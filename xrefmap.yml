@@ -62,6 +62,31 @@ references:
   isSpec: "True"
   fullName: FlexValidator.Exceptions.InvalidValidatorStateException.InvalidValidatorStateException
   nameWithType: InvalidValidatorStateException.InvalidValidatorStateException
+- uid: FlexValidator.Exceptions.ValidatorSectionNotFoundException
+  name: ValidatorSectionNotFoundException
+  href: api/FlexValidator.Exceptions.ValidatorSectionNotFoundException.html
+  commentId: T:FlexValidator.Exceptions.ValidatorSectionNotFoundException
+  fullName: FlexValidator.Exceptions.ValidatorSectionNotFoundException
+  nameWithType: ValidatorSectionNotFoundException
+- uid: FlexValidator.Exceptions.ValidatorSectionNotFoundException.#ctor(System.String)
+  name: ValidatorSectionNotFoundException(String)
+  href: api/FlexValidator.Exceptions.ValidatorSectionNotFoundException.html#FlexValidator_Exceptions_ValidatorSectionNotFoundException__ctor_System_String_
+  commentId: M:FlexValidator.Exceptions.ValidatorSectionNotFoundException.#ctor(System.String)
+  fullName: FlexValidator.Exceptions.ValidatorSectionNotFoundException.ValidatorSectionNotFoundException(System.String)
+  nameWithType: ValidatorSectionNotFoundException.ValidatorSectionNotFoundException(String)
+- uid: FlexValidator.Exceptions.ValidatorSectionNotFoundException.#ctor(System.String,System.Exception)
+  name: ValidatorSectionNotFoundException(String, Exception)
+  href: api/FlexValidator.Exceptions.ValidatorSectionNotFoundException.html#FlexValidator_Exceptions_ValidatorSectionNotFoundException__ctor_System_String_System_Exception_
+  commentId: M:FlexValidator.Exceptions.ValidatorSectionNotFoundException.#ctor(System.String,System.Exception)
+  fullName: FlexValidator.Exceptions.ValidatorSectionNotFoundException.ValidatorSectionNotFoundException(System.String, System.Exception)
+  nameWithType: ValidatorSectionNotFoundException.ValidatorSectionNotFoundException(String, Exception)
+- uid: FlexValidator.Exceptions.ValidatorSectionNotFoundException.#ctor*
+  name: ValidatorSectionNotFoundException
+  href: api/FlexValidator.Exceptions.ValidatorSectionNotFoundException.html#FlexValidator_Exceptions_ValidatorSectionNotFoundException__ctor_
+  commentId: Overload:FlexValidator.Exceptions.ValidatorSectionNotFoundException.#ctor
+  isSpec: "True"
+  fullName: FlexValidator.Exceptions.ValidatorSectionNotFoundException.ValidatorSectionNotFoundException
+  nameWithType: ValidatorSectionNotFoundException.ValidatorSectionNotFoundException
 - uid: FlexValidator.ISectionedValidator`1
   name: ISectionedValidator<T>
   href: api/FlexValidator.ISectionedValidator-1.html
