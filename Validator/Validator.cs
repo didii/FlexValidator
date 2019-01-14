@@ -7,7 +7,7 @@ namespace Validator {
     /// </summary>
     /// <remarks>
     /// In it's simplest form, this is how the validation should be used.
-    /// <code><see cref="Start"/>(new <see cref="ValidationInfo"/>("guid", "Id must be positive"));
+    /// <code><see cref="Start"/>(new <see cref="ValidationInfoBase"/>("guid", "Id must be positive"));
     /// if (obj.Id > 0) {
     ///     <see cref="Pass"/>();
     /// else
