@@ -1,4 +1,4 @@
-# Validator
+# FlexValidator
 A flexible validator made for C#.
 
 ## Why?

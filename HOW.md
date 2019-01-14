@@ -7,9 +7,6 @@ It's ... complicated.
 The class hierarchy:
 
 ```
-                                      BaseValidator
-                                            |
-                                            V
                                         Validator
                                             |
                    +------------------------+------------------------+---------------- - -  -  -
@@ -23,33 +20,6 @@ The class hierarchy:
 SimpleValidator<T>    SectionedValidator<T>    SimpleValidator<T1, T2>    SectionedValidator<T1, T2>
 ```
 
-### BaseValidator
-
-We want 2 things to be possible:
-* Run arbritrary pieces of code
-* Allow as many input variables as necessary
-* Overridable method for easy extendability
-
-So this class should be like this:
-
-```csharp
-public class BaseValidator {
-    internal Func<object[], ValidationResult> ValidatorFunc { get; set; }
-
-    internal virtual ValidationResult Validate(params object[] objs) {
-        return ValidatorFunc(objs);
-    }
-}
-```
-
-We use `ValidatorFunc` so we to save any arbitrary piece of code that can be run.
-Later we can simply assign a method or lambda to this variable when necessary.
-Then we have `Validate` that for this validator simply calls the `ValidatorFunc` with its arguments.
-This is provided for easy extensibility.
-
-We cannot use types here since we have an arbitrary amount of parameters.
-We'll have to introduce types again later down the line.
-
 ### Validator
 
 This class allows the user to write easy to use and understand code.
@@ -60,12 +30,19 @@ It exposes the following methods:
 * `Pass()`
 * `Fail()`
 * `Complete(Assume? assume)`
-* `RunValidator<T1, ...>(Validator<T1, ...> validator, T1 obj, ...)`
+* `RunValidator<T1, ...>(IValidator<T1, ...> validator, T1 obj, ...)`
 
 The method `Start` temporarily saves the given info and passes it to its inner `ValidationResult` when `Pass` or `Fail` is called.
 Then the `info` is reset and a new validation can occur.
 The method `Complete` is provided to clearly delimit a single validation or it can auto-pass or fail a method using the argument.
+
 Lastly we have `RunValidator` that simply calls the inner validator, captures its result and adds it to its own inner `ValidationResult`.
+I do have an issue with the method since at this point, `Validator` should not have any knowledge about types.
+I could move them to an extension method, which would make sense, but this forces users to write `this.RunValidator` which is arguably even dumber.
+
+We cannot use types here since we have an arbitrary amount of parameters.
+We'll have to introduce types again later down the line.
+
 
 ### Validator&lt;T&gt;
 
@@ -80,8 +57,8 @@ Hence the `Validator<T1, T2>`, `Validator<T1, T2, T3>` etc.
 ### SimpleValidator&lt;T&gt;
 
 This class is meant to be overriden by a user.
-These validators simply expose a method `DoValidate` that is run when `Validate` is called.
-The method `Validate` itself is now `sealed` and is simply a wrapper around `DoValidate`.
+These validators simply expose a method `DoValidate` that is run when the public method `Validate` is called.
+It simply makes sure the state is reset correctly before every `Validate` call.
 
 The same problem occurs here as with `Validator<T>`.
 We need to define another `SimpleValidator<T1, T2>` to make a validator that needs multiple arguments.
