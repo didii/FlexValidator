@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Interface ISectionedValidator&lt;T1, T2&gt;
+    <title>Interface ISectionedValidator&lt;T1, T2, T3, T4&gt;
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Interface ISectionedValidator&lt;T1, T2&gt;
+    <meta name="title" content="Interface ISectionedValidator&lt;T1, T2, T3, T4&gt;
    ">
     <meta name="generator" content="docfx 2.40.7.0">
     
@@ -68,24 +68,24 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Validator.ISectionedValidator`2">
+            <article class="content wrap" id="_content" data-uid="FlexValidator.ISectionedValidator`4">
   
   
-  <h1 id="Validator_ISectionedValidator_2" data-uid="Validator.ISectionedValidator`2" class="text-break">Interface ISectionedValidator&lt;T1, T2&gt;
+  <h1 id="FlexValidator_ISectionedValidator_4" data-uid="FlexValidator.ISectionedValidator`4" class="text-break">Interface ISectionedValidator&lt;T1, T2, T3, T4&gt;
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="Validator.IValidator-2.html#Validator_IValidator_2_Validate__0__1_">IValidator&lt;T1, T2&gt;.Validate(T1, T2)</a>
+      <a class="xref" href="FlexValidator.IValidator-4.html#FlexValidator_IValidator_4_Validate__0__1__2__3_">IValidator&lt;T1, T2, T3, T4&gt;.Validate(T1, T2, T3, T4)</a>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Validator.html">Validator</a></h6>
-  <h6><strong>Assembly</strong>: Validator.dll</h6>
-  <h5 id="Validator_ISectionedValidator_2_syntax">Syntax</h5>
+  <h6><strong>Namespace</strong>: <a class="xref" href="FlexValidator.html">FlexValidator</a></h6>
+  <h6><strong>Assembly</strong>: FlexValidator.dll</h6>
+  <h5 id="FlexValidator_ISectionedValidator_4_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface ISectionedValidator&lt;T1, T2&gt; : IValidator&lt;T1, T2&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public interface ISectionedValidator&lt;in T1, in T2, in T3, in T4&gt; : IValidator&lt;T1, T2, T3, T4&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -104,24 +104,32 @@
         <td><span class="parametername">T2</span></td>
         <td></td>
       </tr>
+      <tr>
+        <td><span class="parametername">T3</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="parametername">T4</span></td>
+        <td></td>
+      </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/didii/Validator/new/master/apiSpec/new?filename=Validator_ISectionedValidator_2_ValidateSection_System_String__0__1_.md&amp;value=---%0Auid%3A%20Validator.ISectionedValidator%602.ValidateSection(System.String%2C%600%2C%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/didii/FlexValidator/new/master/apiSpec/new?filename=FlexValidator_ISectionedValidator_4_ValidateSection_System_String__0__1__2__3_.md&amp;value=---%0Auid%3A%20FlexValidator.ISectionedValidator%604.ValidateSection(System.String%2C%600%2C%601%2C%602%2C%603)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/didii/Validator/blob/master/Validator/ISectionedValidator.cs/#L7">View Source</a>
+    <a href="https://github.com/didii/FlexValidator/blob/master/FlexValidator/ISectionedValidator.cs/#L15">View Source</a>
   </span>
-  <a id="Validator_ISectionedValidator_2_ValidateSection_" data-uid="Validator.ISectionedValidator`2.ValidateSection*"></a>
-  <h4 id="Validator_ISectionedValidator_2_ValidateSection_System_String__0__1_" data-uid="Validator.ISectionedValidator`2.ValidateSection(System.String,`0,`1)">ValidateSection(String, T1, T2)</h4>
+  <a id="FlexValidator_ISectionedValidator_4_ValidateSection_" data-uid="FlexValidator.ISectionedValidator`4.ValidateSection*"></a>
+  <h4 id="FlexValidator_ISectionedValidator_4_ValidateSection_System_String__0__1__2__3_" data-uid="FlexValidator.ISectionedValidator`4.ValidateSection(System.String,`0,`1,`2,`3)">ValidateSection(String, T1, T2, T3, T4)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">ValidationResult ValidateSection(string sectionName, T1 obj1, T2 obj2)</code></pre>
+    <pre><code class="lang-csharp hljs">ValidationResult ValidateSection(string sectionName, T1 obj1, T2 obj2, T3 obj3, T4 obj4)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -148,6 +156,16 @@
         <td><span class="parametername">obj2</span></td>
         <td></td>
       </tr>
+      <tr>
+        <td><span class="xref">T3</span></td>
+        <td><span class="parametername">obj3</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T4</span></td>
+        <td><span class="parametername">obj4</span></td>
+        <td></td>
+      </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
@@ -160,7 +178,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Validator.ValidationResult.html">ValidationResult</a></td>
+        <td><a class="xref" href="FlexValidator.ValidationResult.html">ValidationResult</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -173,10 +191,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/didii/Validator/new/master/apiSpec/new?filename=Validator_ISectionedValidator_2.md&amp;value=---%0Auid%3A%20Validator.ISectionedValidator%602%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/didii/FlexValidator/new/master/apiSpec/new?filename=FlexValidator_ISectionedValidator_4.md&amp;value=---%0Auid%3A%20FlexValidator.ISectionedValidator%604%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/didii/Validator/blob/master/Validator/ISectionedValidator.cs/#L6" class="contribution-link">View Source</a>
+                    <a href="https://github.com/didii/FlexValidator/blob/master/FlexValidator/ISectionedValidator.cs/#L14" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
