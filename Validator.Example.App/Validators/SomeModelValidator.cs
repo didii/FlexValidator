@@ -39,7 +39,7 @@ namespace Validator.Example.App.Validators {
 
         private void ValidateName(SomeModel model) {
             // Rule: Name cannot be null or empty
-            Start(new ValidationInfo("a40ef203-6e93-4341-887a-1618b2bb3e07", "Name must have a value", "some"));
+            Start(new ValidationInfoBase("a40ef203-6e93-4341-887a-1618b2bb3e07", "Name must have a value"));
             if (string.IsNullOrEmpty(model.Name)) {
                 Fail();
                 // Short-circuit here, if Name is null or empty, all other validations are moot
@@ -48,20 +48,20 @@ namespace Validator.Example.App.Validators {
             Complete(Assume.Pass);
 
             // Rule: Name must be at least 2 characters in length
-            Start(new ValidationInfo("a3839435-f869-431c-9877-f425d8e9ea2c", "Name must have at least 2 characters", "some"));
+            Start(new ValidationInfoBase("a3839435-f869-431c-9877-f425d8e9ea2c", "Name must have at least 2 characters"));
             if (model.Name.Length >= 2)
                 Pass();
             Complete(Assume.Fail);
 
             // Rule: Name must start with an alphabetical letter
-            Start(new ValidationInfo("63df66cd-7138-4548-95b2-7fa6a1902ee6", "Name must start with an alphabetical letter", "some"));
+            Start(new ValidationInfoBase("63df66cd-7138-4548-95b2-7fa6a1902ee6", "Name must start with an alphabetical letter"));
             if (new Regex(@"^[a-zA-Z]").IsMatch(model.Name))
                 Pass();
             Complete(Assume.Fail);
 
             // Rule: When length of Name is long enough and does not contain alphabetical letters, Name cannot be the developers one
             if (Passed("a3839435-f869-431c-9877-f425d8e9ea2c") && Passed("63df66cd-7138-4548-95b2-7fa6a1902ee6")) {
-                Start(new ValidationInfo("cf214916-564c-4f98-a16f-9876f2343fbf", "Name cannot be didii", "some"));
+                Start(new ValidationInfoBase("cf214916-564c-4f98-a16f-9876f2343fbf", "Name cannot be didii"));
                 if (model.Name == "didii")
                     Fail();
                 Complete(Assume.Pass);
@@ -70,7 +70,7 @@ namespace Validator.Example.App.Validators {
 
         private void ValidateSub(SomeModel model) {
             //Rule: Sub cannot be null and must be valid
-            Start(new ValidationInfo("395273d0-cae6-45e8-832b-05d3b2794728", "Sub cannot be null", "some"));
+            Start(new ValidationInfoBase("395273d0-cae6-45e8-832b-05d3b2794728", "Sub cannot be null"));
             if (model.Sub != null) {
                 Pass();
                 RunValidator(new SubModelValidator(), model.Sub);
@@ -80,13 +80,13 @@ namespace Validator.Example.App.Validators {
 
         private void ValidateDouble(SomeModel model) {
             //Rule: DoubleLeft cannot be null
-            Start(new ValidationInfo("8d0a0e11-c794-42bf-89e1-5e0969c3b59f", "Left cannot be null", "some"));
+            Start(new ValidationInfoBase("8d0a0e11-c794-42bf-89e1-5e0969c3b59f", "Left cannot be null"));
             if (model.DoubleLeft == null)
                 Fail();
             Complete(Assume.Pass);
 
             //Rule: DoubleRight cannot be null
-            Start(new ValidationInfo("29c0672a-72db-4894-b250-bd40d054cc76", "Right cannot be null", "some"));
+            Start(new ValidationInfoBase("29c0672a-72db-4894-b250-bd40d054cc76", "Right cannot be null"));
             if (model.DoubleRight == null)
                 Fail();
             Complete(Assume.Pass);

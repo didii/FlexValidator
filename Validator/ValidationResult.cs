@@ -5,24 +5,24 @@ using System.Linq;
 
 namespace Validator {
     public class ValidationResult {
-        private readonly IList<ValidationInfo> _fails;
-        private readonly IList<ValidationInfo> _passes;
+        private readonly IList<ValidationInfoBase> _fails;
+        private readonly IList<ValidationInfoBase> _passes;
 
-        public IEnumerable<ValidationInfo> Fails => _fails;
-        public IEnumerable<ValidationInfo> Passes => _passes;
+        public IEnumerable<ValidationInfoBase> Fails => _fails;
+        public IEnumerable<ValidationInfoBase> Passes => _passes;
 
         public bool IsValid => _fails.Count == 0;
 
-        public ValidationResult(IEnumerable<ValidationInfo> fails = null, IEnumerable<ValidationInfo> passes = null) {
-            _fails = fails == null ? new List<ValidationInfo>() : fails.ToList();
-            _passes = passes == null ? new List<ValidationInfo>() : passes.ToList();
+        public ValidationResult(IEnumerable<ValidationInfoBase> fails = null, IEnumerable<ValidationInfoBase> passes = null) {
+            _fails = fails == null ? new List<ValidationInfoBase>() : fails.ToList();
+            _passes = passes == null ? new List<ValidationInfoBase>() : passes.ToList();
         }
 
-        internal void AddFail(ValidationInfo info) {
+        internal void AddFail(ValidationInfoBase info) {
             _fails.Add(info);
         }
 
-        internal void AddPass(ValidationInfo info) {
+        internal void AddPass(ValidationInfoBase info) {
             _passes.Add(info);
         }
 

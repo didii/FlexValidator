@@ -20,7 +20,7 @@ namespace Validator.Tests {
             _sut = new TestSectionedValidator<SomeModel>();
             _sut.Init(validator => {
                 validator.Section(section, x => {
-                    _sut.Start(new ValidationInfo(guid));
+                    _sut.Start(new ValidationInfoBase(guid));
                     _sut.Pass();
                 });
             });
@@ -41,11 +41,11 @@ namespace Validator.Tests {
             _sut = new TestSectionedValidator<SomeModel>();
             _sut.Init(validator => {
                 validator.Section(section, x => {
-                    _sut.Start(new ValidationInfo(guid));
+                    _sut.Start(new ValidationInfoBase(guid));
                     _sut.Pass();
                 });
                 validator.Section(section2, x => {
-                    _sut.Start(new ValidationInfo(guid2));
+                    _sut.Start(new ValidationInfoBase(guid2));
                     _sut.Fail();
                 });
             });
@@ -67,11 +67,11 @@ namespace Validator.Tests {
             _sut = new TestSectionedValidator<SomeModel>();
             _sut.Init(validator => {
                 validator.Section(section, x => {
-                    _sut.Start(new ValidationInfo(guid));
+                    _sut.Start(new ValidationInfoBase(guid));
                     _sut.Pass();
                 });
                 validator.Section(section2, x => {
-                    _sut.Start(new ValidationInfo(guid2));
+                    _sut.Start(new ValidationInfoBase(guid2));
                     _sut.Fail();
                 });
             });
@@ -92,11 +92,11 @@ namespace Validator.Tests {
             _sut = new TestSectionedValidator<SomeModel>();
             _sut.Init(validator => {
                 validator.Section(section, x => {
-                    _sut.Start(new ValidationInfo(guid));
+                    _sut.Start(new ValidationInfoBase(guid));
                     _sut.Pass();
                 });
                 validator.Section(section2, x => {
-                    _sut.Start(new ValidationInfo(guid2));
+                    _sut.Start(new ValidationInfoBase(guid2));
                     _sut.Fail();
                 });
             });
@@ -116,7 +116,7 @@ namespace Validator.Tests {
             var model = new SomeModel();
             var other = new TestSimpleValidator<SomeModel>();
             other.ValidateFunc = x => {
-                other.Start(new ValidationInfo(guid));
+                other.Start(new ValidationInfoBase(guid));
                 other.Pass();
             };
 
@@ -138,7 +138,7 @@ namespace Validator.Tests {
             var model = new SomeModel();
             var sub1 = new TestSimpleValidator<SubModel>();
             sub1.ValidateFunc = x => {
-                sub1.Start(new ValidationInfo(guid));
+                sub1.Start(new ValidationInfoBase(guid));
                 sub1.Pass();
             };
             _sut = new TestSectionedValidator<SomeModel>();
@@ -159,12 +159,12 @@ namespace Validator.Tests {
             var model = new SomeModel();
             var doubleLeft = new TestSimpleValidator<DoubleModel>();
             doubleLeft.ValidateFunc = x => {
-                doubleLeft.Start(new ValidationInfo(guid));
+                doubleLeft.Start(new ValidationInfoBase(guid));
                 doubleLeft.Pass();
             };
             var doubleRight = new TestSimpleValidator<DoubleModel>();
             doubleRight.ValidateFunc = x => {
-                doubleRight.Start(new ValidationInfo(guid2));
+                doubleRight.Start(new ValidationInfoBase(guid2));
                 doubleRight.Fail();
             };
             _sut = new TestSectionedValidator<SomeModel>();
@@ -189,12 +189,12 @@ namespace Validator.Tests {
             var model = new SomeModel();
             var doubleLeft = new TestSimpleValidator<DoubleModel>();
             doubleLeft.ValidateFunc = x => {
-                doubleLeft.Start(new ValidationInfo(guid));
+                doubleLeft.Start(new ValidationInfoBase(guid));
                 doubleLeft.Pass();
             };
             var doubleRight = new TestSimpleValidator<DoubleModel>();
             doubleRight.ValidateFunc = x => {
-                doubleRight.Start(new ValidationInfo(guid2));
+                doubleRight.Start(new ValidationInfoBase(guid2));
                 doubleRight.Fail();
             };
             _sut = new TestSectionedValidator<SomeModel>();
@@ -218,12 +218,12 @@ namespace Validator.Tests {
             var model = new SomeModel();
             var doubleLeft = new TestSimpleValidator<DoubleModel>();
             doubleLeft.ValidateFunc = x => {
-                doubleLeft.Start(new ValidationInfo(guid));
+                doubleLeft.Start(new ValidationInfoBase(guid));
                 doubleLeft.Pass();
             };
             var doubleRight = new TestSimpleValidator<DoubleModel>();
             doubleRight.ValidateFunc = x => {
-                doubleRight.Start(new ValidationInfo(guid2));
+                doubleRight.Start(new ValidationInfoBase(guid2));
                 doubleRight.Fail();
             };
             _sut = new TestSectionedValidator<SomeModel>();

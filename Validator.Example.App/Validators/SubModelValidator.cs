@@ -16,7 +16,7 @@ namespace Validator.Example.App.Validators {
             //Not recommended but possible nonetheless
             Section(NameSection, x => {
                 //Rule: Name cannot be null or empty
-                Start(new ValidationInfo("a6eb736f-6d7e-47dc-a5cf-4bc6cffe3a63", "Name must have a value", "sub"));
+                Start(new ValidationInfoBase("a6eb736f-6d7e-47dc-a5cf-4bc6cffe3a63", "Name must have a value"));
                 if (string.IsNullOrEmpty(x.Name))
                     Fail();
                 Complete(Assume.Pass);
@@ -31,7 +31,7 @@ namespace Validator.Example.App.Validators {
 
         private void ValidateDateTimeAndType(SubModel model) {
             //Rule: if Allowed, Date cannot be null
-            Start(new ValidationInfo("5ce91719-965a-425b-a7b3-2683ccaeedbd", "Date is mandatory when Allowed is selected", "sub"));
+            Start(new ValidationInfoBase("5ce91719-965a-425b-a7b3-2683ccaeedbd", "Date is mandatory when Allowed is selected"));
             if (model.Type == SubModelType.Allowed && model.DateTime == null)
                 Fail();
             Complete(Assume.Pass);

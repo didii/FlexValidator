@@ -34,7 +34,7 @@ namespace Validator.Tests {
             //Assert
             _sut = new TestSimpleValidator<EmptyModel, EmptyModel>() {
                 ValidateFunc = (x, y) => {
-                    _sut.Start(new ValidationInfo(guid));
+                    _sut.Start(new ValidationInfoBase(guid));
                     _sut.Pass();
                 }
             };

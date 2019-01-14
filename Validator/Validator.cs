@@ -1,4 +1,5 @@
 ﻿using System;
+using Validator.Exceptions;
 
 namespace Validator {
     /// <summary>
@@ -17,7 +18,7 @@ namespace Validator {
     /// <see cref="Complete"/>.
     /// </remarks>
     public abstract class Validator : BaseValidator {
-        private ValidationInfo _lastValidation;
+        private ValidationInfoBase _lastValidation;
 
         /// <summary>
         /// The result of the ongoing validations. This is what keeps the state and should be treated with caution.
@@ -30,7 +31,7 @@ namespace Validator {
         /// </summary>
         /// <param name="info">Information regarding this specific validation rule</param>
         /// <exception cref="InvalidValidatorStateException">Thrown when a previous validation was not completed</exception>
-        protected internal void Start(ValidationInfo info) {
+        protected internal void Start(ValidationInfoBase info) {
             if (_lastValidation != null) {
                 throw new InvalidValidatorStateException(
                     "Cannot start a new validation since the last one was not completed. Did you forget to call CompleteValidation, Pass or Fail?");

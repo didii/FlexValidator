@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Validator.Exceptions;
 using Validator.Tests.Models;
 using Validator.Tests.Validators;
 
@@ -63,7 +64,7 @@ namespace Validator.Tests {
         [TestMethod]
         public void Pass_ShouldAddTheTestToPasses() {
             TestResult(true, x => {
-                _sut.Start(new ValidationInfo(guid));
+                _sut.Start(new ValidationInfoBase(guid));
                 _sut.Pass();
             });
         }
@@ -71,7 +72,7 @@ namespace Validator.Tests {
         [TestMethod]
         public void Fail_ShouldAddTheTestToFails() {
             TestResult(false, x => {
-                _sut.Start(new ValidationInfo(guid));
+                _sut.Start(new ValidationInfoBase(guid));
                 _sut.Fail();
             });
         }
@@ -79,7 +80,7 @@ namespace Validator.Tests {
         [TestMethod]
         public void AssumePass_ShouldAddTestToPasses() {
             TestResult(true, x => {
-                _sut.Start(new ValidationInfo(guid));
+                _sut.Start(new ValidationInfoBase(guid));
                 _sut.Complete(Assume.Pass);
             });
         }
@@ -87,7 +88,7 @@ namespace Validator.Tests {
         [TestMethod]
         public void AssumeFail_ShouldAddTestToFails() {
             TestResult(false, x => {
-                _sut.Start(new ValidationInfo(guid));
+                _sut.Start(new ValidationInfoBase(guid));
                 _sut.Complete(Assume.Fail);
             });
         }
@@ -95,7 +96,7 @@ namespace Validator.Tests {
         [TestMethod]
         public void Pass_BeforeAssumeFail_ShouldAddTestToPasses() {
             TestResult(true, x => {
-                _sut.Start(new ValidationInfo(guid));
+                _sut.Start(new ValidationInfoBase(guid));
                 _sut.Pass();
                 _sut.Complete(Assume.Fail);
             });
@@ -104,7 +105,7 @@ namespace Validator.Tests {
         [TestMethod]
         public void Fail_BeforeAssumePass_ShouldAddTestToPasses() {
             TestResult(false, x => {
-                _sut.Start(new ValidationInfo(guid));
+                _sut.Start(new ValidationInfoBase(guid));
                 _sut.Fail();
                 _sut.Complete(Assume.Pass);
             });
@@ -114,7 +115,7 @@ namespace Validator.Tests {
         public void CompleteValidation_ShouldThrow_WhithoutPassFailOrAssume() {
             //Arrange
             TestThrow(x => {
-                _sut.Start(new ValidationInfo(guid));
+                _sut.Start(new ValidationInfoBase(guid));
                 _sut.Complete();
             });
         }
@@ -122,8 +123,8 @@ namespace Validator.Tests {
         [TestMethod]
         public void StartValidation_AfterStartValidation_ShouldThrow() {
             TestThrow(x => {
-                _sut.Start(new ValidationInfo(guid));
-                _sut.Start(new ValidationInfo(guid));
+                _sut.Start(new ValidationInfoBase(guid));
+                _sut.Start(new ValidationInfoBase(guid));
 
             });
         }
@@ -142,7 +143,7 @@ namespace Validator.Tests {
         [TestMethod]
         public void PassAfterCompletion_ShouldThrow() {
             TestThrow(x => {
-                _sut.Start(new ValidationInfo(guid));
+                _sut.Start(new ValidationInfoBase(guid));
                 _sut.Pass();
                 _sut.Pass();
             });
@@ -151,7 +152,7 @@ namespace Validator.Tests {
         [TestMethod]
         public void FailAfterCompletion_ShouldThrow() {
             TestThrow(x => {
-                _sut.Start(new ValidationInfo(guid));
+                _sut.Start(new ValidationInfoBase(guid));
                 _sut.Pass();
                 _sut.Fail();
             });

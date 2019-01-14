@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace Validator {
+namespace Validator.Exceptions {
     public class InvalidValidatorStateException : Exception {
         /// <inheritdoc />
         public InvalidValidatorStateException(string message) : base(message) { }

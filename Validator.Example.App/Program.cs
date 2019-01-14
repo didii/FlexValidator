@@ -53,7 +53,7 @@ namespace Validator.Example.App {
                 return;
             }
             foreach (var fail in result.Fails)
-                Console.WriteLine($"{fail.Guid}: [{(fail.Keys.Length == 0 ? "N/A" : fail.Keys.Aggregate((a, b) => $"{a}|{b}"))}] {fail.Message}");
+                Console.WriteLine($"{fail.Guid}: {fail.Message}");
         }
     }
 }

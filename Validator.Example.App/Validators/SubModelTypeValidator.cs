@@ -10,7 +10,7 @@ namespace Validator.Example.App.Validators {
         /// <inheritdoc />
         protected override void DoValidate(SubModelType model) {
             //Rule: Type cannot be Prohibited
-            Start(new ValidationInfo("fa605148-f2d7-4671-8732-bb392c57ccc7", "SubType cannot be prohibited", "submodeltype"));
+            Start(new ValidationInfoBase("fa605148-f2d7-4671-8732-bb392c57ccc7", "SubType cannot be prohibited"));
             if (model == SubModelType.Prohibited)
                 Fail();
             Complete(Assume.Pass);
