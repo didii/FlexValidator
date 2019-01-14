@@ -16,18 +16,19 @@ The problems we had was:
 * Complex logic isn't readable anymore in the Fluent-style
 * Validations based on multiple properties are weird to write
 
-So I came up with another way to write validations where you can simply make use of statements you know (`if`, `else`, `&&`).
+So I came up with another way to write validations where you can simply make use of statements you know: `if`, `else`, `&&`.
 
-## How to use?
+## How to use it?
 
-There are 2 main types of validators.
+There are 2 types of validators.
 
 ### SimpleValidator
 
 To be used for simple validations where you can test the whole model through.
 You don't need seperate _sections_ to seperate logic for testing.
+Ideal for small classes such as a base class that exposes an `Id`.
 
-Simply make a validator that inherits from `SimpleValidator` and specify (all) the model(s) you want to validate.
+To use, simply make a validator that inherits from `SimpleValidator` and specify (all) the model(s) you want to validate.
 
 ```csharp
 class SomeValidator : SimpleValidator<SomeModel> {
@@ -165,6 +166,6 @@ It's ... complicated.
 ## Todo
 
 * Async support
-* Custom `ValidationInfo` object in `Start`
+* Custom `ValidationInfo` object in `Start` and `ValidationResult`
 * Make lookups faster (used in `Passed` and `Failed`)
   * The `List` should become a `Dictionary`
