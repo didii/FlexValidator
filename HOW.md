@@ -2,7 +2,7 @@
 
 ## How did you make it?
 
-It's ... complicated.
+Unsurprisingly, after a refactor, it was pretty simple.
 
 The class hierarchy:
 
