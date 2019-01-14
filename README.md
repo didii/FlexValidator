@@ -159,13 +159,12 @@ The other section simply shows how to call a nested validator.
 Simply use the method `RunValidator` and pass the validator instance and model.
 It will capture all passes and fails from that validator and adds it to the one you are working with.
 
-## How did you make it?
-
-It's ... complicated.
-
 ## Todo
 
 * Async support
 * Custom `ValidationInfo` object in `Start` and `ValidationResult`
 * Make lookups faster (used in `Passed` and `Failed`)
   * The `List` should become a `Dictionary`
+* Make extensibility easier
+  * Currently, a lot of methods are marked `internal` which hides implementation details. This makes it easy to properly implement the `Simple`- and `SectionedValidator`. But it makes it hard to create custom validators such as the `Simple`- and `SectionedValidator`s.
+  * FYI, you can circumvent this currently by creating a project with the name `Validator.Extensions`. This is however not really ideal.
