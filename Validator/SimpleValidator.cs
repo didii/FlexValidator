@@ -1,5 +1,5 @@
 ﻿namespace Validator {
-    public abstract class SimpleValidator<T> : Validator<T>, IValidator<T> {
+    public abstract class SimpleValidator<T> : Validator<T> {
         protected SimpleValidator() {
             ValidatorFunc = objs => Validate((T)objs[0]);
         }
@@ -25,7 +25,7 @@
         protected abstract void DoValidate(T model);
     }
 
-    public abstract class SimpleValidator<T1, T2> : Validator<T1, T2>, IValidator<T1, T2> {
+    public abstract class SimpleValidator<T1, T2> : Validator<T1, T2> {
         public SimpleValidator() {
             ValidatorFunc = objs => Validate((T1)objs[0], (T2)objs[1]);
         }
@@ -52,7 +52,7 @@
         protected abstract void DoValidate(T1 obj1, T2 obj2);
     }
 
-    public abstract class SimpleValidator<T1, T2, T3> : Validator<T1, T2, T3>, IValidator<T1, T2, T3> {
+    public abstract class SimpleValidator<T1, T2, T3> : Validator<T1, T2, T3> {
         public SimpleValidator() {
             ValidatorFunc = objs => Validate((T1)objs[0], (T2)objs[1], (T3)objs[2]);
         }

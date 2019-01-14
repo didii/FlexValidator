@@ -150,7 +150,7 @@ namespace Validator {
         }
     }
 
-    public abstract class Validator<T> : Validator {
+    public abstract class Validator<T> : Validator, IValidator<T> {
         protected Validator() {
             ValidatorFunc = objs => Validate((T)objs[0]);
         }
@@ -159,7 +159,7 @@ namespace Validator {
         public abstract ValidationResult Validate(T obj);
     }
 
-    public abstract class Validator<T1, T2> : Validator {
+    public abstract class Validator<T1, T2> : Validator, IValidator<T1, T2> {
         protected Validator() {
             ValidatorFunc = objs => Validate((T1)objs[0], (T2)objs[1]);
         }
@@ -168,7 +168,7 @@ namespace Validator {
         public abstract ValidationResult Validate(T1 obj1, T2 obj2);
     }
 
-    public abstract class Validator<T1, T2, T3> : Validator {
+    public abstract class Validator<T1, T2, T3> : Validator, IValidator<T1, T2, T3> {
         protected Validator() {
             ValidatorFunc = objs => Validate((T1)objs[0], (T2)objs[1], (T3)objs[2]);
         }
