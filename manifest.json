@@ -9,10 +9,10 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "KxhcMuWz8r+RImuEqIMxGg=="
+          "hash": "vCoYVT96JjkGnKl4NNoHXA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -24,7 +24,7 @@
           "hash": "lyuaGVFsYJZ6BRkhtqYaGQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -48,6 +48,294 @@
           "hash": "s1DWz/eTuqJMgkzANBisnA=="
         }
       },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Validator.Assume.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Validator.Assume.html",
+          "hash": "80i+TKJMxadct/pWhxUtNw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Validator.BaseValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Validator.BaseValidator.html",
+          "hash": "iuIT62aqO+2yUP/8q4dxoQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Validator.Exceptions.InvalidValidatorStateException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Validator.Exceptions.InvalidValidatorStateException.html",
+          "hash": "cGcbX2XveKD28VPEkrdicQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Validator.Exceptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Validator.Exceptions.html",
+          "hash": "YGd0BLXJKmeRvkXXKlHpXw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Validator.ISectionedValidator-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Validator.ISectionedValidator-1.html",
+          "hash": "lgKyfXSsJ/i1WgD9TsUBTQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Validator.ISectionedValidator-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Validator.ISectionedValidator-2.html",
+          "hash": "WXFNR+O4oL2nP/ZZR743VA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Validator.ISectionedValidator-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Validator.ISectionedValidator-3.html",
+          "hash": "9+Wcst+5oV+ZE00u2rl85A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Validator.IValidator-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Validator.IValidator-1.html",
+          "hash": "2a5dZozcJ/crt1lV54wtcA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Validator.IValidator-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Validator.IValidator-2.html",
+          "hash": "VnbeKdIFzbcmUg8jSRjMpA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Validator.IValidator-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Validator.IValidator-3.html",
+          "hash": "kfI2XY3YodoqL4WydaDwtg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Validator.IValidator-4.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Validator.IValidator-4.html",
+          "hash": "f8iidJjme604AI8A5hT2pQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Validator.SectionedValidator-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Validator.SectionedValidator-1.html",
+          "hash": "Mph+K8QcOQI0TVgtWN2HrQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Validator.SectionedValidator-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Validator.SectionedValidator-2.html",
+          "hash": "SCFXhDx+dJ7JiMRJ9pcSyg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Validator.SimpleValidator-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Validator.SimpleValidator-1.html",
+          "hash": "FmIVrNsa8wSha7jWMUb56Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Validator.SimpleValidator-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Validator.SimpleValidator-2.html",
+          "hash": "tWBsSqSxvNkrtiR6SvTzHg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Validator.SimpleValidator-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Validator.SimpleValidator-3.html",
+          "hash": "d4AK8gifF4JXDrpp0cP5Vw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Validator.ValidationInfoBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Validator.ValidationInfoBase.html",
+          "hash": "k1xSDa4cPQa3RUKSbu2gpw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Validator.ValidationResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Validator.ValidationResult.html",
+          "hash": "YMGBkeQWK7x4F1DX0UnDSw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Validator.Validator-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Validator.Validator-1.html",
+          "hash": "qgIDC5LMFR1p+8mRtWSA2g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Validator.Validator-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Validator.Validator-2.html",
+          "hash": "8N2BHCoKfaRIIpY5tbvD2A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Validator.Validator-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Validator.Validator-3.html",
+          "hash": "mzE9P8lecCKfWYUCT6bOQQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Validator.Validator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Validator.Validator.html",
+          "hash": "69wPo3vEIh3CTz+SB3qsAA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Validator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Validator.html",
+          "hash": "OrD95i4cZ6iiJmul0Z6xEQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "obj/api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "rdaTNPj/7zh+yOg5C0lbVw=="
+        }
+      },
       "is_incremental": false,
       "version": ""
     },
@@ -57,7 +345,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "YogSCnhGJbX9ahf1VfioPA=="
+          "hash": "Sg+nKmnHP++YKMT39ruhpw=="
         }
       },
       "is_incremental": false,
@@ -67,8 +355,7 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": false,
-        "details": "Cannot build incrementally because last build info is missing.",
+        "can_incremental": true,
         "incrementalPhase": "build"
       },
       "processors": {
@@ -78,15 +365,19 @@
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {
-          "can_incremental": false,
+          "can_incremental": true,
+          "incrementalPhase": "build"
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
           "incrementalPhase": "build"
         }
       }
     },
     {
       "status": {
-        "can_incremental": false,
-        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
         "incrementalPhase": "postProcessing"
       },
       "processors": {}

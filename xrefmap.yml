@@ -1,3 +1,938 @@
 ### YamlMime:XRefMap
 sorted: true
-references: []
+references:
+- uid: Validator
+  name: Validator
+  href: api/Validator.html
+  commentId: N:Validator
+  fullName: Validator
+  nameWithType: Validator
+- uid: Validator.Assume
+  name: Assume
+  href: api/Validator.Assume.html
+  commentId: T:Validator.Assume
+  fullName: Validator.Assume
+  nameWithType: Assume
+- uid: Validator.Assume.Fail
+  name: Fail
+  href: api/Validator.Assume.html#Validator_Assume_Fail
+  commentId: F:Validator.Assume.Fail
+  fullName: Validator.Assume.Fail
+  nameWithType: Assume.Fail
+- uid: Validator.Assume.Pass
+  name: Pass
+  href: api/Validator.Assume.html#Validator_Assume_Pass
+  commentId: F:Validator.Assume.Pass
+  fullName: Validator.Assume.Pass
+  nameWithType: Assume.Pass
+- uid: Validator.BaseValidator
+  name: BaseValidator
+  href: api/Validator.BaseValidator.html
+  commentId: T:Validator.BaseValidator
+  fullName: Validator.BaseValidator
+  nameWithType: BaseValidator
+- uid: Validator.Exceptions
+  name: Validator.Exceptions
+  href: api/Validator.Exceptions.html
+  commentId: N:Validator.Exceptions
+  fullName: Validator.Exceptions
+  nameWithType: Validator.Exceptions
+- uid: Validator.Exceptions.InvalidValidatorStateException
+  name: InvalidValidatorStateException
+  href: api/Validator.Exceptions.InvalidValidatorStateException.html
+  commentId: T:Validator.Exceptions.InvalidValidatorStateException
+  fullName: Validator.Exceptions.InvalidValidatorStateException
+  nameWithType: InvalidValidatorStateException
+- uid: Validator.Exceptions.InvalidValidatorStateException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  name: InvalidValidatorStateException(SerializationInfo, StreamingContext)
+  href: api/Validator.Exceptions.InvalidValidatorStateException.html#Validator_Exceptions_InvalidValidatorStateException__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_
+  commentId: M:Validator.Exceptions.InvalidValidatorStateException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  fullName: Validator.Exceptions.InvalidValidatorStateException.InvalidValidatorStateException(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
+  nameWithType: InvalidValidatorStateException.InvalidValidatorStateException(SerializationInfo, StreamingContext)
+- uid: Validator.Exceptions.InvalidValidatorStateException.#ctor(System.String)
+  name: InvalidValidatorStateException(String)
+  href: api/Validator.Exceptions.InvalidValidatorStateException.html#Validator_Exceptions_InvalidValidatorStateException__ctor_System_String_
+  commentId: M:Validator.Exceptions.InvalidValidatorStateException.#ctor(System.String)
+  fullName: Validator.Exceptions.InvalidValidatorStateException.InvalidValidatorStateException(System.String)
+  nameWithType: InvalidValidatorStateException.InvalidValidatorStateException(String)
+- uid: Validator.Exceptions.InvalidValidatorStateException.#ctor(System.String,System.Exception)
+  name: InvalidValidatorStateException(String, Exception)
+  href: api/Validator.Exceptions.InvalidValidatorStateException.html#Validator_Exceptions_InvalidValidatorStateException__ctor_System_String_System_Exception_
+  commentId: M:Validator.Exceptions.InvalidValidatorStateException.#ctor(System.String,System.Exception)
+  fullName: Validator.Exceptions.InvalidValidatorStateException.InvalidValidatorStateException(System.String, System.Exception)
+  nameWithType: InvalidValidatorStateException.InvalidValidatorStateException(String, Exception)
+- uid: Validator.Exceptions.InvalidValidatorStateException.#ctor*
+  name: InvalidValidatorStateException
+  href: api/Validator.Exceptions.InvalidValidatorStateException.html#Validator_Exceptions_InvalidValidatorStateException__ctor_
+  commentId: Overload:Validator.Exceptions.InvalidValidatorStateException.#ctor
+  isSpec: "True"
+  fullName: Validator.Exceptions.InvalidValidatorStateException.InvalidValidatorStateException
+  nameWithType: InvalidValidatorStateException.InvalidValidatorStateException
+- uid: Validator.ISectionedValidator`1
+  name: ISectionedValidator<T>
+  href: api/Validator.ISectionedValidator-1.html
+  commentId: T:Validator.ISectionedValidator`1
+  name.vb: ISectionedValidator(Of T)
+  fullName: Validator.ISectionedValidator<T>
+  fullName.vb: Validator.ISectionedValidator(Of T)
+  nameWithType: ISectionedValidator<T>
+  nameWithType.vb: ISectionedValidator(Of T)
+- uid: Validator.ISectionedValidator`1.ValidateSection(System.String,`0)
+  name: ValidateSection(String, T)
+  href: api/Validator.ISectionedValidator-1.html#Validator_ISectionedValidator_1_ValidateSection_System_String__0_
+  commentId: M:Validator.ISectionedValidator`1.ValidateSection(System.String,`0)
+  fullName: Validator.ISectionedValidator<T>.ValidateSection(System.String, T)
+  fullName.vb: Validator.ISectionedValidator(Of T).ValidateSection(System.String, T)
+  nameWithType: ISectionedValidator<T>.ValidateSection(String, T)
+  nameWithType.vb: ISectionedValidator(Of T).ValidateSection(String, T)
+- uid: Validator.ISectionedValidator`1.ValidateSection*
+  name: ValidateSection
+  href: api/Validator.ISectionedValidator-1.html#Validator_ISectionedValidator_1_ValidateSection_
+  commentId: Overload:Validator.ISectionedValidator`1.ValidateSection
+  isSpec: "True"
+  fullName: Validator.ISectionedValidator<T>.ValidateSection
+  fullName.vb: Validator.ISectionedValidator(Of T).ValidateSection
+  nameWithType: ISectionedValidator<T>.ValidateSection
+  nameWithType.vb: ISectionedValidator(Of T).ValidateSection
+- uid: Validator.ISectionedValidator`2
+  name: ISectionedValidator<T1, T2>
+  href: api/Validator.ISectionedValidator-2.html
+  commentId: T:Validator.ISectionedValidator`2
+  name.vb: ISectionedValidator(Of T1, T2)
+  fullName: Validator.ISectionedValidator<T1, T2>
+  fullName.vb: Validator.ISectionedValidator(Of T1, T2)
+  nameWithType: ISectionedValidator<T1, T2>
+  nameWithType.vb: ISectionedValidator(Of T1, T2)
+- uid: Validator.ISectionedValidator`2.ValidateSection(System.String,`0,`1)
+  name: ValidateSection(String, T1, T2)
+  href: api/Validator.ISectionedValidator-2.html#Validator_ISectionedValidator_2_ValidateSection_System_String__0__1_
+  commentId: M:Validator.ISectionedValidator`2.ValidateSection(System.String,`0,`1)
+  fullName: Validator.ISectionedValidator<T1, T2>.ValidateSection(System.String, T1, T2)
+  fullName.vb: Validator.ISectionedValidator(Of T1, T2).ValidateSection(System.String, T1, T2)
+  nameWithType: ISectionedValidator<T1, T2>.ValidateSection(String, T1, T2)
+  nameWithType.vb: ISectionedValidator(Of T1, T2).ValidateSection(String, T1, T2)
+- uid: Validator.ISectionedValidator`2.ValidateSection*
+  name: ValidateSection
+  href: api/Validator.ISectionedValidator-2.html#Validator_ISectionedValidator_2_ValidateSection_
+  commentId: Overload:Validator.ISectionedValidator`2.ValidateSection
+  isSpec: "True"
+  fullName: Validator.ISectionedValidator<T1, T2>.ValidateSection
+  fullName.vb: Validator.ISectionedValidator(Of T1, T2).ValidateSection
+  nameWithType: ISectionedValidator<T1, T2>.ValidateSection
+  nameWithType.vb: ISectionedValidator(Of T1, T2).ValidateSection
+- uid: Validator.ISectionedValidator`3
+  name: ISectionedValidator<T1, T2, T3>
+  href: api/Validator.ISectionedValidator-3.html
+  commentId: T:Validator.ISectionedValidator`3
+  name.vb: ISectionedValidator(Of T1, T2, T3)
+  fullName: Validator.ISectionedValidator<T1, T2, T3>
+  fullName.vb: Validator.ISectionedValidator(Of T1, T2, T3)
+  nameWithType: ISectionedValidator<T1, T2, T3>
+  nameWithType.vb: ISectionedValidator(Of T1, T2, T3)
+- uid: Validator.ISectionedValidator`3.ValidateSection(System.String,`0,`1,`2)
+  name: ValidateSection(String, T1, T2, T3)
+  href: api/Validator.ISectionedValidator-3.html#Validator_ISectionedValidator_3_ValidateSection_System_String__0__1__2_
+  commentId: M:Validator.ISectionedValidator`3.ValidateSection(System.String,`0,`1,`2)
+  fullName: Validator.ISectionedValidator<T1, T2, T3>.ValidateSection(System.String, T1, T2, T3)
+  fullName.vb: Validator.ISectionedValidator(Of T1, T2, T3).ValidateSection(System.String, T1, T2, T3)
+  nameWithType: ISectionedValidator<T1, T2, T3>.ValidateSection(String, T1, T2, T3)
+  nameWithType.vb: ISectionedValidator(Of T1, T2, T3).ValidateSection(String, T1, T2, T3)
+- uid: Validator.ISectionedValidator`3.ValidateSection*
+  name: ValidateSection
+  href: api/Validator.ISectionedValidator-3.html#Validator_ISectionedValidator_3_ValidateSection_
+  commentId: Overload:Validator.ISectionedValidator`3.ValidateSection
+  isSpec: "True"
+  fullName: Validator.ISectionedValidator<T1, T2, T3>.ValidateSection
+  fullName.vb: Validator.ISectionedValidator(Of T1, T2, T3).ValidateSection
+  nameWithType: ISectionedValidator<T1, T2, T3>.ValidateSection
+  nameWithType.vb: ISectionedValidator(Of T1, T2, T3).ValidateSection
+- uid: Validator.IValidator`1
+  name: IValidator<T>
+  href: api/Validator.IValidator-1.html
+  commentId: T:Validator.IValidator`1
+  name.vb: IValidator(Of T)
+  fullName: Validator.IValidator<T>
+  fullName.vb: Validator.IValidator(Of T)
+  nameWithType: IValidator<T>
+  nameWithType.vb: IValidator(Of T)
+- uid: Validator.IValidator`1.Validate(`0)
+  name: Validate(T)
+  href: api/Validator.IValidator-1.html#Validator_IValidator_1_Validate__0_
+  commentId: M:Validator.IValidator`1.Validate(`0)
+  fullName: Validator.IValidator<T>.Validate(T)
+  fullName.vb: Validator.IValidator(Of T).Validate(T)
+  nameWithType: IValidator<T>.Validate(T)
+  nameWithType.vb: IValidator(Of T).Validate(T)
+- uid: Validator.IValidator`1.Validate*
+  name: Validate
+  href: api/Validator.IValidator-1.html#Validator_IValidator_1_Validate_
+  commentId: Overload:Validator.IValidator`1.Validate
+  isSpec: "True"
+  fullName: Validator.IValidator<T>.Validate
+  fullName.vb: Validator.IValidator(Of T).Validate
+  nameWithType: IValidator<T>.Validate
+  nameWithType.vb: IValidator(Of T).Validate
+- uid: Validator.IValidator`2
+  name: IValidator<T1, T2>
+  href: api/Validator.IValidator-2.html
+  commentId: T:Validator.IValidator`2
+  name.vb: IValidator(Of T1, T2)
+  fullName: Validator.IValidator<T1, T2>
+  fullName.vb: Validator.IValidator(Of T1, T2)
+  nameWithType: IValidator<T1, T2>
+  nameWithType.vb: IValidator(Of T1, T2)
+- uid: Validator.IValidator`2.Validate(`0,`1)
+  name: Validate(T1, T2)
+  href: api/Validator.IValidator-2.html#Validator_IValidator_2_Validate__0__1_
+  commentId: M:Validator.IValidator`2.Validate(`0,`1)
+  fullName: Validator.IValidator<T1, T2>.Validate(T1, T2)
+  fullName.vb: Validator.IValidator(Of T1, T2).Validate(T1, T2)
+  nameWithType: IValidator<T1, T2>.Validate(T1, T2)
+  nameWithType.vb: IValidator(Of T1, T2).Validate(T1, T2)
+- uid: Validator.IValidator`2.Validate*
+  name: Validate
+  href: api/Validator.IValidator-2.html#Validator_IValidator_2_Validate_
+  commentId: Overload:Validator.IValidator`2.Validate
+  isSpec: "True"
+  fullName: Validator.IValidator<T1, T2>.Validate
+  fullName.vb: Validator.IValidator(Of T1, T2).Validate
+  nameWithType: IValidator<T1, T2>.Validate
+  nameWithType.vb: IValidator(Of T1, T2).Validate
+- uid: Validator.IValidator`3
+  name: IValidator<T1, T2, T3>
+  href: api/Validator.IValidator-3.html
+  commentId: T:Validator.IValidator`3
+  name.vb: IValidator(Of T1, T2, T3)
+  fullName: Validator.IValidator<T1, T2, T3>
+  fullName.vb: Validator.IValidator(Of T1, T2, T3)
+  nameWithType: IValidator<T1, T2, T3>
+  nameWithType.vb: IValidator(Of T1, T2, T3)
+- uid: Validator.IValidator`3.Validate(`0,`1,`2)
+  name: Validate(T1, T2, T3)
+  href: api/Validator.IValidator-3.html#Validator_IValidator_3_Validate__0__1__2_
+  commentId: M:Validator.IValidator`3.Validate(`0,`1,`2)
+  fullName: Validator.IValidator<T1, T2, T3>.Validate(T1, T2, T3)
+  fullName.vb: Validator.IValidator(Of T1, T2, T3).Validate(T1, T2, T3)
+  nameWithType: IValidator<T1, T2, T3>.Validate(T1, T2, T3)
+  nameWithType.vb: IValidator(Of T1, T2, T3).Validate(T1, T2, T3)
+- uid: Validator.IValidator`3.Validate*
+  name: Validate
+  href: api/Validator.IValidator-3.html#Validator_IValidator_3_Validate_
+  commentId: Overload:Validator.IValidator`3.Validate
+  isSpec: "True"
+  fullName: Validator.IValidator<T1, T2, T3>.Validate
+  fullName.vb: Validator.IValidator(Of T1, T2, T3).Validate
+  nameWithType: IValidator<T1, T2, T3>.Validate
+  nameWithType.vb: IValidator(Of T1, T2, T3).Validate
+- uid: Validator.IValidator`4
+  name: IValidator<T1, T2, T3, T4>
+  href: api/Validator.IValidator-4.html
+  commentId: T:Validator.IValidator`4
+  name.vb: IValidator(Of T1, T2, T3, T4)
+  fullName: Validator.IValidator<T1, T2, T3, T4>
+  fullName.vb: Validator.IValidator(Of T1, T2, T3, T4)
+  nameWithType: IValidator<T1, T2, T3, T4>
+  nameWithType.vb: IValidator(Of T1, T2, T3, T4)
+- uid: Validator.IValidator`4.Validate(`0,`1,`2,`3)
+  name: Validate(T1, T2, T3, T4)
+  href: api/Validator.IValidator-4.html#Validator_IValidator_4_Validate__0__1__2__3_
+  commentId: M:Validator.IValidator`4.Validate(`0,`1,`2,`3)
+  fullName: Validator.IValidator<T1, T2, T3, T4>.Validate(T1, T2, T3, T4)
+  fullName.vb: Validator.IValidator(Of T1, T2, T3, T4).Validate(T1, T2, T3, T4)
+  nameWithType: IValidator<T1, T2, T3, T4>.Validate(T1, T2, T3, T4)
+  nameWithType.vb: IValidator(Of T1, T2, T3, T4).Validate(T1, T2, T3, T4)
+- uid: Validator.IValidator`4.Validate*
+  name: Validate
+  href: api/Validator.IValidator-4.html#Validator_IValidator_4_Validate_
+  commentId: Overload:Validator.IValidator`4.Validate
+  isSpec: "True"
+  fullName: Validator.IValidator<T1, T2, T3, T4>.Validate
+  fullName.vb: Validator.IValidator(Of T1, T2, T3, T4).Validate
+  nameWithType: IValidator<T1, T2, T3, T4>.Validate
+  nameWithType.vb: IValidator(Of T1, T2, T3, T4).Validate
+- uid: Validator.SectionedValidator`1
+  name: SectionedValidator<T>
+  href: api/Validator.SectionedValidator-1.html
+  commentId: T:Validator.SectionedValidator`1
+  name.vb: SectionedValidator(Of T)
+  fullName: Validator.SectionedValidator<T>
+  fullName.vb: Validator.SectionedValidator(Of T)
+  nameWithType: SectionedValidator<T>
+  nameWithType.vb: SectionedValidator(Of T)
+- uid: Validator.SectionedValidator`1.Section(System.String,System.Action{`0})
+  name: Section(String, Action<T>)
+  href: api/Validator.SectionedValidator-1.html#Validator_SectionedValidator_1_Section_System_String_System_Action__0__
+  commentId: M:Validator.SectionedValidator`1.Section(System.String,System.Action{`0})
+  name.vb: Section(String, Action(Of T))
+  fullName: Validator.SectionedValidator<T>.Section(System.String, System.Action<T>)
+  fullName.vb: Validator.SectionedValidator(Of T).Section(System.String, System.Action(Of T))
+  nameWithType: SectionedValidator<T>.Section(String, Action<T>)
+  nameWithType.vb: SectionedValidator(Of T).Section(String, Action(Of T))
+- uid: Validator.SectionedValidator`1.Section*
+  name: Section
+  href: api/Validator.SectionedValidator-1.html#Validator_SectionedValidator_1_Section_
+  commentId: Overload:Validator.SectionedValidator`1.Section
+  isSpec: "True"
+  fullName: Validator.SectionedValidator<T>.Section
+  fullName.vb: Validator.SectionedValidator(Of T).Section
+  nameWithType: SectionedValidator<T>.Section
+  nameWithType.vb: SectionedValidator(Of T).Section
+- uid: Validator.SectionedValidator`1.Validate(`0)
+  name: Validate(T)
+  href: api/Validator.SectionedValidator-1.html#Validator_SectionedValidator_1_Validate__0_
+  commentId: M:Validator.SectionedValidator`1.Validate(`0)
+  fullName: Validator.SectionedValidator<T>.Validate(T)
+  fullName.vb: Validator.SectionedValidator(Of T).Validate(T)
+  nameWithType: SectionedValidator<T>.Validate(T)
+  nameWithType.vb: SectionedValidator(Of T).Validate(T)
+- uid: Validator.SectionedValidator`1.Validate*
+  name: Validate
+  href: api/Validator.SectionedValidator-1.html#Validator_SectionedValidator_1_Validate_
+  commentId: Overload:Validator.SectionedValidator`1.Validate
+  isSpec: "True"
+  fullName: Validator.SectionedValidator<T>.Validate
+  fullName.vb: Validator.SectionedValidator(Of T).Validate
+  nameWithType: SectionedValidator<T>.Validate
+  nameWithType.vb: SectionedValidator(Of T).Validate
+- uid: Validator.SectionedValidator`1.ValidateSection(System.String,`0)
+  name: ValidateSection(String, T)
+  href: api/Validator.SectionedValidator-1.html#Validator_SectionedValidator_1_ValidateSection_System_String__0_
+  commentId: M:Validator.SectionedValidator`1.ValidateSection(System.String,`0)
+  fullName: Validator.SectionedValidator<T>.ValidateSection(System.String, T)
+  fullName.vb: Validator.SectionedValidator(Of T).ValidateSection(System.String, T)
+  nameWithType: SectionedValidator<T>.ValidateSection(String, T)
+  nameWithType.vb: SectionedValidator(Of T).ValidateSection(String, T)
+- uid: Validator.SectionedValidator`1.ValidateSection*
+  name: ValidateSection
+  href: api/Validator.SectionedValidator-1.html#Validator_SectionedValidator_1_ValidateSection_
+  commentId: Overload:Validator.SectionedValidator`1.ValidateSection
+  isSpec: "True"
+  fullName: Validator.SectionedValidator<T>.ValidateSection
+  fullName.vb: Validator.SectionedValidator(Of T).ValidateSection
+  nameWithType: SectionedValidator<T>.ValidateSection
+  nameWithType.vb: SectionedValidator(Of T).ValidateSection
+- uid: Validator.SectionedValidator`2
+  name: SectionedValidator<T1, T2>
+  href: api/Validator.SectionedValidator-2.html
+  commentId: T:Validator.SectionedValidator`2
+  name.vb: SectionedValidator(Of T1, T2)
+  fullName: Validator.SectionedValidator<T1, T2>
+  fullName.vb: Validator.SectionedValidator(Of T1, T2)
+  nameWithType: SectionedValidator<T1, T2>
+  nameWithType.vb: SectionedValidator(Of T1, T2)
+- uid: Validator.SectionedValidator`2.Section(System.String,System.Action{`0,`1})
+  name: Section(String, Action<T1, T2>)
+  href: api/Validator.SectionedValidator-2.html#Validator_SectionedValidator_2_Section_System_String_System_Action__0__1__
+  commentId: M:Validator.SectionedValidator`2.Section(System.String,System.Action{`0,`1})
+  name.vb: Section(String, Action(Of T1, T2))
+  fullName: Validator.SectionedValidator<T1, T2>.Section(System.String, System.Action<T1, T2>)
+  fullName.vb: Validator.SectionedValidator(Of T1, T2).Section(System.String, System.Action(Of T1, T2))
+  nameWithType: SectionedValidator<T1, T2>.Section(String, Action<T1, T2>)
+  nameWithType.vb: SectionedValidator(Of T1, T2).Section(String, Action(Of T1, T2))
+- uid: Validator.SectionedValidator`2.Section*
+  name: Section
+  href: api/Validator.SectionedValidator-2.html#Validator_SectionedValidator_2_Section_
+  commentId: Overload:Validator.SectionedValidator`2.Section
+  isSpec: "True"
+  fullName: Validator.SectionedValidator<T1, T2>.Section
+  fullName.vb: Validator.SectionedValidator(Of T1, T2).Section
+  nameWithType: SectionedValidator<T1, T2>.Section
+  nameWithType.vb: SectionedValidator(Of T1, T2).Section
+- uid: Validator.SectionedValidator`2.Validate(`0,`1)
+  name: Validate(T1, T2)
+  href: api/Validator.SectionedValidator-2.html#Validator_SectionedValidator_2_Validate__0__1_
+  commentId: M:Validator.SectionedValidator`2.Validate(`0,`1)
+  fullName: Validator.SectionedValidator<T1, T2>.Validate(T1, T2)
+  fullName.vb: Validator.SectionedValidator(Of T1, T2).Validate(T1, T2)
+  nameWithType: SectionedValidator<T1, T2>.Validate(T1, T2)
+  nameWithType.vb: SectionedValidator(Of T1, T2).Validate(T1, T2)
+- uid: Validator.SectionedValidator`2.Validate*
+  name: Validate
+  href: api/Validator.SectionedValidator-2.html#Validator_SectionedValidator_2_Validate_
+  commentId: Overload:Validator.SectionedValidator`2.Validate
+  isSpec: "True"
+  fullName: Validator.SectionedValidator<T1, T2>.Validate
+  fullName.vb: Validator.SectionedValidator(Of T1, T2).Validate
+  nameWithType: SectionedValidator<T1, T2>.Validate
+  nameWithType.vb: SectionedValidator(Of T1, T2).Validate
+- uid: Validator.SectionedValidator`2.ValidateSection(System.String,`0,`1)
+  name: ValidateSection(String, T1, T2)
+  href: api/Validator.SectionedValidator-2.html#Validator_SectionedValidator_2_ValidateSection_System_String__0__1_
+  commentId: M:Validator.SectionedValidator`2.ValidateSection(System.String,`0,`1)
+  fullName: Validator.SectionedValidator<T1, T2>.ValidateSection(System.String, T1, T2)
+  fullName.vb: Validator.SectionedValidator(Of T1, T2).ValidateSection(System.String, T1, T2)
+  nameWithType: SectionedValidator<T1, T2>.ValidateSection(String, T1, T2)
+  nameWithType.vb: SectionedValidator(Of T1, T2).ValidateSection(String, T1, T2)
+- uid: Validator.SectionedValidator`2.ValidateSection*
+  name: ValidateSection
+  href: api/Validator.SectionedValidator-2.html#Validator_SectionedValidator_2_ValidateSection_
+  commentId: Overload:Validator.SectionedValidator`2.ValidateSection
+  isSpec: "True"
+  fullName: Validator.SectionedValidator<T1, T2>.ValidateSection
+  fullName.vb: Validator.SectionedValidator(Of T1, T2).ValidateSection
+  nameWithType: SectionedValidator<T1, T2>.ValidateSection
+  nameWithType.vb: SectionedValidator(Of T1, T2).ValidateSection
+- uid: Validator.SimpleValidator`1
+  name: SimpleValidator<T>
+  href: api/Validator.SimpleValidator-1.html
+  commentId: T:Validator.SimpleValidator`1
+  name.vb: SimpleValidator(Of T)
+  fullName: Validator.SimpleValidator<T>
+  fullName.vb: Validator.SimpleValidator(Of T)
+  nameWithType: SimpleValidator<T>
+  nameWithType.vb: SimpleValidator(Of T)
+- uid: Validator.SimpleValidator`1.#ctor
+  name: SimpleValidator()
+  href: api/Validator.SimpleValidator-1.html#Validator_SimpleValidator_1__ctor
+  commentId: M:Validator.SimpleValidator`1.#ctor
+  fullName: Validator.SimpleValidator<T>.SimpleValidator()
+  fullName.vb: Validator.SimpleValidator(Of T).SimpleValidator()
+  nameWithType: SimpleValidator<T>.SimpleValidator()
+  nameWithType.vb: SimpleValidator(Of T).SimpleValidator()
+- uid: Validator.SimpleValidator`1.#ctor*
+  name: SimpleValidator
+  href: api/Validator.SimpleValidator-1.html#Validator_SimpleValidator_1__ctor_
+  commentId: Overload:Validator.SimpleValidator`1.#ctor
+  isSpec: "True"
+  fullName: Validator.SimpleValidator<T>.SimpleValidator
+  fullName.vb: Validator.SimpleValidator(Of T).SimpleValidator
+  nameWithType: SimpleValidator<T>.SimpleValidator
+  nameWithType.vb: SimpleValidator(Of T).SimpleValidator
+- uid: Validator.SimpleValidator`1.DoValidate(`0)
+  name: DoValidate(T)
+  href: api/Validator.SimpleValidator-1.html#Validator_SimpleValidator_1_DoValidate__0_
+  commentId: M:Validator.SimpleValidator`1.DoValidate(`0)
+  fullName: Validator.SimpleValidator<T>.DoValidate(T)
+  fullName.vb: Validator.SimpleValidator(Of T).DoValidate(T)
+  nameWithType: SimpleValidator<T>.DoValidate(T)
+  nameWithType.vb: SimpleValidator(Of T).DoValidate(T)
+- uid: Validator.SimpleValidator`1.DoValidate*
+  name: DoValidate
+  href: api/Validator.SimpleValidator-1.html#Validator_SimpleValidator_1_DoValidate_
+  commentId: Overload:Validator.SimpleValidator`1.DoValidate
+  isSpec: "True"
+  fullName: Validator.SimpleValidator<T>.DoValidate
+  fullName.vb: Validator.SimpleValidator(Of T).DoValidate
+  nameWithType: SimpleValidator<T>.DoValidate
+  nameWithType.vb: SimpleValidator(Of T).DoValidate
+- uid: Validator.SimpleValidator`1.Validate(`0)
+  name: Validate(T)
+  href: api/Validator.SimpleValidator-1.html#Validator_SimpleValidator_1_Validate__0_
+  commentId: M:Validator.SimpleValidator`1.Validate(`0)
+  fullName: Validator.SimpleValidator<T>.Validate(T)
+  fullName.vb: Validator.SimpleValidator(Of T).Validate(T)
+  nameWithType: SimpleValidator<T>.Validate(T)
+  nameWithType.vb: SimpleValidator(Of T).Validate(T)
+- uid: Validator.SimpleValidator`1.Validate*
+  name: Validate
+  href: api/Validator.SimpleValidator-1.html#Validator_SimpleValidator_1_Validate_
+  commentId: Overload:Validator.SimpleValidator`1.Validate
+  isSpec: "True"
+  fullName: Validator.SimpleValidator<T>.Validate
+  fullName.vb: Validator.SimpleValidator(Of T).Validate
+  nameWithType: SimpleValidator<T>.Validate
+  nameWithType.vb: SimpleValidator(Of T).Validate
+- uid: Validator.SimpleValidator`2
+  name: SimpleValidator<T1, T2>
+  href: api/Validator.SimpleValidator-2.html
+  commentId: T:Validator.SimpleValidator`2
+  name.vb: SimpleValidator(Of T1, T2)
+  fullName: Validator.SimpleValidator<T1, T2>
+  fullName.vb: Validator.SimpleValidator(Of T1, T2)
+  nameWithType: SimpleValidator<T1, T2>
+  nameWithType.vb: SimpleValidator(Of T1, T2)
+- uid: Validator.SimpleValidator`2.#ctor
+  name: SimpleValidator()
+  href: api/Validator.SimpleValidator-2.html#Validator_SimpleValidator_2__ctor
+  commentId: M:Validator.SimpleValidator`2.#ctor
+  fullName: Validator.SimpleValidator<T1, T2>.SimpleValidator()
+  fullName.vb: Validator.SimpleValidator(Of T1, T2).SimpleValidator()
+  nameWithType: SimpleValidator<T1, T2>.SimpleValidator()
+  nameWithType.vb: SimpleValidator(Of T1, T2).SimpleValidator()
+- uid: Validator.SimpleValidator`2.#ctor*
+  name: SimpleValidator
+  href: api/Validator.SimpleValidator-2.html#Validator_SimpleValidator_2__ctor_
+  commentId: Overload:Validator.SimpleValidator`2.#ctor
+  isSpec: "True"
+  fullName: Validator.SimpleValidator<T1, T2>.SimpleValidator
+  fullName.vb: Validator.SimpleValidator(Of T1, T2).SimpleValidator
+  nameWithType: SimpleValidator<T1, T2>.SimpleValidator
+  nameWithType.vb: SimpleValidator(Of T1, T2).SimpleValidator
+- uid: Validator.SimpleValidator`2.DoValidate(`0,`1)
+  name: DoValidate(T1, T2)
+  href: api/Validator.SimpleValidator-2.html#Validator_SimpleValidator_2_DoValidate__0__1_
+  commentId: M:Validator.SimpleValidator`2.DoValidate(`0,`1)
+  fullName: Validator.SimpleValidator<T1, T2>.DoValidate(T1, T2)
+  fullName.vb: Validator.SimpleValidator(Of T1, T2).DoValidate(T1, T2)
+  nameWithType: SimpleValidator<T1, T2>.DoValidate(T1, T2)
+  nameWithType.vb: SimpleValidator(Of T1, T2).DoValidate(T1, T2)
+- uid: Validator.SimpleValidator`2.DoValidate*
+  name: DoValidate
+  href: api/Validator.SimpleValidator-2.html#Validator_SimpleValidator_2_DoValidate_
+  commentId: Overload:Validator.SimpleValidator`2.DoValidate
+  isSpec: "True"
+  fullName: Validator.SimpleValidator<T1, T2>.DoValidate
+  fullName.vb: Validator.SimpleValidator(Of T1, T2).DoValidate
+  nameWithType: SimpleValidator<T1, T2>.DoValidate
+  nameWithType.vb: SimpleValidator(Of T1, T2).DoValidate
+- uid: Validator.SimpleValidator`2.Validate(`0,`1)
+  name: Validate(T1, T2)
+  href: api/Validator.SimpleValidator-2.html#Validator_SimpleValidator_2_Validate__0__1_
+  commentId: M:Validator.SimpleValidator`2.Validate(`0,`1)
+  fullName: Validator.SimpleValidator<T1, T2>.Validate(T1, T2)
+  fullName.vb: Validator.SimpleValidator(Of T1, T2).Validate(T1, T2)
+  nameWithType: SimpleValidator<T1, T2>.Validate(T1, T2)
+  nameWithType.vb: SimpleValidator(Of T1, T2).Validate(T1, T2)
+- uid: Validator.SimpleValidator`2.Validate*
+  name: Validate
+  href: api/Validator.SimpleValidator-2.html#Validator_SimpleValidator_2_Validate_
+  commentId: Overload:Validator.SimpleValidator`2.Validate
+  isSpec: "True"
+  fullName: Validator.SimpleValidator<T1, T2>.Validate
+  fullName.vb: Validator.SimpleValidator(Of T1, T2).Validate
+  nameWithType: SimpleValidator<T1, T2>.Validate
+  nameWithType.vb: SimpleValidator(Of T1, T2).Validate
+- uid: Validator.SimpleValidator`3
+  name: SimpleValidator<T1, T2, T3>
+  href: api/Validator.SimpleValidator-3.html
+  commentId: T:Validator.SimpleValidator`3
+  name.vb: SimpleValidator(Of T1, T2, T3)
+  fullName: Validator.SimpleValidator<T1, T2, T3>
+  fullName.vb: Validator.SimpleValidator(Of T1, T2, T3)
+  nameWithType: SimpleValidator<T1, T2, T3>
+  nameWithType.vb: SimpleValidator(Of T1, T2, T3)
+- uid: Validator.SimpleValidator`3.#ctor
+  name: SimpleValidator()
+  href: api/Validator.SimpleValidator-3.html#Validator_SimpleValidator_3__ctor
+  commentId: M:Validator.SimpleValidator`3.#ctor
+  fullName: Validator.SimpleValidator<T1, T2, T3>.SimpleValidator()
+  fullName.vb: Validator.SimpleValidator(Of T1, T2, T3).SimpleValidator()
+  nameWithType: SimpleValidator<T1, T2, T3>.SimpleValidator()
+  nameWithType.vb: SimpleValidator(Of T1, T2, T3).SimpleValidator()
+- uid: Validator.SimpleValidator`3.#ctor*
+  name: SimpleValidator
+  href: api/Validator.SimpleValidator-3.html#Validator_SimpleValidator_3__ctor_
+  commentId: Overload:Validator.SimpleValidator`3.#ctor
+  isSpec: "True"
+  fullName: Validator.SimpleValidator<T1, T2, T3>.SimpleValidator
+  fullName.vb: Validator.SimpleValidator(Of T1, T2, T3).SimpleValidator
+  nameWithType: SimpleValidator<T1, T2, T3>.SimpleValidator
+  nameWithType.vb: SimpleValidator(Of T1, T2, T3).SimpleValidator
+- uid: Validator.SimpleValidator`3.DoValidate(`0,`1,`2)
+  name: DoValidate(T1, T2, T3)
+  href: api/Validator.SimpleValidator-3.html#Validator_SimpleValidator_3_DoValidate__0__1__2_
+  commentId: M:Validator.SimpleValidator`3.DoValidate(`0,`1,`2)
+  fullName: Validator.SimpleValidator<T1, T2, T3>.DoValidate(T1, T2, T3)
+  fullName.vb: Validator.SimpleValidator(Of T1, T2, T3).DoValidate(T1, T2, T3)
+  nameWithType: SimpleValidator<T1, T2, T3>.DoValidate(T1, T2, T3)
+  nameWithType.vb: SimpleValidator(Of T1, T2, T3).DoValidate(T1, T2, T3)
+- uid: Validator.SimpleValidator`3.DoValidate*
+  name: DoValidate
+  href: api/Validator.SimpleValidator-3.html#Validator_SimpleValidator_3_DoValidate_
+  commentId: Overload:Validator.SimpleValidator`3.DoValidate
+  isSpec: "True"
+  fullName: Validator.SimpleValidator<T1, T2, T3>.DoValidate
+  fullName.vb: Validator.SimpleValidator(Of T1, T2, T3).DoValidate
+  nameWithType: SimpleValidator<T1, T2, T3>.DoValidate
+  nameWithType.vb: SimpleValidator(Of T1, T2, T3).DoValidate
+- uid: Validator.SimpleValidator`3.Validate(`0,`1,`2)
+  name: Validate(T1, T2, T3)
+  href: api/Validator.SimpleValidator-3.html#Validator_SimpleValidator_3_Validate__0__1__2_
+  commentId: M:Validator.SimpleValidator`3.Validate(`0,`1,`2)
+  fullName: Validator.SimpleValidator<T1, T2, T3>.Validate(T1, T2, T3)
+  fullName.vb: Validator.SimpleValidator(Of T1, T2, T3).Validate(T1, T2, T3)
+  nameWithType: SimpleValidator<T1, T2, T3>.Validate(T1, T2, T3)
+  nameWithType.vb: SimpleValidator(Of T1, T2, T3).Validate(T1, T2, T3)
+- uid: Validator.SimpleValidator`3.Validate*
+  name: Validate
+  href: api/Validator.SimpleValidator-3.html#Validator_SimpleValidator_3_Validate_
+  commentId: Overload:Validator.SimpleValidator`3.Validate
+  isSpec: "True"
+  fullName: Validator.SimpleValidator<T1, T2, T3>.Validate
+  fullName.vb: Validator.SimpleValidator(Of T1, T2, T3).Validate
+  nameWithType: SimpleValidator<T1, T2, T3>.Validate
+  nameWithType.vb: SimpleValidator(Of T1, T2, T3).Validate
+- uid: Validator.ValidationInfoBase
+  name: ValidationInfoBase
+  href: api/Validator.ValidationInfoBase.html
+  commentId: T:Validator.ValidationInfoBase
+  fullName: Validator.ValidationInfoBase
+  nameWithType: ValidationInfoBase
+- uid: Validator.ValidationInfoBase.#ctor(System.Guid,System.String)
+  name: ValidationInfoBase(Guid, String)
+  href: api/Validator.ValidationInfoBase.html#Validator_ValidationInfoBase__ctor_System_Guid_System_String_
+  commentId: M:Validator.ValidationInfoBase.#ctor(System.Guid,System.String)
+  fullName: Validator.ValidationInfoBase.ValidationInfoBase(System.Guid, System.String)
+  nameWithType: ValidationInfoBase.ValidationInfoBase(Guid, String)
+- uid: Validator.ValidationInfoBase.#ctor(System.String,System.String)
+  name: ValidationInfoBase(String, String)
+  href: api/Validator.ValidationInfoBase.html#Validator_ValidationInfoBase__ctor_System_String_System_String_
+  commentId: M:Validator.ValidationInfoBase.#ctor(System.String,System.String)
+  fullName: Validator.ValidationInfoBase.ValidationInfoBase(System.String, System.String)
+  nameWithType: ValidationInfoBase.ValidationInfoBase(String, String)
+- uid: Validator.ValidationInfoBase.#ctor*
+  name: ValidationInfoBase
+  href: api/Validator.ValidationInfoBase.html#Validator_ValidationInfoBase__ctor_
+  commentId: Overload:Validator.ValidationInfoBase.#ctor
+  isSpec: "True"
+  fullName: Validator.ValidationInfoBase.ValidationInfoBase
+  nameWithType: ValidationInfoBase.ValidationInfoBase
+- uid: Validator.ValidationInfoBase.Guid
+  name: Guid
+  href: api/Validator.ValidationInfoBase.html#Validator_ValidationInfoBase_Guid
+  commentId: P:Validator.ValidationInfoBase.Guid
+  fullName: Validator.ValidationInfoBase.Guid
+  nameWithType: ValidationInfoBase.Guid
+- uid: Validator.ValidationInfoBase.Guid*
+  name: Guid
+  href: api/Validator.ValidationInfoBase.html#Validator_ValidationInfoBase_Guid_
+  commentId: Overload:Validator.ValidationInfoBase.Guid
+  isSpec: "True"
+  fullName: Validator.ValidationInfoBase.Guid
+  nameWithType: ValidationInfoBase.Guid
+- uid: Validator.ValidationInfoBase.Message
+  name: Message
+  href: api/Validator.ValidationInfoBase.html#Validator_ValidationInfoBase_Message
+  commentId: P:Validator.ValidationInfoBase.Message
+  fullName: Validator.ValidationInfoBase.Message
+  nameWithType: ValidationInfoBase.Message
+- uid: Validator.ValidationInfoBase.Message*
+  name: Message
+  href: api/Validator.ValidationInfoBase.html#Validator_ValidationInfoBase_Message_
+  commentId: Overload:Validator.ValidationInfoBase.Message
+  isSpec: "True"
+  fullName: Validator.ValidationInfoBase.Message
+  nameWithType: ValidationInfoBase.Message
+- uid: Validator.ValidationResult
+  name: ValidationResult
+  href: api/Validator.ValidationResult.html
+  commentId: T:Validator.ValidationResult
+  fullName: Validator.ValidationResult
+  nameWithType: ValidationResult
+- uid: Validator.ValidationResult.#ctor(System.Collections.Generic.IEnumerable{Validator.ValidationInfoBase},System.Collections.Generic.IEnumerable{Validator.ValidationInfoBase})
+  name: ValidationResult(IEnumerable<ValidationInfoBase>, IEnumerable<ValidationInfoBase>)
+  href: api/Validator.ValidationResult.html#Validator_ValidationResult__ctor_System_Collections_Generic_IEnumerable_Validator_ValidationInfoBase__System_Collections_Generic_IEnumerable_Validator_ValidationInfoBase__
+  commentId: M:Validator.ValidationResult.#ctor(System.Collections.Generic.IEnumerable{Validator.ValidationInfoBase},System.Collections.Generic.IEnumerable{Validator.ValidationInfoBase})
+  name.vb: ValidationResult(IEnumerable(Of ValidationInfoBase), IEnumerable(Of ValidationInfoBase))
+  fullName: Validator.ValidationResult.ValidationResult(System.Collections.Generic.IEnumerable<Validator.ValidationInfoBase>, System.Collections.Generic.IEnumerable<Validator.ValidationInfoBase>)
+  fullName.vb: Validator.ValidationResult.ValidationResult(System.Collections.Generic.IEnumerable(Of Validator.ValidationInfoBase), System.Collections.Generic.IEnumerable(Of Validator.ValidationInfoBase))
+  nameWithType: ValidationResult.ValidationResult(IEnumerable<ValidationInfoBase>, IEnumerable<ValidationInfoBase>)
+  nameWithType.vb: ValidationResult.ValidationResult(IEnumerable(Of ValidationInfoBase), IEnumerable(Of ValidationInfoBase))
+- uid: Validator.ValidationResult.#ctor*
+  name: ValidationResult
+  href: api/Validator.ValidationResult.html#Validator_ValidationResult__ctor_
+  commentId: Overload:Validator.ValidationResult.#ctor
+  isSpec: "True"
+  fullName: Validator.ValidationResult.ValidationResult
+  nameWithType: ValidationResult.ValidationResult
+- uid: Validator.ValidationResult.Fails
+  name: Fails
+  href: api/Validator.ValidationResult.html#Validator_ValidationResult_Fails
+  commentId: P:Validator.ValidationResult.Fails
+  fullName: Validator.ValidationResult.Fails
+  nameWithType: ValidationResult.Fails
+- uid: Validator.ValidationResult.Fails*
+  name: Fails
+  href: api/Validator.ValidationResult.html#Validator_ValidationResult_Fails_
+  commentId: Overload:Validator.ValidationResult.Fails
+  isSpec: "True"
+  fullName: Validator.ValidationResult.Fails
+  nameWithType: ValidationResult.Fails
+- uid: Validator.ValidationResult.IsValid
+  name: IsValid
+  href: api/Validator.ValidationResult.html#Validator_ValidationResult_IsValid
+  commentId: P:Validator.ValidationResult.IsValid
+  fullName: Validator.ValidationResult.IsValid
+  nameWithType: ValidationResult.IsValid
+- uid: Validator.ValidationResult.IsValid*
+  name: IsValid
+  href: api/Validator.ValidationResult.html#Validator_ValidationResult_IsValid_
+  commentId: Overload:Validator.ValidationResult.IsValid
+  isSpec: "True"
+  fullName: Validator.ValidationResult.IsValid
+  nameWithType: ValidationResult.IsValid
+- uid: Validator.ValidationResult.Passes
+  name: Passes
+  href: api/Validator.ValidationResult.html#Validator_ValidationResult_Passes
+  commentId: P:Validator.ValidationResult.Passes
+  fullName: Validator.ValidationResult.Passes
+  nameWithType: ValidationResult.Passes
+- uid: Validator.ValidationResult.Passes*
+  name: Passes
+  href: api/Validator.ValidationResult.html#Validator_ValidationResult_Passes_
+  commentId: Overload:Validator.ValidationResult.Passes
+  isSpec: "True"
+  fullName: Validator.ValidationResult.Passes
+  nameWithType: ValidationResult.Passes
+- uid: Validator.Validator
+  name: Validator
+  href: api/Validator.Validator.html
+  commentId: T:Validator.Validator
+  fullName: Validator.Validator
+  nameWithType: Validator
+- uid: Validator.Validator.Complete(System.Nullable{Validator.Assume})
+  name: Complete(Nullable<Assume>)
+  href: api/Validator.Validator.html#Validator_Validator_Complete_System_Nullable_Validator_Assume__
+  commentId: M:Validator.Validator.Complete(System.Nullable{Validator.Assume})
+  name.vb: Complete(Nullable(Of Assume))
+  fullName: Validator.Validator.Complete(System.Nullable<Validator.Assume>)
+  fullName.vb: Validator.Validator.Complete(System.Nullable(Of Validator.Assume))
+  nameWithType: Validator.Complete(Nullable<Assume>)
+  nameWithType.vb: Validator.Complete(Nullable(Of Assume))
+- uid: Validator.Validator.Complete*
+  name: Complete
+  href: api/Validator.Validator.html#Validator_Validator_Complete_
+  commentId: Overload:Validator.Validator.Complete
+  isSpec: "True"
+  fullName: Validator.Validator.Complete
+  nameWithType: Validator.Complete
+- uid: Validator.Validator.Fail
+  name: Fail()
+  href: api/Validator.Validator.html#Validator_Validator_Fail
+  commentId: M:Validator.Validator.Fail
+  fullName: Validator.Validator.Fail()
+  nameWithType: Validator.Fail()
+- uid: Validator.Validator.Fail*
+  name: Fail
+  href: api/Validator.Validator.html#Validator_Validator_Fail_
+  commentId: Overload:Validator.Validator.Fail
+  isSpec: "True"
+  fullName: Validator.Validator.Fail
+  nameWithType: Validator.Fail
+- uid: Validator.Validator.Failed(System.String)
+  name: Failed(String)
+  href: api/Validator.Validator.html#Validator_Validator_Failed_System_String_
+  commentId: M:Validator.Validator.Failed(System.String)
+  fullName: Validator.Validator.Failed(System.String)
+  nameWithType: Validator.Failed(String)
+- uid: Validator.Validator.Failed*
+  name: Failed
+  href: api/Validator.Validator.html#Validator_Validator_Failed_
+  commentId: Overload:Validator.Validator.Failed
+  isSpec: "True"
+  fullName: Validator.Validator.Failed
+  nameWithType: Validator.Failed
+- uid: Validator.Validator.Pass
+  name: Pass()
+  href: api/Validator.Validator.html#Validator_Validator_Pass
+  commentId: M:Validator.Validator.Pass
+  fullName: Validator.Validator.Pass()
+  nameWithType: Validator.Pass()
+- uid: Validator.Validator.Pass*
+  name: Pass
+  href: api/Validator.Validator.html#Validator_Validator_Pass_
+  commentId: Overload:Validator.Validator.Pass
+  isSpec: "True"
+  fullName: Validator.Validator.Pass
+  nameWithType: Validator.Pass
+- uid: Validator.Validator.Passed(System.String)
+  name: Passed(String)
+  href: api/Validator.Validator.html#Validator_Validator_Passed_System_String_
+  commentId: M:Validator.Validator.Passed(System.String)
+  fullName: Validator.Validator.Passed(System.String)
+  nameWithType: Validator.Passed(String)
+- uid: Validator.Validator.Passed*
+  name: Passed
+  href: api/Validator.Validator.html#Validator_Validator_Passed_
+  commentId: Overload:Validator.Validator.Passed
+  isSpec: "True"
+  fullName: Validator.Validator.Passed
+  nameWithType: Validator.Passed
+- uid: Validator.Validator.Reset
+  name: Reset()
+  href: api/Validator.Validator.html#Validator_Validator_Reset
+  commentId: M:Validator.Validator.Reset
+  fullName: Validator.Validator.Reset()
+  nameWithType: Validator.Reset()
+- uid: Validator.Validator.Reset*
+  name: Reset
+  href: api/Validator.Validator.html#Validator_Validator_Reset_
+  commentId: Overload:Validator.Validator.Reset
+  isSpec: "True"
+  fullName: Validator.Validator.Reset
+  nameWithType: Validator.Reset
+- uid: Validator.Validator.RunValidator*
+  name: RunValidator
+  href: api/Validator.Validator.html#Validator_Validator_RunValidator_
+  commentId: Overload:Validator.Validator.RunValidator
+  isSpec: "True"
+  fullName: Validator.Validator.RunValidator
+  nameWithType: Validator.RunValidator
+- uid: Validator.Validator.RunValidator``1(Validator.IValidator{``0},``0)
+  name: RunValidator<T>(IValidator<T>, T)
+  href: api/Validator.Validator.html#Validator_Validator_RunValidator__1_Validator_IValidator___0____0_
+  commentId: M:Validator.Validator.RunValidator``1(Validator.IValidator{``0},``0)
+  name.vb: RunValidator(Of T)(IValidator(Of T), T)
+  fullName: Validator.Validator.RunValidator<T>(Validator.IValidator<T>, T)
+  fullName.vb: Validator.Validator.RunValidator(Of T)(Validator.IValidator(Of T), T)
+  nameWithType: Validator.RunValidator<T>(IValidator<T>, T)
+  nameWithType.vb: Validator.RunValidator(Of T)(IValidator(Of T), T)
+- uid: Validator.Validator.RunValidator``2(Validator.IValidator{``0,``1},``0,``1)
+  name: RunValidator<T1, T2>(IValidator<T1, T2>, T1, T2)
+  href: api/Validator.Validator.html#Validator_Validator_RunValidator__2_Validator_IValidator___0___1____0___1_
+  commentId: M:Validator.Validator.RunValidator``2(Validator.IValidator{``0,``1},``0,``1)
+  name.vb: RunValidator(Of T1, T2)(IValidator(Of T1, T2), T1, T2)
+  fullName: Validator.Validator.RunValidator<T1, T2>(Validator.IValidator<T1, T2>, T1, T2)
+  fullName.vb: Validator.Validator.RunValidator(Of T1, T2)(Validator.IValidator(Of T1, T2), T1, T2)
+  nameWithType: Validator.RunValidator<T1, T2>(IValidator<T1, T2>, T1, T2)
+  nameWithType.vb: Validator.RunValidator(Of T1, T2)(IValidator(Of T1, T2), T1, T2)
+- uid: Validator.Validator.RunValidator``3(Validator.IValidator{``0,``1,``2},``0,``1,``2)
+  name: RunValidator<T1, T2, T3>(IValidator<T1, T2, T3>, T1, T2, T3)
+  href: api/Validator.Validator.html#Validator_Validator_RunValidator__3_Validator_IValidator___0___1___2____0___1___2_
+  commentId: M:Validator.Validator.RunValidator``3(Validator.IValidator{``0,``1,``2},``0,``1,``2)
+  name.vb: RunValidator(Of T1, T2, T3)(IValidator(Of T1, T2, T3), T1, T2, T3)
+  fullName: Validator.Validator.RunValidator<T1, T2, T3>(Validator.IValidator<T1, T2, T3>, T1, T2, T3)
+  fullName.vb: Validator.Validator.RunValidator(Of T1, T2, T3)(Validator.IValidator(Of T1, T2, T3), T1, T2, T3)
+  nameWithType: Validator.RunValidator<T1, T2, T3>(IValidator<T1, T2, T3>, T1, T2, T3)
+  nameWithType.vb: Validator.RunValidator(Of T1, T2, T3)(IValidator(Of T1, T2, T3), T1, T2, T3)
+- uid: Validator.Validator.RunValidator``4(Validator.IValidator{``0,``1,``2,``3},``0,``1,``2,``3)
+  name: RunValidator<T1, T2, T3, T4>(IValidator<T1, T2, T3, T4>, T1, T2, T3, T4)
+  href: api/Validator.Validator.html#Validator_Validator_RunValidator__4_Validator_IValidator___0___1___2___3____0___1___2___3_
+  commentId: M:Validator.Validator.RunValidator``4(Validator.IValidator{``0,``1,``2,``3},``0,``1,``2,``3)
+  name.vb: RunValidator(Of T1, T2, T3, T4)(IValidator(Of T1, T2, T3, T4), T1, T2, T3, T4)
+  fullName: Validator.Validator.RunValidator<T1, T2, T3, T4>(Validator.IValidator<T1, T2, T3, T4>, T1, T2, T3, T4)
+  fullName.vb: Validator.Validator.RunValidator(Of T1, T2, T3, T4)(Validator.IValidator(Of T1, T2, T3, T4), T1, T2, T3, T4)
+  nameWithType: Validator.RunValidator<T1, T2, T3, T4>(IValidator<T1, T2, T3, T4>, T1, T2, T3, T4)
+  nameWithType.vb: Validator.RunValidator(Of T1, T2, T3, T4)(IValidator(Of T1, T2, T3, T4), T1, T2, T3, T4)
+- uid: Validator.Validator.Start(Validator.ValidationInfoBase)
+  name: Start(ValidationInfoBase)
+  href: api/Validator.Validator.html#Validator_Validator_Start_Validator_ValidationInfoBase_
+  commentId: M:Validator.Validator.Start(Validator.ValidationInfoBase)
+  fullName: Validator.Validator.Start(Validator.ValidationInfoBase)
+  nameWithType: Validator.Start(ValidationInfoBase)
+- uid: Validator.Validator.Start*
+  name: Start
+  href: api/Validator.Validator.html#Validator_Validator_Start_
+  commentId: Overload:Validator.Validator.Start
+  isSpec: "True"
+  fullName: Validator.Validator.Start
+  nameWithType: Validator.Start
+- uid: Validator.Validator`1
+  name: Validator<T>
+  href: api/Validator.Validator-1.html
+  commentId: T:Validator.Validator`1
+  name.vb: Validator(Of T)
+  fullName: Validator.Validator<T>
+  fullName.vb: Validator.Validator(Of T)
+  nameWithType: Validator<T>
+  nameWithType.vb: Validator(Of T)
+- uid: Validator.Validator`1.#ctor
+  name: Validator()
+  href: api/Validator.Validator-1.html#Validator_Validator_1__ctor
+  commentId: M:Validator.Validator`1.#ctor
+  fullName: Validator.Validator<T>.Validator()
+  fullName.vb: Validator.Validator(Of T).Validator()
+  nameWithType: Validator<T>.Validator()
+  nameWithType.vb: Validator(Of T).Validator()
+- uid: Validator.Validator`1.#ctor*
+  name: Validator
+  href: api/Validator.Validator-1.html#Validator_Validator_1__ctor_
+  commentId: Overload:Validator.Validator`1.#ctor
+  isSpec: "True"
+  fullName: Validator.Validator<T>.Validator
+  fullName.vb: Validator.Validator(Of T).Validator
+  nameWithType: Validator<T>.Validator
+  nameWithType.vb: Validator(Of T).Validator
+- uid: Validator.Validator`1.Validate(`0)
+  name: Validate(T)
+  href: api/Validator.Validator-1.html#Validator_Validator_1_Validate__0_
+  commentId: M:Validator.Validator`1.Validate(`0)
+  fullName: Validator.Validator<T>.Validate(T)
+  fullName.vb: Validator.Validator(Of T).Validate(T)
+  nameWithType: Validator<T>.Validate(T)
+  nameWithType.vb: Validator(Of T).Validate(T)
+- uid: Validator.Validator`1.Validate*
+  name: Validate
+  href: api/Validator.Validator-1.html#Validator_Validator_1_Validate_
+  commentId: Overload:Validator.Validator`1.Validate
+  isSpec: "True"
+  fullName: Validator.Validator<T>.Validate
+  fullName.vb: Validator.Validator(Of T).Validate
+  nameWithType: Validator<T>.Validate
+  nameWithType.vb: Validator(Of T).Validate
+- uid: Validator.Validator`2
+  name: Validator<T1, T2>
+  href: api/Validator.Validator-2.html
+  commentId: T:Validator.Validator`2
+  name.vb: Validator(Of T1, T2)
+  fullName: Validator.Validator<T1, T2>
+  fullName.vb: Validator.Validator(Of T1, T2)
+  nameWithType: Validator<T1, T2>
+  nameWithType.vb: Validator(Of T1, T2)
+- uid: Validator.Validator`2.#ctor
+  name: Validator()
+  href: api/Validator.Validator-2.html#Validator_Validator_2__ctor
+  commentId: M:Validator.Validator`2.#ctor
+  fullName: Validator.Validator<T1, T2>.Validator()
+  fullName.vb: Validator.Validator(Of T1, T2).Validator()
+  nameWithType: Validator<T1, T2>.Validator()
+  nameWithType.vb: Validator(Of T1, T2).Validator()
+- uid: Validator.Validator`2.#ctor*
+  name: Validator
+  href: api/Validator.Validator-2.html#Validator_Validator_2__ctor_
+  commentId: Overload:Validator.Validator`2.#ctor
+  isSpec: "True"
+  fullName: Validator.Validator<T1, T2>.Validator
+  fullName.vb: Validator.Validator(Of T1, T2).Validator
+  nameWithType: Validator<T1, T2>.Validator
+  nameWithType.vb: Validator(Of T1, T2).Validator
+- uid: Validator.Validator`2.Validate(`0,`1)
+  name: Validate(T1, T2)
+  href: api/Validator.Validator-2.html#Validator_Validator_2_Validate__0__1_
+  commentId: M:Validator.Validator`2.Validate(`0,`1)
+  fullName: Validator.Validator<T1, T2>.Validate(T1, T2)
+  fullName.vb: Validator.Validator(Of T1, T2).Validate(T1, T2)
+  nameWithType: Validator<T1, T2>.Validate(T1, T2)
+  nameWithType.vb: Validator(Of T1, T2).Validate(T1, T2)
+- uid: Validator.Validator`2.Validate*
+  name: Validate
+  href: api/Validator.Validator-2.html#Validator_Validator_2_Validate_
+  commentId: Overload:Validator.Validator`2.Validate
+  isSpec: "True"
+  fullName: Validator.Validator<T1, T2>.Validate
+  fullName.vb: Validator.Validator(Of T1, T2).Validate
+  nameWithType: Validator<T1, T2>.Validate
+  nameWithType.vb: Validator(Of T1, T2).Validate
+- uid: Validator.Validator`3
+  name: Validator<T1, T2, T3>
+  href: api/Validator.Validator-3.html
+  commentId: T:Validator.Validator`3
+  name.vb: Validator(Of T1, T2, T3)
+  fullName: Validator.Validator<T1, T2, T3>
+  fullName.vb: Validator.Validator(Of T1, T2, T3)
+  nameWithType: Validator<T1, T2, T3>
+  nameWithType.vb: Validator(Of T1, T2, T3)
+- uid: Validator.Validator`3.#ctor
+  name: Validator()
+  href: api/Validator.Validator-3.html#Validator_Validator_3__ctor
+  commentId: M:Validator.Validator`3.#ctor
+  fullName: Validator.Validator<T1, T2, T3>.Validator()
+  fullName.vb: Validator.Validator(Of T1, T2, T3).Validator()
+  nameWithType: Validator<T1, T2, T3>.Validator()
+  nameWithType.vb: Validator(Of T1, T2, T3).Validator()
+- uid: Validator.Validator`3.#ctor*
+  name: Validator
+  href: api/Validator.Validator-3.html#Validator_Validator_3__ctor_
+  commentId: Overload:Validator.Validator`3.#ctor
+  isSpec: "True"
+  fullName: Validator.Validator<T1, T2, T3>.Validator
+  fullName.vb: Validator.Validator(Of T1, T2, T3).Validator
+  nameWithType: Validator<T1, T2, T3>.Validator
+  nameWithType.vb: Validator(Of T1, T2, T3).Validator
+- uid: Validator.Validator`3.Validate(`0,`1,`2)
+  name: Validate(T1, T2, T3)
+  href: api/Validator.Validator-3.html#Validator_Validator_3_Validate__0__1__2_
+  commentId: M:Validator.Validator`3.Validate(`0,`1,`2)
+  fullName: Validator.Validator<T1, T2, T3>.Validate(T1, T2, T3)
+  fullName.vb: Validator.Validator(Of T1, T2, T3).Validate(T1, T2, T3)
+  nameWithType: Validator<T1, T2, T3>.Validate(T1, T2, T3)
+  nameWithType.vb: Validator(Of T1, T2, T3).Validate(T1, T2, T3)
+- uid: Validator.Validator`3.Validate*
+  name: Validate
+  href: api/Validator.Validator-3.html#Validator_Validator_3_Validate_
+  commentId: Overload:Validator.Validator`3.Validate
+  isSpec: "True"
+  fullName: Validator.Validator<T1, T2, T3>.Validate
+  fullName.vb: Validator.Validator(Of T1, T2, T3).Validate
+  nameWithType: Validator<T1, T2, T3>.Validate
+  nameWithType.vb: Validator(Of T1, T2, T3).Validate
