@@ -1,6 +1,8 @@
 # FlexValidator
 A flexible validator made for C#.
 
+[API docs](https://didii.github.io/FlexValidator/)
+
 ## Why?
 
 I've recently been in a project that had a lot of very complex business rules.
