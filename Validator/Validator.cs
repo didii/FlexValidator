@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 using Validator.Exceptions;
 
 namespace Validator {
@@ -7,17 +8,17 @@ namespace Validator {
     /// </summary>
     /// <remarks>
     /// In it's simplest form, this is how the validation should be used.
-    /// <code><see cref="Start"/>(new <see cref="ValidationInfoBase"/>("guid", "Id must be positive"));
+    /// <code>Start(new ValidationInfoBase("guid", "Id must be positive"));
     /// if (obj.Id > 0) {
-    ///     <see cref="Pass"/>();
+    ///     Pass();
     /// else
-    ///     <see cref="Fail"/>();
-    /// <see cref="Complete"/>();</code>
+    ///     Fail();
+    /// Complete();</code>
     /// In words: Start every test with a single <see cref="Start"/> with information about the validation you want to do. Then write the
     /// validation logic and make sure this leads to a single call to <see cref="Pass"/> or <see cref="Fail"/>. Then complete the validation using
     /// <see cref="Complete"/>.
     /// </remarks>
-    public abstract class Validator : BaseValidator {
+    public abstract class Validator {
         private ValidationInfoBase _lastValidation;
 
         /// <summary>
@@ -194,32 +195,5 @@ namespace Validator {
         private void ResetValidation() {
             _lastValidation = null;
         }
-    }
-
-    public abstract class Validator<T> : Validator, IValidator<T> {
-        protected Validator() {
-            ValidatorFunc = objs => Validate((T)objs[0]);
-        }
-
-        /// <inheritdoc/>
-        public abstract ValidationResult Validate(T obj);
-    }
-
-    public abstract class Validator<T1, T2> : Validator, IValidator<T1, T2> {
-        protected Validator() {
-            ValidatorFunc = objs => Validate((T1)objs[0], (T2)objs[1]);
-        }
-
-        /// <inheritdoc/>
-        public abstract ValidationResult Validate(T1 obj1, T2 obj2);
-    }
-
-    public abstract class Validator<T1, T2, T3> : Validator, IValidator<T1, T2, T3> {
-        protected Validator() {
-            ValidatorFunc = objs => Validate((T1)objs[0], (T2)objs[1], (T3)objs[2]);
-        }
-
-        /// <inheritdoc/>
-        public abstract ValidationResult Validate(T1 obj1, T2 obj2, T3 obj3);
     }
 }

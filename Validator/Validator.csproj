@@ -51,7 +51,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assume.cs" />
-    <Compile Include="BaseValidator.cs" />
     <Compile Include="Exceptions\InvalidValidatorStateException.cs" />
     <Compile Include="Exceptions\ValidatorSectionNotFoundException.cs" />
     <Compile Include="ValidationInfoBase.cs" />
