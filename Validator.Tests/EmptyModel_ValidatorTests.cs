@@ -80,7 +80,7 @@ namespace Validator.Tests {
         public void AssumePass_ShouldAddTestToPasses() {
             TestResult(true, x => {
                 _sut.Start(new ValidationInfo(guid));
-                _sut.Complete(true);
+                _sut.Complete(Assume.Pass);
             });
         }
 
@@ -88,7 +88,7 @@ namespace Validator.Tests {
         public void AssumeFail_ShouldAddTestToFails() {
             TestResult(false, x => {
                 _sut.Start(new ValidationInfo(guid));
-                _sut.Complete(false);
+                _sut.Complete(Assume.Fail);
             });
         }
 
@@ -97,7 +97,7 @@ namespace Validator.Tests {
             TestResult(true, x => {
                 _sut.Start(new ValidationInfo(guid));
                 _sut.Pass();
-                _sut.Complete(false);
+                _sut.Complete(Assume.Fail);
             });
         }
 
@@ -106,7 +106,7 @@ namespace Validator.Tests {
             TestResult(false, x => {
                 _sut.Start(new ValidationInfo(guid));
                 _sut.Fail();
-                _sut.Complete(true);
+                _sut.Complete(Assume.Pass);
             });
         }
 

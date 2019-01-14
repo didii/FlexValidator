@@ -12,7 +12,7 @@ namespace Validator.Example.App.Validators {
             Start(new ValidationInfo("8d7af18b-1a13-4b7e-963d-68c6cd6636ca", "Date must be after 01-01-2000", "datetime"));
             if (model < new DateTime(2000, 1, 1))
                 Fail();
-            Complete(true);
+            Complete(Assume.Pass);
         }
     }
 }

@@ -19,7 +19,7 @@ namespace Validator.Example.App.Validators {
                 Start(new ValidationInfo("a6eb736f-6d7e-47dc-a5cf-4bc6cffe3a63", "Name must have a value", "sub"));
                 if (string.IsNullOrEmpty(x.Name))
                     Fail();
-                Complete(true);
+                Complete(Assume.Pass);
             });
 
             // Run a sub-validator
@@ -34,7 +34,7 @@ namespace Validator.Example.App.Validators {
             Start(new ValidationInfo("5ce91719-965a-425b-a7b3-2683ccaeedbd", "Date is mandatory when Allowed is selected", "sub"));
             if (model.Type == SubModelType.Allowed && model.DateTime == null)
                 Fail();
-            Complete(true);
+            Complete(Assume.Pass);
         }
     }
 }

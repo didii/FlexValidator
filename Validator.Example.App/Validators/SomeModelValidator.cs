@@ -45,26 +45,26 @@ namespace Validator.Example.App.Validators {
                 // Short-circuit here, if Name is null or empty, all other validations are moot
                 return;
             }
-            Complete(true);
+            Complete(Assume.Pass);
 
             // Rule: Name must be at least 2 characters in length
             Start(new ValidationInfo("a3839435-f869-431c-9877-f425d8e9ea2c", "Name must have at least 2 characters", "some"));
             if (model.Name.Length >= 2)
                 Pass();
-            Complete(false);
+            Complete(Assume.Fail);
 
             // Rule: Name must start with an alphabetical letter
             Start(new ValidationInfo("63df66cd-7138-4548-95b2-7fa6a1902ee6", "Name must start with an alphabetical letter", "some"));
             if (new Regex(@"^[a-zA-Z]").IsMatch(model.Name))
                 Pass();
-            Complete(false);
+            Complete(Assume.Fail);
 
             // Rule: When length of Name is long enough and does not contain alphabetical letters, Name cannot be the developers one
             if (Passed("a3839435-f869-431c-9877-f425d8e9ea2c") && Passed("63df66cd-7138-4548-95b2-7fa6a1902ee6")) {
                 Start(new ValidationInfo("cf214916-564c-4f98-a16f-9876f2343fbf", "Name cannot be didii", "some"));
                 if (model.Name == "didii")
                     Fail();
-                Complete(true);
+                Complete(Assume.Pass);
             }
         }
 
@@ -75,7 +75,7 @@ namespace Validator.Example.App.Validators {
                 Pass();
                 RunValidator(new SubModelValidator(), model.Sub);
             }
-            Complete(false);
+            Complete(Assume.Fail);
         }
 
         private void ValidateDouble(SomeModel model) {
@@ -83,13 +83,13 @@ namespace Validator.Example.App.Validators {
             Start(new ValidationInfo("8d0a0e11-c794-42bf-89e1-5e0969c3b59f", "Left cannot be null", "some"));
             if (model.DoubleLeft == null)
                 Fail();
-            Complete(true);
+            Complete(Assume.Pass);
 
             //Rule: DoubleRight cannot be null
             Start(new ValidationInfo("29c0672a-72db-4894-b250-bd40d054cc76", "Right cannot be null", "some"));
             if (model.DoubleRight == null)
                 Fail();
-            Complete(true);
+            Complete(Assume.Pass);
 
             //Rule: Run coupled validator if both are non-null
             if (Passed("8d0a0e11-c794-42bf-89e1-5e0969c3b59f") && Passed("29c0672a-72db-4894-b250-bd40d054cc76")) {

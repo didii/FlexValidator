@@ -25,7 +25,7 @@ namespace Validator.Example.App.Validators {
             if (model.Id == 0)
                 Fail();
             //Complete the validation where we set assumePass to true to assume the validation was passed if no Pass() or Fail() was encountered before
-            Complete(assumePass: true);
+            Complete(Assume.Pass);
         }
     }
 }

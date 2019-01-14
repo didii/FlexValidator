@@ -41,27 +41,33 @@ namespace Validator {
         }
 
         /// <summary>
-        /// Ends a single validation. Optionally provide <paramref name="assumePass"/> to auto-pass or fail the test if <see cref="Pass"/> or <see cref="Fail"/>
+        /// Ends a single validation. Optionally provide <paramref name="assume"/> to auto-pass or fail the test if <see cref="Pass"/> or <see cref="Fail"/>
         /// was not called.
         /// </summary>
-        /// <param name="assumePass">
-        /// True to assume the test to be passed if <see cref="Pass"/> or <see cref="Fail"/> was not called. False to assume the test to
-        /// be failed.
+        /// <param name="assume">
+        /// <see cref="Assume.Pass"/> to assume the test to pass or <see cref="Assume.Fail"/> to be failed.
         /// </param>
         /// <exception cref="InvalidValidatorStateException">
         /// Thrown when a validation was started, no <see cref="Pass"/> or <see cref="Fail"/> was called and no
-        /// <paramref name="assumePass"/> given.
+        /// <paramref name="assume"/> given.
         /// </exception>
-        protected internal void Complete(bool? assumePass = null) {
+        protected internal void Complete(Assume? assume = null) {
             if (_lastValidation == null) return;
 
-            if (assumePass == null)
+            if (assume == null)
                 throw new InvalidValidatorStateException(
                     "Cannot complete validation with CompleteValidation validation was not completed. Pass or Fail must be called before completion.");
-            if (assumePass.Value)
-                Pass();
-            else
-                Fail();
+
+            switch (assume) {
+                case Assume.Pass:
+                    Pass();
+                    break;
+                case Assume.Fail:
+                    Fail();
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(assume), assume, null);
+            }
             ResetValidation();
         }
 
@@ -148,16 +154,16 @@ namespace Validator {
             ValidatorFunc = objs => Validate((T)objs[0]);
         }
 
-        /// <inheritdoc />
+        /// <inheritdoc/>
         public abstract ValidationResult Validate(T obj);
     }
 
-    public abstract class Validator<T1, T2> : Validator{
+    public abstract class Validator<T1, T2> : Validator {
         protected Validator() {
             ValidatorFunc = objs => Validate((T1)objs[0], (T2)objs[1]);
         }
 
-        /// <inheritdoc />
+        /// <inheritdoc/>
         public abstract ValidationResult Validate(T1 obj1, T2 obj2);
     }
 
@@ -166,7 +172,7 @@ namespace Validator {
             ValidatorFunc = objs => Validate((T1)objs[0], (T2)objs[1], (T3)objs[2]);
         }
 
-        /// <inheritdoc />
+        /// <inheritdoc/>
         public abstract ValidationResult Validate(T1 obj1, T2 obj2, T3 obj3);
     }
 }

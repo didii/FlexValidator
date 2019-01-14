@@ -13,7 +13,7 @@ namespace Validator.Example.App.Validators {
             Start(new ValidationInfo("fa605148-f2d7-4671-8732-bb392c57ccc7", "SubType cannot be prohibited", "submodeltype"));
             if (model == SubModelType.Prohibited)
                 Fail();
-            Complete(true);
+            Complete(Assume.Pass);
         }
     }
 }
