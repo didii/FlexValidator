@@ -6,7 +6,7 @@
           "files": [
             "*.csproj"
           ],
-          "cwd": ".",
+          "cwd": "../Validator",
           "exclude": [
             "**/obj/**",
             "**/bin/**",
