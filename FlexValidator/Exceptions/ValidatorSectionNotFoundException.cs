@@ -1,7 +1,7 @@
 ﻿using System;
 
 namespace FlexValidator.Exceptions {
-    class ValidatorSectionNotFoundException : Exception {
+    public class ValidatorSectionNotFoundException : Exception {
         private static string CreateMessage(string sectionName) {
             return $"The section '{sectionName}' was not found in this sectioned validator";
         }
