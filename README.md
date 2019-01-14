@@ -31,7 +31,7 @@ Simply make a validator that inherits from `SimpleValidator` and specify (all) t
 
 ```csharp
 class SomeValidator : SimpleValidator<SomeModel> {
-    // Override this method 
+    // Override the DoValidate method 
     protected override void DoValidate(SomeModel model) {
         Start(new ValidationInfo("someGuid", "Name cannot be null"));
         if (model.Name == null)
@@ -166,3 +166,5 @@ It's ... complicated.
 
 * Async support
 * Custom `ValidationInfo` object in `Start`
+* Make lookups faster (used in `Passed` and `Failed`)
+  * The `List` should become a `Dictionary`
