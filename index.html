@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>This is the HOMEPAGE. </title>
+    <title>FlexValidator </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="This is the HOMEPAGE. ">
+    <meta name="title" content="FlexValidator ">
     <meta name="generator" content="docfx 2.40.7.0">
     
     <link rel="shortcut icon" href="favicon.ico">
@@ -60,13 +60,180 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="this-is-the-homepage">This is the <strong>HOMEPAGE</strong>.</h1>
+<h1 id="flexvalidator">FlexValidator</h1>
 
-<p>Refer to <a href="http://daringfireball.net/projects/markdown/">Markdown</a> for how to write markdown files.</p>
-<h2 id="quick-start-notes">Quick Start Notes:</h2>
-<ol>
-<li>Add images to <em>images</em> folder if the file is referencing an image.</li>
-</ol>
+<p>A flexible validator made for C#.</p>
+<h2 id="why">Why?</h2>
+<p>I&#39;ve recently been in a project that had a lot of very complex business rules.
+It was partly law-based and thus had rules with exceptions and exceptions and exceptions.
+We first started using <a href="https://github.com/JeremySkinner/FluentValidation">FluentValidator</a>,
+which - don&#39;t get me wrong - is a good framework,
+but is not suited for this kind of complex logic with numerous of properties.</p>
+<p>The problems we had was:</p>
+<ul>
+<li>Seperation of concerns (properties that depend on each other need to be in the top-level validator)</li>
+<li>Testability (we also need to know if a test was passed)</li>
+<li>Complex logic isn&#39;t readable anymore in the Fluent-style</li>
+<li>Validations based on multiple properties are weird to write</li>
+</ul>
+<p>So I came up with another way to write validations where you can simply make use of statements you know: <code>if</code>, <code>else</code>, <code>&amp;&amp;</code>.</p>
+<h2 id="how-to-use-it">How to use it?</h2>
+<p>There are 2 types of validators.</p>
+<h3 id="simplevalidator">SimpleValidator</h3>
+<p>To be used for simple validations where you can test the whole model through.
+You don&#39;t need seperate <em>sections</em> to seperate logic for testing.
+Ideal for small classes such as a base class that exposes an <code>Id</code>.</p>
+<p>To use, simply make a validator that inherits from <code>SimpleValidator</code> and specify (all) the model(s) you want to validate.</p>
+<pre><code class="lang-csharp">class SomeValidator : SimpleValidator&lt;SomeModel&gt; {
+    // Override the DoValidate method 
+    protected override void DoValidate(SomeModel model) {
+        Start(new ValidationInfo(&quot;someGuid&quot;, &quot;Name cannot be null&quot;));
+        if (model.Name == null)
+            Fail();
+            //Short-circuit here, we don&#39;t do any other validation when Name is null
+            return;
+        else
+            Pass();
+        Complete();
+
+        Start(new ValidationInfo(&quot;someOtherGuid&quot;, &quot;Name cannot be empty&quot;));
+        if (model.Name.Length == 0)
+            Fail();
+        // We skip a call to Pass here, instead we use the argument in Complete
+        // When set to Assume.Pass, we assume that the test was passed if no Pass or Fail was called
+        // Assume.Fail assumes the test to be failed
+        // Note: when no argument is given, Complete will throw if no Pass or Fail was encoutered
+        Complete(Assume.Pass);
+    }
+}
+</code></pre><p>Now you have a validator that validates the <code>Name</code> of <code>SomeModel</code> to be not null and not empty with helpful messages.
+The given info is registered when calling <code>Fail()</code> or <code>Pass()</code> and more validations can follow.</p>
+<p>Take note that in this structure you can easily short-circuit the validation.
+When <code>Name</code> is <code>null</code>, we don&#39;t bother checking the rest.
+If we didn&#39;t do this, we&#39;d always have to re-check on <code>null</code> or get a <code>NullReferenceException</code>.
+Short-circuiting makes the code a lot more cleaner and readable.</p>
+<p>The state can later be inspected when the validator was run.</p>
+<pre><code class="lang-csharp">SomeModel model = ...;
+SomeValidator validator = ...;
+var result = validator.Validate(model);
+
+if (result.IsValid) {
+    //Yay, the model is valid
+} else {
+    //Aww, the model isn&#39;t valid
+    //Inspect result.Fails and result.Passes to see which rule failed or passed
+}
+</code></pre><h3 id="sectionedvalidator">SectionedValidator</h3>
+<p>To be used for complex models.
+You want to seperate logic and isolate certain validation rules so they can be tested properly.</p>
+<p>Again, simply make a validator that inherits from <code>SectionedValidator</code> and specify (all) the model(s) you want to validate.</p>
+<pre><code class="lang-csharp">class OtherValidator : SectionedValidator&lt;OtherModel&gt; {
+    public const string IdSection = &quot;Id&quot;;
+    public const string SomeSection = &quot;Some&quot;;
+
+    private readonly SomeValidator _someValidator = someValidator;
+
+    // Inject other validators using your favorite DI container
+    public OtherValidator(SomeValidator someValidator) {
+        _someValidator = someValidator;
+
+        //Create a validation section with a publicly visible name
+        Section(IdSection, ValidateId);
+        //Create another validation section
+        Section(SomeSection, ValidateSome);
+    }
+
+    private void ValidateId(OtherModel model) {
+        // Has the same structure as the main body of the simple validator
+        Start(new ValidationInfo(&quot;someGuid&quot;, &quot;someMessage&quot;));
+        if (model.Id &gt; 0)
+            Pass();
+        Complete(false); //The false here means: if no Pass or Fail was encoutered, assume the validation failed
+    }
+
+    private void ValidateSome(OtherModel model) {
+        Start(new ValidationInfo(&quot;someOtherGuid&quot;, &quot;Some cannot be null&quot;));
+        if (model.Some == null)
+            Fail();
+            // Short-circuit here, we don&#39;t have to check anything else
+            return;
+        else {
+            Pass();
+            // Only run the sub-validator if model.Some is not null
+            RunValidator(_someValidator, model.Some);
+        }
+        Complete();
+    }
+}
+</code></pre><p>So this is a bit more complex.
+We declare two publicly visible constant strings that are the names of our sections.
+We inject another validator we&#39;ll use later.</p>
+<p>Then we define 2 sections referring to the private methods we defined.
+The body of these methods are to be used in the exact same way as the <code>DoValidate</code> method of the <code>SimpleValidator</code>.
+The difference is that we can call this specific body seperately when needed.
+For example in tests.</p>
+<pre><code class="lang-csharp">private SomeValidator _sut = new SomeValidator();
+
+[Test]
+public void Test() {
+    //Arrange
+    SomeModel model = ...;
+
+    //Act
+    var result = _sut.ValidateSection(SomeValidator.IdSection, model);
+
+    //Assert
+    result.ShouldPass(&quot;someGuid&quot;);
+}
+</code></pre><p>This test will only bother to run the method <code>ValidateId</code> and will not run <code>ValidateSome</code>.
+This makes it a lot easier to write tests since we do not yet have to mock <code>SomeValidator</code> when it&#39;s not needed.
+All our tests will also not fail when we accidentily introduce a Exception in a section.</p>
+<p>The other section simply shows how to call a nested validator.
+Simply use the method <code>RunValidator</code> and pass the validator instance and model.
+It will capture all passes and fails from that validator and adds it to the one you are working with.</p>
+<h2 id="the-guid-thing">The GUID thing</h2>
+<p>I&#39;ve chosen to work with GUIDs to identify the tests.
+There are a couple of reasons why I don&#39;t want this to be different.</p>
+<blockquote><p><strong>GUIDs don&#39;t contain human-readable information about the test.</strong></p>
+<p>This actively discourages to find a method to identify the tests based on its ID.
+It&#39;s a good thing because you don&#39;t ever want to rename the ID.
+You write the test once, use it again once in your tests and done.
+Never touch the GUID again.</p>
+<p>I know at least I have the urge to rename them if I find a better way.</p>
+<p><strong>GUIDs are very unique</strong></p>
+<p>Grab any online GUID generator, generate 100&#39;s of them and you won&#39;t get a duplicate.
+Hence, it&#39;s a good unique identifier.</p>
+<p><strong>The Ctrl+F method</strong></p>
+<p>Do you see a validation pop up in your frontend where you didn&#39;t expect it?
+Make a simple dev tool: e.g. triple click the message to copy the GUID to the clipboard.
+Ctrl+F, Ctrl+V and BOOM, you can correct the validation.</p>
+<p>No, you can&#39;t always do it with strings because variable data could be shown (<code>$&quot;Last must come after {model.First}&quot;</code>).</p>
+<p><strong>But GUIDs are ugly</strong></p>
+<p>Well, it&#39;s more ugly to have inconsistent naming code in every test.</p>
+</blockquote>
+<h2 id="todo">Todo</h2>
+<p>These are things that still need to be added.</p>
+<p><strong>Important</strong></p>
+<ul>
+<li>Async support</li>
+<li>Pass data to children validators such as their name</li>
+</ul>
+<p><strong>Less important</strong></p>
+<ul>
+<li>Custom <code>ValidationInfo</code> object in <code>Start</code> and <code>ValidationResult</code><ul>
+<li>For now you can create a class that inherits from <code>ValidationInfo</code> and pass that to <code>Start</code>. You will however have to cast every validation result to your own type afterwards.</li>
+</ul>
+</li>
+<li>Make lookups faster (used in <code>Passed</code> and <code>Failed</code>)<ul>
+<li>The <code>List</code> should become a <code>Dictionary</code></li>
+</ul>
+</li>
+<li>Make extensibility easier<ul>
+<li>Currently, a lot of methods are marked <code>internal</code> which hides implementation details. This makes it easy to properly implement the <code>Simple</code>- and <code>SectionedValidator</code>. But it makes it hard to create custom validators such as the <code>Simple</code>- and <code>SectionedValidator</code>s.</li>
+<li>FYI, you can circumvent this currently by creating a project with the name <code>Validator.Extensions</code>. This is however not really ideal.</li>
+</ul>
+</li>
+</ul>
 </article>
           </div>
           
