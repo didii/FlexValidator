@@ -131,6 +131,39 @@ Complete();</code></pre>
 validation logic and make sure this leads to a single call to <a class="xref" href="FlexValidator.Validator.html#FlexValidator_Validator_Pass">Pass()</a> or <a class="xref" href="FlexValidator.Validator.html#FlexValidator_Validator_Fail">Fail()</a>. Then complete the validation using
 <a class="xref" href="FlexValidator.Validator.html#FlexValidator_Validator_Complete_System_Nullable_FlexValidator_Assume__">Complete(Nullable&lt;Assume&gt;)</a>.</p>
 </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/didii/FlexValidator/new/master/apiSpec/new?filename=FlexValidator_Validator_Result.md&amp;value=---%0Auid%3A%20FlexValidator.Validator.Result%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/didii/FlexValidator/blob/master/FlexValidator/Validator.cs/#L26">View Source</a>
+  </span>
+  <a id="FlexValidator_Validator_Result_" data-uid="FlexValidator.Validator.Result*"></a>
+  <h4 id="FlexValidator_Validator_Result" data-uid="FlexValidator.Validator.Result">Result</h4>
+  <div class="markdown level1 summary"><p>Only use when creating new validator types. The result of the ongoing validations. This is what keeps the state and should be treated with caution.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ValidationResult Result { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FlexValidator.ValidationResult.html">ValidationResult</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
@@ -388,7 +421,7 @@ was not called.</p>
   </span>
   <a id="FlexValidator_Validator_Reset_" data-uid="FlexValidator.Validator.Reset*"></a>
   <h4 id="FlexValidator_Validator_Reset" data-uid="FlexValidator.Validator.Reset">Reset()</h4>
-  <div class="markdown level1 summary"><p>Resets all validations built up in <span class="xref">FlexValidator.Validator.Result</span>. Should normally not be used by you.</p>
+  <div class="markdown level1 summary"><p>Resets all validations built up in <a class="xref" href="FlexValidator.Validator.html#FlexValidator_Validator_Result">Result</a>. Should normally not be used by you.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>

@@ -717,12 +717,24 @@ references:
   commentId: T:FlexValidator.ValidationInfoBase
   fullName: FlexValidator.ValidationInfoBase
   nameWithType: ValidationInfoBase
+- uid: FlexValidator.ValidationInfoBase.#ctor(System.Guid)
+  name: ValidationInfoBase(Guid)
+  href: api/FlexValidator.ValidationInfoBase.html#FlexValidator_ValidationInfoBase__ctor_System_Guid_
+  commentId: M:FlexValidator.ValidationInfoBase.#ctor(System.Guid)
+  fullName: FlexValidator.ValidationInfoBase.ValidationInfoBase(System.Guid)
+  nameWithType: ValidationInfoBase.ValidationInfoBase(Guid)
 - uid: FlexValidator.ValidationInfoBase.#ctor(System.Guid,System.String)
   name: ValidationInfoBase(Guid, String)
   href: api/FlexValidator.ValidationInfoBase.html#FlexValidator_ValidationInfoBase__ctor_System_Guid_System_String_
   commentId: M:FlexValidator.ValidationInfoBase.#ctor(System.Guid,System.String)
   fullName: FlexValidator.ValidationInfoBase.ValidationInfoBase(System.Guid, System.String)
   nameWithType: ValidationInfoBase.ValidationInfoBase(Guid, String)
+- uid: FlexValidator.ValidationInfoBase.#ctor(System.String)
+  name: ValidationInfoBase(String)
+  href: api/FlexValidator.ValidationInfoBase.html#FlexValidator_ValidationInfoBase__ctor_System_String_
+  commentId: M:FlexValidator.ValidationInfoBase.#ctor(System.String)
+  fullName: FlexValidator.ValidationInfoBase.ValidationInfoBase(System.String)
+  nameWithType: ValidationInfoBase.ValidationInfoBase(String)
 - uid: FlexValidator.ValidationInfoBase.#ctor(System.String,System.String)
   name: ValidationInfoBase(String, String)
   href: api/FlexValidator.ValidationInfoBase.html#FlexValidator_ValidationInfoBase__ctor_System_String_System_String_
@@ -910,6 +922,19 @@ references:
   isSpec: "True"
   fullName: FlexValidator.Validator.Reset
   nameWithType: Validator.Reset
+- uid: FlexValidator.Validator.Result
+  name: Result
+  href: api/FlexValidator.Validator.html#FlexValidator_Validator_Result
+  commentId: P:FlexValidator.Validator.Result
+  fullName: FlexValidator.Validator.Result
+  nameWithType: Validator.Result
+- uid: FlexValidator.Validator.Result*
+  name: Result
+  href: api/FlexValidator.Validator.html#FlexValidator_Validator_Result_
+  commentId: Overload:FlexValidator.Validator.Result
+  isSpec: "True"
+  fullName: FlexValidator.Validator.Result
+  nameWithType: Validator.Result
 - uid: FlexValidator.Validator.RunValidator*
   name: RunValidator
   href: api/FlexValidator.Validator.html#FlexValidator_Validator_RunValidator_
