@@ -21,9 +21,9 @@ namespace FlexValidator {
         private ValidationInfoBase _lastValidation;
 
         /// <summary>
-        /// The result of the ongoing validations. This is what keeps the state and should be treated with caution.
+        /// Only use when creating new validator types. The result of the ongoing validations. This is what keeps the state and should be treated with caution.
         /// </summary>
-        internal ValidationResult Result { get; private set; }
+        protected internal ValidationResult Result { get; private set; }
 
         /// <summary>
         /// Start a single validation. Must be followed by a single <see cref="Pass"/> or <see cref="Fail"/> and is best ended with a
