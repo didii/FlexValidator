@@ -1,5 +1,5 @@
 # FlexValidator
-A flexible validator made for C#.
+A flexible and testable validator made for C#.
 
 See the docs for all info you need: [API docs](https://didii.github.io/FlexValidator/).
 This readme is only part of it
