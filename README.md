@@ -1,172 +1,141 @@
 # FlexValidator
 A flexible validator made for C#.
 
-[API docs](https://didii.github.io/FlexValidator/)
+See the docs for all info you need: [API docs](https://didii.github.io/FlexValidator/).
+This readme is only part of it
 
-## Why?
+## Syntax
 
-I've recently been in a project that had a lot of very complex business rules.
-It was partly law-based and thus had rules with exceptions and exceptions and exceptions.
-We first started using [FluentValidator](https://github.com/JeremySkinner/FluentValidation),
-which - don't get me wrong - is a good framework,
-but is not suited for this kind of complex logic with numerous of properties.
-
-The problems we had was:
-
-* Seperation of concerns (properties that depend on each other need to be in the top-level validator)
-* Testability (we also need to know if a test was passed)
-* Complex logic isn't readable anymore in the Fluent-style
-* Validations based on multiple properties are weird to write
-
-So I came up with another way to write validations where you can simply make use of statements you know: `if`, `else`, `&&`.
-
-## How to use it?
-
-There are 2 types of validators.
-
-### SimpleValidator
-
-To be used for simple validations where you can test the whole model through.
-You don't need seperate _sections_ to seperate logic for testing.
-Ideal for small classes such as a base class that exposes an `Id`.
-
-To use, simply make a validator that inherits from `SimpleValidator` and specify (all) the model(s) you want to validate.
+The default syntax is pretty straightforward.
 
 ```csharp
-class SomeValidator : SimpleValidator<SomeModel> {
-    // Override the DoValidate method 
-    protected override void DoValidate(SomeModel model) {
-        Start(new ValidationInfo("someGuid", "Name cannot be null"));
-        if (model.Name == null)
-            Fail();
-            //Short-circuit here, we don't do any other validation when Name is null
-            return;
-        else
-            Pass();
-        Complete();
-        
-        Start(new ValidationInfo("someOtherGuid", "Name cannot be empty"));
-        if (model.Name.Length == 0)
-            Fail();
-        // We skip a call to Pass here, instead we use the argument in Complete
-        // When set to Assume.Pass, we assume that the test was passed if no Pass or Fail was called
-        // Assume.Fail assumes the test to be failed
-        // Note: when no argument is given, Complete will throw if no Pass or Fail was encoutered
-        Complete(Assume.Pass);
-    }
+private void ValidateName(SomeModel model) {
+    //Start a single validation by calling Start and providing an instance of ValidationInfo
+    //You are required to give it a GUID as its identifier and a message
+    Start(new ValidationInfo("d4c99639-dd0f-49ba-921f-0c53653b2326", "Name cannot be null"));
+
+    //Write your validation logic
+    if (model.Name == null)
+        Fail(); //This fails the last started validation
+    else
+        Pass(); //This passes the last started validation
+    
+    //Complete the validation
+    Complete();
+    //Using Complete without arguments is recommended, but not required
 }
 ```
 
-Now you have a validator that validates the `Name` of `SomeModel` to be not null and not empty with helpful messages.
-The given info is registered when calling `Fail()` or `Pass()` and more validations can follow.
+The structure is like this:
 
-Take note that in this structure you can easily short-circuit the validation.
-When `Name` is `null`, we don't bother checking the rest.
-If we didn't do this, we'd always have to re-check on `null` or get a `NullReferenceException`.
-Short-circuiting makes the code a lot more cleaner and readable.
+1. Start the validation by calling `Start` and provide it with information about the validation.
+   1. If you want more properties, simply extend `ValidationInfo` and add the properties you need
+2. After `Start` you can write your custom business logic that leads to calls to `Pass` or `Fail`.
+   1. A single validation rule can only fail or pass once. When `Fail` or `Pass` is encoutered multiple times, it will throw a `InvalidValidatorStateException`.
+3. You can complete the rule by calling `Complete`
+   1. It's recommended to always do this. Calling it without arguments does a check to see if the current rule had a call to `Fail` or `Pass`. If not, it will throw a `InvalidValidatorStateException`.
 
-The state can later be inspected when the validator was run.
+By using the argument in `Complete` you also simplify the test a bit.
 
 ```csharp
-SomeModel model = ...;
-SomeValidator validator = ...;
-var result = validator.Validate(model);
-
-if (result.IsValid) {
-    //Yay, the model is valid
-} else {
-    //Aww, the model isn't valid
-    //Inspect result.Fails and result.Passes to see which rule failed or passed
+private void ValidateName(SomeModel model) {
+    Start(new ValidationInfo("d4c99639-dd0f-49ba-921f-0c53653b2326", "Name cannot be null"));
+    if (model.Name == null)
+        Fail();
+    Complete(Assume.Pass);
 }
 ```
 
-### SectionedValidator
+Now when `Complete` is encountered and no call to `Pass` or `Fail` were made beforehand, it will call `Pass` for you.
+You can also use `Assume.Fail` to assume the test to be failed if no `Pass` or `Fail` was encountered.
 
-To be used for complex models.
-You want to seperate logic and isolate certain validation rules so they can be tested properly.
-
-Again, simply make a validator that inherits from `SectionedValidator` and specify (all) the model(s) you want to validate.
+Validations can follow each other up as much as you want
 
 ```csharp
-class OtherValidator : SectionedValidator<OtherModel> {
-    public const string IdSection = "Id";
-    public const string SomeSection = "Some";
-    
-    private readonly SomeValidator _someValidator = someValidator;
-    
-    // Inject other validators using your favorite DI container
-    public OtherValidator(SomeValidator someValidator) {
-        _someValidator = someValidator;
-        
-        //Create a validation section with a publicly visible name
-        Section(IdSection, ValidateId);
-        //Create another validation section
-        Section(SomeSection, ValidateSome);
+private void ValidateName(SomeModel model) {
+    Start(new ValidationInfo("d4c99639-dd0f-49ba-921f-0c53653b2326", "Name cannot be null"));
+    if (model.Name == null) {
+        Fail();
+        //Short-circuit here: other validations don't matter if Name is null
+        return;
     }
-    
-    private void ValidateId(OtherModel model) {
-        // Has the same structure as the main body of the simple validator
-        Start(new ValidationInfo("someGuid", "someMessage"));
-        if (model.Id > 0)
-            Pass();
-        Complete(false); //The false here means: if no Pass or Fail was encoutered, assume the validation failed
+    Complete(Assume.Pass);
+
+    Start(new ValidationInfo("e1410df7-1438-4b5a-a755-1c8657f827a2", "Name cannot be empty"));
+    if (model.Name.Length == 0) {
+        Fail();
+        //Short-circuit again
+        return;
     }
-    
-    private void ValidateSome(OtherModel model) {
-        Start(new ValidationInfo("someOtherGuid", "Some cannot be null"));
-        if (model.Some == null)
-            Fail();
-            // Short-circuit here, we don't have to check anything else
-            return;
-        else {
-            Pass();
-            // Only run the sub-validator if model.Some is not null
-            RunValidator(_someValidator, model.Some);
-        }
-        Complete();
-    }
+    Complete(Assume.Pass);
+
+    Start(new ValidationInfo("9aee2017-5c09-485d-8d91-c2d8a102c569", "Name must start with an alphabetical letter"))
+    if (new Regex(@"[a-zA-Z]").IsMatch(model.name))
+        Pass();
+    Complete(Assume.Fail);
+
+    //...
 }
 ```
 
-So this is a bit more complex.
-We declare two publicly visible constant strings that are the names of our sections.
-We inject another validator we'll use later.
+Note that since we write our validations using simple statements, we can short-circuit out a validation.
+If `Name` is `null`, it does not make sense to still try and run the other validations.
+The second validation will fail anyway since this will throw a `NullReferenceException`.
 
-Then we define 2 sections referring to the private methods we defined.
-The body of these methods are to be used in the exact same way as the `DoValidate` method of the `SimpleValidator`.
-The difference is that we can call this specific body seperately when needed.
-For example in tests.
+## Testing
+
+You're probably also here to know whether or not this makes testing validations easier or not.
+Well, according to my findings, it does.
+This is why we need the GUID so that a single validation rule can always be identified.
+See more below why I chose to use GUIDs.
+
+The test is now pretty easy to write.
+In this example I use `NUnit`, but it can be done with any testing framework.
 
 ```csharp
-private SomeValidator _sut = new SomeValidator();
+enum Must {
+    Pass,
+    Fail,
+}
 
-[Test]
-public void Test() {
+[TestCase(Must.Fail, null)]
+[TestCase(Must.Pass, "")]
+[TestCase(Must.Pass, "some text")]
+public void Validate_NameCannotBeNull(Must type, string name) {
     //Arrange
-    SomeModel model = ...;
-    
+    var validator = new MyValidator();
+    var model = new SomeModel() {
+        Name = name
+    }
+
     //Act
-    var result = _sut.ValidateSection(SomeValidator.IdSection, model);
-    
+    var result = validator.Validate(model);
+
     //Assert
-    result.ShouldPass("someGuid");
+    result.Should(type, "d4c99639-dd0f-49ba-921f-0c53653b2326");
 }
 ```
 
-This test will only bother to run the method `ValidateId` and will not run `ValidateSome`.
-This makes it a lot easier to write tests since we do not yet have to mock `SomeValidator` when it's not needed.
-All our tests will also not fail when we accidentily introduce a Exception in a section.
+We have defined an extension method `Should` on `ValidationResult` to make our lives easier.
+See [ValidationResultExtensions.cs](https://github.com/didii/FlexValidator/blob/master/FlexValidator.Example.App.Tests/Helpers/ValidationResultExtensions.cs) for the implemenatation.
+In words, it simply checks if `result` has the given validation (identified by the GUID) in its collection of `Fails` or `Passes` and calls `Assert.Fail` when it's in the wrong collection or it does not exist.
 
-The other section simply shows how to call a nested validator.
-Simply use the method `RunValidator` and pass the validator instance and model.
-It will capture all passes and fails from that validator and adds it to the one you are working with.
+Take note that the GUID is the same as the first validation we defined above.
 
 ## Todo
 
+These are things that still need to be added.
+
+**Important**
+
 * Async support
+* Pass data to children validators such as their name
+
+**Less important**
+
 * Custom `ValidationInfo` object in `Start` and `ValidationResult`
+  * For now you can create a class that inherits from `ValidationInfo` and pass that to `Start`. You will however have to cast every validation result to your own type afterwards.
 * Make lookups faster (used in `Passed` and `Failed`)
   * The `List` should become a `Dictionary`
 * Make extensibility easier
-  * Currently, a lot of methods are marked `internal` which hides implementation details. This makes it easy to properly implement the `Simple`- and `SectionedValidator`. But it makes it hard to create custom validators such as the `Simple`- and `SectionedValidator`s.
-  * FYI, you can circumvent this currently by creating a project with the name `Validator.Extensions`. This is however not really ideal.
+  * Almost all methods and properties are marked as `protected`. If you want to add a utility method to `Validator` (the base class), right now it cannot be done with extension methods because they don't have access to the necessary properties. While extending `Validator` on your own is possible, you'll need to add quite some boilerplate code since all `SimpleValidator` and `SectionedValidator` classes won't suddenly inherit from your class.
