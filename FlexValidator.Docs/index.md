@@ -306,8 +306,8 @@ These are things that still need to be added.
 
 * Custom `ValidationInfo` object in `Start` and `ValidationResult`
   * For now you can create a class that inherits from `ValidationInfo` and pass that to `Start`. You will however have to cast every validation result to your own type afterwards.
-* Make lookups faster (used in `Passed` and `Failed`)
-  * The `List` should become a `Dictionary`
+* ~~Make lookups faster (used in `Passed` and `Failed`)~~
+  * ~~The `List` should become a `Dictionary`~~
 * Make extensibility easier
   * Currently, a lot of methods are marked `internal` which hides implementation details. This makes it easy to properly implement the `Simple`- and `SectionedValidator`. But it makes it hard to create custom validators such as the `Simple`- and `SectionedValidator`s.
   * FYI, you can circumvent this currently by creating a project with the name `Validator.Extensions`. This is however not really ideal.
