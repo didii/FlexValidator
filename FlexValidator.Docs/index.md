@@ -284,7 +284,7 @@ There are a couple of reasons why I don't want this to be different.
 > Make a simple dev tool: e.g. triple click the message to copy the GUID to the clipboard.
 > Ctrl+F, Ctrl+V and BOOM, you can correct the validation.
 >
-> No, you can't always do it with strings because variable data could be shown (`$"Last must come after {model.First}"`).
+> No, you can't always do it with the message because variable data could be shown (`$"Last must come after {model.First}"`).
 
 > **But GUIDs are ugly**
 > 
