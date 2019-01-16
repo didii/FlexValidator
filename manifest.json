@@ -64,6 +64,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "obj/api/FlexValidator.Exceptions.ValidationNotFoundException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FlexValidator.Exceptions.ValidationNotFoundException.html",
+          "hash": "gYc+yG/Q7kYrMvNMkvFskw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "obj/api/FlexValidator.Exceptions.ValidatorSectionNotFoundException.yml",
       "output": {
         ".html": {
@@ -80,7 +92,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FlexValidator.Exceptions.html",
-          "hash": "V2KfKvXnkmpeJ3AfBr2FfQ=="
+          "hash": "Ymv3QV6U/sLXQ6BBRRoGFQ=="
         }
       },
       "is_incremental": false,
@@ -188,7 +200,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FlexValidator.SectionedValidator-1.html",
-          "hash": "D15Y7LWjzzHTEh0b3KdpNg=="
+          "hash": "DecLd1VkMgnrYormPAyDvw=="
         }
       },
       "is_incremental": false,
@@ -200,7 +212,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FlexValidator.SectionedValidator-2.html",
-          "hash": "4hYGSMqaaPSO0G5U8nbETw=="
+          "hash": "eX6tP8JQffkGZQ3Y+fl64Q=="
         }
       },
       "is_incremental": false,
@@ -212,7 +224,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FlexValidator.SectionedValidator-3.html",
-          "hash": "OZUMVzqR3H3duLsJfYkU/w=="
+          "hash": "KglbBV4SYYxxPZIGMXBTxw=="
         }
       },
       "is_incremental": false,
@@ -224,7 +236,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FlexValidator.SectionedValidator-4.html",
-          "hash": "XF2wBxFiWs4AN4jKFUqhtw=="
+          "hash": "Kb2sHt27EWyd/AHmzrpw8w=="
         }
       },
       "is_incremental": false,
@@ -236,7 +248,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FlexValidator.SectionedValidator.html",
-          "hash": "Lc/5lmTwwn+awa8uHxoWWA=="
+          "hash": "56wYL8wX7vtte3sgiWX4TA=="
         }
       },
       "is_incremental": false,
@@ -248,7 +260,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FlexValidator.SimpleValidator-1.html",
-          "hash": "vUxE4Hb90HH/sIXtB2xSNw=="
+          "hash": "bcru9qazRlcj2BqnXFLNtA=="
         }
       },
       "is_incremental": false,
@@ -260,7 +272,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FlexValidator.SimpleValidator-2.html",
-          "hash": "X/JsUq5nbvizTMb4M91mmQ=="
+          "hash": "JTukXJ8UK5eIMHK07Y+nzg=="
         }
       },
       "is_incremental": false,
@@ -272,7 +284,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FlexValidator.SimpleValidator-3.html",
-          "hash": "zLj2IQPJOiRtht+B+w4jxQ=="
+          "hash": "reNI5CwCH2tQUoVxTRYi4Q=="
         }
       },
       "is_incremental": false,
@@ -284,7 +296,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FlexValidator.SimpleValidator-4.html",
-          "hash": "PcaisriWPpVeHhzJsTQD6w=="
+          "hash": "Bt1afxHkAelaDh2L0Wh5qw=="
         }
       },
       "is_incremental": false,
@@ -296,7 +308,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FlexValidator.SimpleValidator.html",
-          "hash": "I7+/6B11Opg/f+Uo2M7qPQ=="
+          "hash": "ufawz+XsQmB9pJdTrYDM1g=="
         }
       },
       "is_incremental": false,
@@ -332,7 +344,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FlexValidator.Validator.html",
-          "hash": "GVqNdwDqJznep0cs+PasAQ=="
+          "hash": "V/J0Wvw8/0eVnKsku+0n1Q=="
         }
       },
       "is_incremental": false,
@@ -356,7 +368,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "PTwebiiGQ/7gV2+3hm3y7g=="
+          "hash": "3wN7T+vXD6lRs6oXn2Fssg=="
         }
       },
       "is_incremental": false,
@@ -382,11 +394,6 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -398,6 +405,11 @@
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
+          "incrementalPhase": "build"
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }

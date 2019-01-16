@@ -62,6 +62,31 @@ references:
   isSpec: "True"
   fullName: FlexValidator.Exceptions.InvalidValidatorStateException.InvalidValidatorStateException
   nameWithType: InvalidValidatorStateException.InvalidValidatorStateException
+- uid: FlexValidator.Exceptions.ValidationNotFoundException
+  name: ValidationNotFoundException
+  href: api/FlexValidator.Exceptions.ValidationNotFoundException.html
+  commentId: T:FlexValidator.Exceptions.ValidationNotFoundException
+  fullName: FlexValidator.Exceptions.ValidationNotFoundException
+  nameWithType: ValidationNotFoundException
+- uid: FlexValidator.Exceptions.ValidationNotFoundException.#ctor(System.Guid)
+  name: ValidationNotFoundException(Guid)
+  href: api/FlexValidator.Exceptions.ValidationNotFoundException.html#FlexValidator_Exceptions_ValidationNotFoundException__ctor_System_Guid_
+  commentId: M:FlexValidator.Exceptions.ValidationNotFoundException.#ctor(System.Guid)
+  fullName: FlexValidator.Exceptions.ValidationNotFoundException.ValidationNotFoundException(System.Guid)
+  nameWithType: ValidationNotFoundException.ValidationNotFoundException(Guid)
+- uid: FlexValidator.Exceptions.ValidationNotFoundException.#ctor(System.Guid,System.Exception)
+  name: ValidationNotFoundException(Guid, Exception)
+  href: api/FlexValidator.Exceptions.ValidationNotFoundException.html#FlexValidator_Exceptions_ValidationNotFoundException__ctor_System_Guid_System_Exception_
+  commentId: M:FlexValidator.Exceptions.ValidationNotFoundException.#ctor(System.Guid,System.Exception)
+  fullName: FlexValidator.Exceptions.ValidationNotFoundException.ValidationNotFoundException(System.Guid, System.Exception)
+  nameWithType: ValidationNotFoundException.ValidationNotFoundException(Guid, Exception)
+- uid: FlexValidator.Exceptions.ValidationNotFoundException.#ctor*
+  name: ValidationNotFoundException
+  href: api/FlexValidator.Exceptions.ValidationNotFoundException.html#FlexValidator_Exceptions_ValidationNotFoundException__ctor_
+  commentId: Overload:FlexValidator.Exceptions.ValidationNotFoundException.#ctor
+  isSpec: "True"
+  fullName: FlexValidator.Exceptions.ValidationNotFoundException.ValidationNotFoundException
+  nameWithType: ValidationNotFoundException.ValidationNotFoundException
 - uid: FlexValidator.Exceptions.ValidatorSectionNotFoundException
   name: ValidatorSectionNotFoundException
   href: api/FlexValidator.Exceptions.ValidatorSectionNotFoundException.html
@@ -1498,6 +1523,12 @@ references:
   isSpec: "True"
   fullName: FlexValidator.Validator.Fail
   nameWithType: Validator.Fail
+- uid: FlexValidator.Validator.Failed(System.Guid)
+  name: Failed(Guid)
+  href: api/FlexValidator.Validator.html#FlexValidator_Validator_Failed_System_Guid_
+  commentId: M:FlexValidator.Validator.Failed(System.Guid)
+  fullName: FlexValidator.Validator.Failed(System.Guid)
+  nameWithType: Validator.Failed(Guid)
 - uid: FlexValidator.Validator.Failed(System.String)
   name: Failed(String)
   href: api/FlexValidator.Validator.html#FlexValidator_Validator_Failed_System_String_
@@ -1524,6 +1555,12 @@ references:
   isSpec: "True"
   fullName: FlexValidator.Validator.Pass
   nameWithType: Validator.Pass
+- uid: FlexValidator.Validator.Passed(System.Guid)
+  name: Passed(Guid)
+  href: api/FlexValidator.Validator.html#FlexValidator_Validator_Passed_System_Guid_
+  commentId: M:FlexValidator.Validator.Passed(System.Guid)
+  fullName: FlexValidator.Validator.Passed(System.Guid)
+  nameWithType: Validator.Passed(Guid)
 - uid: FlexValidator.Validator.Passed(System.String)
   name: Passed(String)
   href: api/FlexValidator.Validator.html#FlexValidator_Validator_Passed_System_String_
