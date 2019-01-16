@@ -102,17 +102,25 @@ namespace FlexValidator {
             ResetValidation();
         }
 
+        protected internal bool Passed(string guid) {
+            return Passed(new Guid(guid));
+        }
+
         /// <summary>
         /// Check if the given validation was a success
         /// </summary>
         /// <param name="guid"></param>
         /// <exception cref="InvalidValidatorStateException">Thrown when the given validation does not exist</exception>
         /// <returns></returns>
-        protected internal bool Passed(string guid) {
+        protected internal bool Passed(Guid guid) {
             var result = Result.Check(guid);
             if (result == null)
-                throw new InvalidValidatorStateException("Cannot check Passed on a validation that does not exist. Check the GUID.");
+                throw new ValidationNotFoundException(guid);
             return result.Value;
+        }
+
+        protected internal bool Failed(string guid) {
+            return Failed(new Guid(guid));
         }
 
         /// <summary>
@@ -121,10 +129,10 @@ namespace FlexValidator {
         /// <param name="guid"></param>
         /// <exception cref="InvalidValidatorStateException">Thrown when the given validation does not exist</exception>
         /// <returns></returns>
-        protected internal bool Failed(string guid) {
+        protected internal bool Failed(Guid guid) {
             var result = Result.Check(guid);
             if (result == null)
-                throw new InvalidValidatorStateException("Cannot check Failed on a validation that does not exist. Check the GUID.");
+                throw new ValidationNotFoundException(guid);
             return result.Value;
         }
 

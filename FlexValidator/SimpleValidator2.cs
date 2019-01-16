@@ -16,11 +16,11 @@ namespace FlexValidator {
         /// Implement your <see cref="Validator.Start"/>/<see cref="Validator.Pass"/>/<see cref="Validator.Fail"/>/
         /// <see cref="Validator.Complete"/> logic here. Is called when <see cref="Validate"/> is called.
         /// </summary>
-        /// <param name="obj1">The first argument given to <see cref="Validate"/></param>
-        /// <param name="obj2">The second argument given to <see cref="Validate"/></param>
-        protected virtual void DoValidate(T1 obj1, T2 obj2) { }
+        /// <param name="model1">The first argument given to <see cref="Validate"/></param>
+        /// <param name="model2">The second argument given to <see cref="Validate"/></param>
+        protected virtual void DoValidate(T1 model1, T2 model2) { }
 
-        protected virtual async Task DoValidateAsync(T1 obj1, T2 obj2) { }
+        protected virtual async Task DoValidateAsync(T1 model1, T2 model2) { }
 
         /// <inheritdoc/>
         protected internal override void DoValidate(object[] models) {

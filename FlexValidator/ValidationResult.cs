@@ -32,10 +32,6 @@ namespace FlexValidator {
                 _passes.Add(otherPass);
         }
 
-        internal bool? Check(string guid) {
-            return Check(new Guid(guid));
-        }
-
         /// <summary>
         /// Utility function that returns false if the given test failed, true if the given test passed and null if not present
         /// </summary>
