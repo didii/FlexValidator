@@ -9,31 +9,18 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "XCBq8tC4APGj7V9tnF1lvA=="
+          "hash": "mvU2uyAxwqc4Ss04mCodcQ=="
         }
       },
       "is_incremental": true,
       "version": ""
     },
     {
-      "type": "Conceptual",
-      "source_relative_path": "articles/intro.md",
+      "type": "Resource",
+      "source_relative_path": "images/Hierarchy.png",
       "output": {
-        ".html": {
-          "relative_path": "articles/intro.html",
-          "hash": "6Z/RmhTGqrzBvIBS0S13iw=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "Toc",
-      "source_relative_path": "articles/toc.md",
-      "output": {
-        ".html": {
-          "relative_path": "articles/toc.html",
-          "hash": "b84zk5/psIQCA6fB0jhsYA=="
+        "resource": {
+          "relative_path": "images/Hierarchy.png"
         }
       },
       "is_incremental": false,
@@ -45,7 +32,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "ruxp4rMWxgjYwWe9k7770w=="
+          "hash": "IiTB6EAB/JBWEZaNXq9iSA=="
         }
       },
       "is_incremental": false,
@@ -357,7 +344,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "wA1p0h3PqEkEkdurrlYggg=="
+          "hash": "CTRBtwqjkNOufjixN6uYcg=="
         }
       },
       "is_incremental": false,
@@ -382,6 +369,11 @@
         },
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
+          "incrementalPhase": "build"
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }
