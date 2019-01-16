@@ -6,4 +6,22 @@ namespace FlexValidator.Tests.Validators {
             init(this);
         }
     }
+
+    class TestSectionedValidator<T1, T2> : SectionedValidator<T1, T2> {
+        public void Init(Action<TestSectionedValidator<T1, T2>> init) {
+            init(this);
+        }
+    }
+
+    class TestSectionedValidator<T1, T2, T3> : SectionedValidator<T1, T2, T3> {
+        public void Init(Action<TestSectionedValidator<T1, T2, T3>> init) {
+            init(this);
+        }
+    }
+
+    class TestSectionedValidator<T1, T2, T3, T4> : SectionedValidator<T1, T2, T3, T4> {
+        public void Init(Action<TestSectionedValidator<T1, T2, T3, T4>> init) {
+            init(this);
+        }
+    }
 }

@@ -6,7 +6,7 @@ using NUnit.Framework;
 
 namespace FlexValidator.Tests {
 
-    public class DoubleEmptyModel_ValidatorTests {
+    public class EmptyModel2ValidatorTests {
         private TestSimpleValidator<EmptyModel, EmptyModel> _sut;
         private EmptyModel _model1 = new EmptyModel();
         private EmptyModel _model2 = new EmptyModel();

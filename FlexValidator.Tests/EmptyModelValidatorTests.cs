@@ -6,7 +6,7 @@ using FlexValidator.Tests.Validators;
 using NUnit.Framework;
 
 namespace FlexValidator.Tests {
-    public class EmptyModel_ValidatorTests {
+    public class EmptyModelValidatorTests {
         private TestSimpleValidator<EmptyModel> _sut;
         private EmptyModel _model = new EmptyModel();
         private Guid guid = new Guid("de2319c3-5568-467b-b370-acb486a553f6");
@@ -33,7 +33,7 @@ namespace FlexValidator.Tests {
             }
         }
 
-        private void TestThrow(Action<EmptyModel> validateFunc) {
+        private void TestThrow<TException>(Action<EmptyModel> validateFunc) where TException : Exception {
             //Arrange
             _sut = new TestSimpleValidator<EmptyModel>() {
                 ValidateFunc = validateFunc
@@ -43,7 +43,7 @@ namespace FlexValidator.Tests {
             TestDelegate test = () => _sut.Validate(_model);
 
             //Assert
-            Assert.Throws<InvalidValidatorStateException>(test);
+            Assert.Throws<TException>(test);
         }
 
         [Test]
@@ -113,7 +113,7 @@ namespace FlexValidator.Tests {
         [Test]
         public void CompleteValidation_ShouldThrow_WhithoutPassFailOrAssume() {
             //Arrange
-            TestThrow(x => {
+            TestThrow<InvalidValidatorStateException>(x => {
                 _sut.Start(new ValidationInfoBase(guid));
                 _sut.Complete();
             });
@@ -121,27 +121,25 @@ namespace FlexValidator.Tests {
 
         [Test]
         public void StartValidation_AfterStartValidation_ShouldThrow() {
-            TestThrow(x => {
+            TestThrow< InvalidValidatorStateException>(x => {
                 _sut.Start(new ValidationInfoBase(guid));
                 _sut.Start(new ValidationInfoBase(guid));
-
             });
         }
 
         [Test]
         public void PassWithoutStart_ShouldThrow() {
-            //Assert
-            TestThrow(x => _sut.Pass());
+            TestThrow< InvalidValidatorStateException>(x => _sut.Pass());
         }
 
         [Test]
         public void FailWithoutStart_ShouldThrow() {
-            TestThrow(x => _sut.Fail());
+            TestThrow< InvalidValidatorStateException>(x => _sut.Fail());
         }
 
         [Test]
         public void PassAfterCompletion_ShouldThrow() {
-            TestThrow(x => {
+            TestThrow< InvalidValidatorStateException>(x => {
                 _sut.Start(new ValidationInfoBase(guid));
                 _sut.Pass();
                 _sut.Pass();
@@ -150,11 +148,21 @@ namespace FlexValidator.Tests {
 
         [Test]
         public void FailAfterCompletion_ShouldThrow() {
-            TestThrow(x => {
+            TestThrow< InvalidValidatorStateException>(x => {
                 _sut.Start(new ValidationInfoBase(guid));
                 _sut.Pass();
                 _sut.Fail();
             });
+        }
+
+        [Test]
+        public void Passed_WithoutGuidInResult_ShouldThrow() {
+            TestThrow<ValidationNotFoundException>(x => _sut.Passed(guid));
+        }
+
+        [Test]
+        public void Failed_WithoutGuidInResult_ShouldThrow() {
+            TestThrow<ValidationNotFoundException>(x => _sut.Failed(guid));
         }
     }
 }

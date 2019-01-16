@@ -14,8 +14,8 @@ namespace FlexValidator.Tests.Validators {
         public Action<T1, T2> ValidateFunc { get; set; }
 
         /// <inheritdoc />
-        protected override void DoValidate(T1 obj1, T2 obj2) {
-            ValidateFunc(obj1, obj2);
+        protected override void DoValidate(T1 model1, T2 model2) {
+            ValidateFunc(model1, model2);
         }
     }
 
@@ -23,8 +23,17 @@ namespace FlexValidator.Tests.Validators {
         private Action<T1, T2, T3> ValidateFunc { get; set; }
 
         /// <inheritdoc />
-        protected override void DoValidate(T1 obj1, T2 obj2, T3 obj3) {
-            ValidateFunc(obj1, obj2, obj3);
+        protected override void DoValidate(T1 model1, T2 model2, T3 model3) {
+            ValidateFunc(model1, model2, model3);
+        }
+    }
+
+    class TestSimpleValidator<T1, T2, T3, T4> : SimpleValidator<T1, T2, T3, T4> {
+        private Action<T1, T2, T3> ValidateFunc { get; set; }
+
+        /// <inheritdoc />
+        protected override void DoValidate(T1 model1, T2 model2, T3 model3, T4 model4) {
+            ValidateFunc(model1, model2, model3);
         }
     }
 }
