@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Threading.Tasks;
 
-namespace FlexValidator {
+namespace FlexValidator.Helpers {
     /// <summary>
     /// Simple helper class to expand or group variables
     /// </summary>
-    internal class Helper {
+    public class Helper {
         public static object[] Pack(params object[] objs) {
             return objs;
         }
