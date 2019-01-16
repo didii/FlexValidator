@@ -63,6 +63,7 @@
     "dest": "../gh-pages",
     "template": [
       "default"
-    ]
+    ],
+    "markdownEngineName": "dfm-latest"
   }
 }

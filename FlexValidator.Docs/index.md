@@ -1,6 +1,8 @@
 # FlexValidator
 A flexible validator made for C#.
 
+See the source code on GitHub: https://github.com/didii/FlexValidator.
+
 ## Table of contents
 - [FlexValidator](#flexvalidator)
   - [Table of contents](#table-of-contents)
@@ -286,7 +288,7 @@ There are a couple of reasons why I don't want this to be different.
 
 > **But GUIDs are ugly**
 > 
-> Well, it's more ugly to have inconsistent naming code in every test.
+> Well, it's more ugly to have inconsistent code-names spread throughout your application.
 
 ## Todo
 
