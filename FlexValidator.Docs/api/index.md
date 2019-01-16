@@ -2,6 +2,8 @@
 
 See the left window for all navigation to all classes.
 
+This page gives a simple overview on what to find. More details can be found in the API documentation itself.
+
 Here is a picture of the general hierarchy of the classes.
 
 ![Hierarchy](../images/hierarchy.png)
@@ -10,21 +12,24 @@ Here is a picture of the general hierarchy of the classes.
 
 Contains the base methods such as `Start`, `Pass`, `Fail` and `Complete`. Has no knowledge about types and only serves as to have a centralized place to place these methods. Those are the core to writing your own validations.
 
-## Validator&lt;T&gt;
+## SimpleValidator
 
-All the `Validator` types with generic arguments introduce typing into the system.
-Such that a user doesn't have to deal with `object`.
-Each generic `Validator` extends its own interface `IValidator` with the same generic arguments which makes it expose a single method:
+Provides a type-less base structure for all typed `SimpleValidator<...>`s such that their logic is centralized.
+This implements logic for a method `ValidationResult Validate(object[])` such that state is correctly set before and the right result is returned.
+It also defines `virtual` methods for a user to implement where they can write their validation logic.
 
-```csharp
-ValidationResult Validate(T1 model1, T2 model2, ...).
-```
+## SimpleValidator&lt;...&gt;
 
-where the amount or arguments it has corresponds to the amount of generic arguments it has.
-FlexValidator currently supports up to 4 arguments.
-Creating more is possible, but just needs a lot of boilerplate to make it work.
+Exposes typed methods that a user can implement and use.
+For more information about how to use them, see the [homepage](/#validators).
 
-## SimpleValidator&lt;T&gt; and SectionedValidator&lt;T&gt;
+## SectionedValidator
 
-See the [homepage](/#validators) to know how they work.
-They provide a structure such that you can write your own validation class.
+Provides a type-less base structure for all typed `SectionedValidator<...>`s such that their logic is centralized.
+This class internally keeps a dictionary of the sections that are defined and simply loops over all items when `Validate` is called.
+The method `Section` simply stores the given key-value pair.
+
+## SectionedValidator&lt;...&gt;
+
+Just as with the `SimpleValidator<...>`, it exposes methods that a user can implement and use.
+For more information about how to use them, see the [homepage](/#validators).

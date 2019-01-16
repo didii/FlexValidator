@@ -247,6 +247,8 @@ public void Validate_IdSection_IdMustBeGreaterThanZero(Must type, long id) {
 }
 ```
 
+Note that internally the sections are stored in a dictionary. This means order is not guaranteed to be reserved when executing `Validate`. This is intentional and makes it so that your sections need to be entirely independent of each other.
+
 ### Utility methods
 
 There are also a couple of utility methods available.
@@ -296,7 +298,8 @@ These are things that still need to be added.
 
 **Important**
 
-* Async support
+* ~~Async support~~
+  * Still needs to be tested, but the code is there
 * Pass data to children validators such as their name
 
 **Less important**
