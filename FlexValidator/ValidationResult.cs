@@ -4,32 +4,32 @@ using System.Linq;
 
 namespace FlexValidator {
     public class ValidationResult {
-        private readonly IList<ValidationInfoBase> _fails;
-        private readonly IList<ValidationInfoBase> _passes;
+        private readonly IDictionary<Guid, ValidationInfoBase> _fails;
+        private readonly IDictionary<Guid, ValidationInfoBase> _passes;
 
-        public IEnumerable<ValidationInfoBase> Fails => _fails;
-        public IEnumerable<ValidationInfoBase> Passes => _passes;
+        public IEnumerable<ValidationInfoBase> Fails => _fails.Values;
+        public IEnumerable<ValidationInfoBase> Passes => _passes.Values;
 
         public bool IsValid => _fails.Count == 0;
 
         public ValidationResult(IEnumerable<ValidationInfoBase> fails = null, IEnumerable<ValidationInfoBase> passes = null) {
-            _fails = fails == null ? new List<ValidationInfoBase>() : fails.ToList();
-            _passes = passes == null ? new List<ValidationInfoBase>() : passes.ToList();
+            _fails = fails == null ? new Dictionary<Guid, ValidationInfoBase>() : fails.ToDictionary(x => x.Guid, x => x);
+            _passes = passes == null ? new Dictionary<Guid, ValidationInfoBase>() : passes.ToDictionary(x => x.Guid, x => x);
         }
 
         internal void AddFail(ValidationInfoBase info) {
-            _fails.Add(info);
+            _fails.Add(info.Guid, info);
         }
 
         internal void AddPass(ValidationInfoBase info) {
-            _passes.Add(info);
+            _passes.Add(info.Guid, info);
         }
 
         internal void AddRange(ValidationResult other) {
-            foreach (var otherFail in other.Fails)
-                _fails.Add(otherFail);
-            foreach (var otherPass in other.Passes)
-                _passes.Add(otherPass);
+            foreach (var fail in other.Fails)
+                _fails.Add(fail.Guid, fail);
+            foreach (var pass in other.Passes)
+                _passes.Add(pass.Guid, pass);
         }
 
         /// <summary>
@@ -38,14 +38,11 @@ namespace FlexValidator {
         /// <param name="guid"></param>
         /// <returns></returns>
         internal bool? Check(Guid guid) {
-            var fail = _fails.FirstOrDefault(x => x.Guid == guid);
-            if (fail != null)
+            if (_fails.ContainsKey(guid))
                 return false;
-            var pass = _passes.FirstOrDefault(x => x.Guid == guid);
-            if (pass != null)
+            if (_passes.ContainsKey(guid))
                 return true;
             return null;
         }
-
     }
 }
