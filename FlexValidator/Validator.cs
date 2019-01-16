@@ -133,7 +133,7 @@ namespace FlexValidator {
             var result = Result.Check(guid);
             if (result == null)
                 throw new ValidationNotFoundException(guid);
-            return result.Value;
+            return !result.Value;
         }
 
         /// <summary>

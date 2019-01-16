@@ -8,7 +8,7 @@ using NUnit.Framework;
 namespace FlexValidator.Tests {
     public class EmptyModelValidatorTests {
         private TestSimpleValidator<SomeModel> _sut;
-        private SomeModel _someModel = new SomeModel();
+        private SomeModel _model = new SomeModel();
         private Guid guid = new Guid("de2319c3-5568-467b-b370-acb486a553f6");
         private Guid guid2 = new Guid("4ac89b89-52ea-4b50-a283-ea79f29c7122");
 
@@ -19,7 +19,7 @@ namespace FlexValidator.Tests {
             };
 
             //Act
-            var result = _sut.Validate(_someModel);
+            var result = _sut.Validate(_model);
 
             //Assert
             if (shouldPass) {
@@ -40,7 +40,7 @@ namespace FlexValidator.Tests {
             };
 
             //Act
-            TestDelegate test = () => _sut.Validate(_someModel);
+            TestDelegate test = () => _sut.Validate(_model);
 
             //Assert
             Assert.Throws<TException>(test);
@@ -50,11 +50,11 @@ namespace FlexValidator.Tests {
         public void Validate_ShouldPassModel() {
             //Arrange
             _sut = new TestSimpleValidator<SomeModel>() {
-                ValidateFunc = x => Assert.AreSame(_someModel, x)
+                ValidateFunc = x => Assert.AreSame(_model, x)
             };
 
             //Act
-            _sut.Validate(_someModel);
+            _sut.Validate(_model);
 
             //Assert
             //act should not throw
@@ -121,7 +121,7 @@ namespace FlexValidator.Tests {
 
         [Test]
         public void StartValidation_AfterStartValidation_ShouldThrow() {
-            TestThrow< InvalidValidatorStateException>(x => {
+            TestThrow<InvalidValidatorStateException>(x => {
                 _sut.Start(new ValidationInfoBase(guid));
                 _sut.Start(new ValidationInfoBase(guid));
             });
@@ -129,17 +129,17 @@ namespace FlexValidator.Tests {
 
         [Test]
         public void PassWithoutStart_ShouldThrow() {
-            TestThrow< InvalidValidatorStateException>(x => _sut.Pass());
+            TestThrow<InvalidValidatorStateException>(x => _sut.Pass());
         }
 
         [Test]
         public void FailWithoutStart_ShouldThrow() {
-            TestThrow< InvalidValidatorStateException>(x => _sut.Fail());
+            TestThrow<InvalidValidatorStateException>(x => _sut.Fail());
         }
 
         [Test]
         public void PassAfterCompletion_ShouldThrow() {
-            TestThrow< InvalidValidatorStateException>(x => {
+            TestThrow<InvalidValidatorStateException>(x => {
                 _sut.Start(new ValidationInfoBase(guid));
                 _sut.Pass();
                 _sut.Pass();
@@ -148,7 +148,7 @@ namespace FlexValidator.Tests {
 
         [Test]
         public void FailAfterCompletion_ShouldThrow() {
-            TestThrow< InvalidValidatorStateException>(x => {
+            TestThrow<InvalidValidatorStateException>(x => {
                 _sut.Start(new ValidationInfoBase(guid));
                 _sut.Pass();
                 _sut.Fail();
@@ -163,6 +163,62 @@ namespace FlexValidator.Tests {
         [Test]
         public void Failed_WithoutGuidInResult_ShouldThrow() {
             TestThrow<ValidationNotFoundException>(x => _sut.Failed(guid));
+        }
+
+        [Test]
+        public void Passed_WithGuidInPassed_ShouldReturnTrue() {
+            //Arrange
+            _sut = new TestSimpleValidator<SomeModel>() {
+                ValidateFunc = m => {
+                    _sut.Result.AddPass(new ValidationInfoBase(guid));
+                    Assert.IsTrue(_sut.Passed(guid));
+                }
+            };
+
+            //Act + Assert
+            _sut.Validate(_model);
+        }
+
+        [Test]
+        public void Passed_WithGuidInFailed_ShouldReturnFalse() {
+            //Arrange
+            _sut = new TestSimpleValidator<SomeModel>() {
+                ValidateFunc = m => {
+                    _sut.Result.AddFail(new ValidationInfoBase(guid));
+                    Assert.IsFalse(_sut.Passed(guid));
+                }
+            };
+
+            //Act + Assert
+            _sut.Validate(_model);
+        }
+
+        [Test]
+        public void Failed_WithGuidInPassed_ShouldReturnFalse() {
+            //Arrange
+            _sut = new TestSimpleValidator<SomeModel>() {
+                ValidateFunc = m => {
+                    _sut.Result.AddPass(new ValidationInfoBase(guid));
+                    Assert.IsFalse(_sut.Failed(guid));
+                }
+            };
+
+            //Act + Assert
+            _sut.Validate(_model);
+        }
+
+        [Test]
+        public void Failed_WithGuidInFailed_ShouldReturnTrue() {
+            //Arrange
+            _sut = new TestSimpleValidator<SomeModel>() {
+                ValidateFunc = m => {
+                    _sut.Result.AddFail(new ValidationInfoBase(guid));
+                    Assert.IsTrue(_sut.Failed(guid));
+                }
+            };
+
+            //Act + Assert
+            _sut.Validate(_model);
         }
     }
 }
