@@ -7,15 +7,15 @@ using NUnit.Framework;
 namespace FlexValidator.Tests {
 
     public class EmptyModel2ValidatorTests {
-        private TestSimpleValidator<EmptyModel, EmptyModel> _sut;
-        private EmptyModel _model1 = new EmptyModel();
-        private EmptyModel _model2 = new EmptyModel();
+        private TestSimpleValidator<SomeModel, SomeModel> _sut;
+        private SomeModel _model1 = new SomeModel();
+        private SomeModel _model2 = new SomeModel();
         private Guid guid = new Guid("de2319c3-5568-467b-b370-acb486a553f6");
 
         [Test]
         public void Validate_ShouldPassModels() {
             //Assert
-            _sut = new TestSimpleValidator<EmptyModel, EmptyModel>() {
+            _sut = new TestSimpleValidator<SomeModel, SomeModel>() {
                 ValidateFunc = (x, y) => {
                     Assert.AreSame(_model1, x);
                     Assert.AreSame(_model2, y);
@@ -32,7 +32,7 @@ namespace FlexValidator.Tests {
         [Test]
         public void Pass_ShouldAddTestToPasses() {
             //Assert
-            _sut = new TestSimpleValidator<EmptyModel, EmptyModel>() {
+            _sut = new TestSimpleValidator<SomeModel, SomeModel>() {
                 ValidateFunc = (x, y) => {
                     _sut.Start(new ValidationInfoBase(guid));
                     _sut.Pass();

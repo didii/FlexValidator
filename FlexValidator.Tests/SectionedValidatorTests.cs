@@ -135,13 +135,13 @@ namespace FlexValidator.Tests {
         public void Validate_WithSubValidator_ShouldRun() {
             //Arrange
             var model = new SomeModel();
-            var sub1 = new TestSimpleValidator<SubModel>();
+            var sub1 = new TestSimpleValidator<SomeModel>();
             sub1.ValidateFunc = x => {
                 sub1.Start(new ValidationInfoBase(guid));
                 sub1.Pass();
             };
             _sut = new TestSectionedValidator<SomeModel>();
-            _sut.Init(validator => _sut.Section(section, m => _sut.RunValidator(sub1, m.Sub)));
+            _sut.Init(validator => _sut.Section(section, m => _sut.RunValidator(sub1, m.Some)));
 
             //Act
             var result = _sut.Validate(model);
@@ -156,20 +156,20 @@ namespace FlexValidator.Tests {
         public void Validate_WithMultileSubValidators_ShouldRunAllSections() {
             //Arrange
             var model = new SomeModel();
-            var doubleLeft = new TestSimpleValidator<DoubleModel>();
+            var doubleLeft = new TestSimpleValidator<SomeModel>();
             doubleLeft.ValidateFunc = x => {
                 doubleLeft.Start(new ValidationInfoBase(guid));
                 doubleLeft.Pass();
             };
-            var doubleRight = new TestSimpleValidator<DoubleModel>();
+            var doubleRight = new TestSimpleValidator<SomeModel>();
             doubleRight.ValidateFunc = x => {
                 doubleRight.Start(new ValidationInfoBase(guid2));
                 doubleRight.Fail();
             };
             _sut = new TestSectionedValidator<SomeModel>();
             _sut.Init(validator => {
-                _sut.Section(section, m => _sut.RunValidator(doubleLeft, m.DoubleLeft));
-                _sut.Section(section2, m => _sut.RunValidator(doubleRight, m.DoubleRight));
+                _sut.Section(section, m => _sut.RunValidator(doubleLeft, m.Some));
+                _sut.Section(section2, m => _sut.RunValidator(doubleRight, m.Some));
             });
 
             //Act
@@ -186,20 +186,20 @@ namespace FlexValidator.Tests {
         public void ValidateSection_WithMultileSubValidators_ShouldRunSection() {
             //Arrange
             var model = new SomeModel();
-            var doubleLeft = new TestSimpleValidator<DoubleModel>();
+            var doubleLeft = new TestSimpleValidator<SomeModel>();
             doubleLeft.ValidateFunc = x => {
                 doubleLeft.Start(new ValidationInfoBase(guid));
                 doubleLeft.Pass();
             };
-            var doubleRight = new TestSimpleValidator<DoubleModel>();
+            var doubleRight = new TestSimpleValidator<SomeModel>();
             doubleRight.ValidateFunc = x => {
                 doubleRight.Start(new ValidationInfoBase(guid2));
                 doubleRight.Fail();
             };
             _sut = new TestSectionedValidator<SomeModel>();
             _sut.Init(validator => {
-                _sut.Section(section, m => _sut.RunValidator(doubleLeft, m.DoubleLeft));
-                _sut.Section(section2, m => _sut.RunValidator(doubleRight, m.DoubleRight));
+                _sut.Section(section, m => _sut.RunValidator(doubleLeft, m.Some));
+                _sut.Section(section2, m => _sut.RunValidator(doubleRight, m.Some));
             });
 
             //Act
@@ -215,20 +215,20 @@ namespace FlexValidator.Tests {
         public void ValidateSection2_WithMultileSubValidators_ShouldRunSection2() {
             //Arrange
             var model = new SomeModel();
-            var doubleLeft = new TestSimpleValidator<DoubleModel>();
+            var doubleLeft = new TestSimpleValidator<SomeModel>();
             doubleLeft.ValidateFunc = x => {
                 doubleLeft.Start(new ValidationInfoBase(guid));
                 doubleLeft.Pass();
             };
-            var doubleRight = new TestSimpleValidator<DoubleModel>();
+            var doubleRight = new TestSimpleValidator<SomeModel>();
             doubleRight.ValidateFunc = x => {
                 doubleRight.Start(new ValidationInfoBase(guid2));
                 doubleRight.Fail();
             };
             _sut = new TestSectionedValidator<SomeModel>();
             _sut.Init(validator => {
-                _sut.Section(section, m => _sut.RunValidator(doubleLeft, m.DoubleLeft));
-                _sut.Section(section2, m => _sut.RunValidator(doubleRight, m.DoubleRight));
+                _sut.Section(section, m => _sut.RunValidator(doubleLeft, m.Some));
+                _sut.Section(section2, m => _sut.RunValidator(doubleRight, m.Some));
             });
 
             //Act

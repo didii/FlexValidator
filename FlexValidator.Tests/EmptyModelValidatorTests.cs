@@ -7,19 +7,19 @@ using NUnit.Framework;
 
 namespace FlexValidator.Tests {
     public class EmptyModelValidatorTests {
-        private TestSimpleValidator<EmptyModel> _sut;
-        private EmptyModel _model = new EmptyModel();
+        private TestSimpleValidator<SomeModel> _sut;
+        private SomeModel _someModel = new SomeModel();
         private Guid guid = new Guid("de2319c3-5568-467b-b370-acb486a553f6");
         private Guid guid2 = new Guid("4ac89b89-52ea-4b50-a283-ea79f29c7122");
 
-        private void TestResult(bool shouldPass, Action<EmptyModel> validateFunc) {
+        private void TestResult(bool shouldPass, Action<SomeModel> validateFunc) {
             //Arrange
-            _sut = new TestSimpleValidator<EmptyModel>() {
+            _sut = new TestSimpleValidator<SomeModel>() {
                 ValidateFunc = validateFunc
             };
 
             //Act
-            var result = _sut.Validate(_model);
+            var result = _sut.Validate(_someModel);
 
             //Assert
             if (shouldPass) {
@@ -33,14 +33,14 @@ namespace FlexValidator.Tests {
             }
         }
 
-        private void TestThrow<TException>(Action<EmptyModel> validateFunc) where TException : Exception {
+        private void TestThrow<TException>(Action<SomeModel> validateFunc) where TException : Exception {
             //Arrange
-            _sut = new TestSimpleValidator<EmptyModel>() {
+            _sut = new TestSimpleValidator<SomeModel>() {
                 ValidateFunc = validateFunc
             };
 
             //Act
-            TestDelegate test = () => _sut.Validate(_model);
+            TestDelegate test = () => _sut.Validate(_someModel);
 
             //Assert
             Assert.Throws<TException>(test);
@@ -49,12 +49,12 @@ namespace FlexValidator.Tests {
         [Test]
         public void Validate_ShouldPassModel() {
             //Arrange
-            _sut = new TestSimpleValidator<EmptyModel>() {
-                ValidateFunc = x => Assert.AreSame(_model, x)
+            _sut = new TestSimpleValidator<SomeModel>() {
+                ValidateFunc = x => Assert.AreSame(_someModel, x)
             };
 
             //Act
-            _sut.Validate(_model);
+            _sut.Validate(_someModel);
 
             //Assert
             //act should not throw
