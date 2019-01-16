@@ -25,14 +25,16 @@ We first started using [FluentValidator](https://github.com/JeremySkinner/Fluent
 which - don't get me wrong - is a good framework,
 but is not suited for this kind of complex logic with numerous of properties.
 
-The problems we had was:
+What we neede was:
 
-* Seperation of concerns (properties that depend on each other need to be in the top-level validator)
-* Testability (we also need to know if a test was passed)
-* Complex logic isn't readable anymore in the Fluent-style
-* Validations based on multiple properties are weird to write
+* Seperation of concerns
+  * E.g. Validating the connection between property A and property B has nothing to do with validating the connection between property A and property C. They should not be tested or always run together.
+* Testability
+  * We need to know whether a validation failed, but also when it passed
+  * Seperation of concern is here related
+* Complex logic has still to be readable
 
-So I came up with another way to write validations where you can simply make use of statements you know: `if`, `else`, `&&`.
+So I came up with another way to write validations where you can simply make use of statements you know: `if`, `else`, `&&`, .... And where every validation can be nicely seperated from the rest.
 
 ## How to use it?
 
