@@ -91,14 +91,20 @@ It was partly law-based and thus had rules with exceptions and exceptions and ex
 We first started using <a href="https://github.com/JeremySkinner/FluentValidation">FluentValidator</a>,
 which - don&#39;t get me wrong - is a good framework,
 but is not suited for this kind of complex logic with numerous of properties.</p>
-<p>The problems we had was:</p>
+<p>What we neede was:</p>
 <ul>
-<li>Seperation of concerns (properties that depend on each other need to be in the top-level validator)</li>
-<li>Testability (we also need to know if a test was passed)</li>
-<li>Complex logic isn&#39;t readable anymore in the Fluent-style</li>
-<li>Validations based on multiple properties are weird to write</li>
+<li>Seperation of concerns<ul>
+<li>E.g. Validating the connection between property A and property B has nothing to do with validating the connection between property A and property C. They should not be tested or always run together.</li>
 </ul>
-<p>So I came up with another way to write validations where you can simply make use of statements you know: <code>if</code>, <code>else</code>, <code>&amp;&amp;</code>.</p>
+</li>
+<li>Testability<ul>
+<li>We need to know whether a validation failed, but also when it passed</li>
+<li>Seperation of concern is here related</li>
+</ul>
+</li>
+<li>Complex logic has still to be readable</li>
+</ul>
+<p>So I came up with another way to write validations where you can simply make use of statements you know: <code>if</code>, <code>else</code>, <code>&amp;&amp;</code>, .... And where every validation can be nicely seperated from the rest.</p>
 <h2 id="how-to-use-it">How to use it?</h2>
 <h3 id="syntax">Syntax</h3>
 <p>The default syntax is pretty straightforward.</p>
