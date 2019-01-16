@@ -260,3 +260,7 @@ paket-files/
 __pycache__/
 *.pyc
 FlexValidator.Docs/log.txt
+
+
+# DoxFx for github pages
+gh-pages/
