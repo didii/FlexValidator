@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using FlexValidator.Helpers;
 
 namespace FlexValidator {
     public abstract class SimpleValidator<T> : SimpleValidator, IValidator<T> {

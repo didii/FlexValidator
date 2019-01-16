@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using FlexValidator.Helpers;
 
 namespace FlexValidator {
     public abstract class SectionedValidator<T> : SectionedValidator, ISectionedValidator<T> {

@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 
 namespace FlexValidator {
+    /// <summary>
+    /// The result set of any validation
+    /// </summary>
     public interface IValidationResult {
         /// <summary>
         /// Is this result set valid? Should return true if Fails contains no elements.
