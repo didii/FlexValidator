@@ -275,7 +275,8 @@ public void Validate_IdSection_IdMustBeGreaterThanZero(Must type, long id) {
     //Assert
     result.Should(type, &quot;someGuid&quot;);
 }
-</code></pre><h3 id="utility-methods">Utility methods</h3>
+</code></pre><p>Note that internally the sections are stored in a dictionary. This means order is not guaranteed to be reserved when executing <code>Validate</code>. This is intentional and makes it so that your sections need to be entirely independent of each other.</p>
+<h3 id="utility-methods">Utility methods</h3>
 <p>There are also a couple of utility methods available.</p>
 <table>
 <thead>
@@ -327,7 +328,10 @@ Ctrl+F, Ctrl+V and BOOM, you can correct the validation.</p>
 <p>These are things that still need to be added.</p>
 <p><strong>Important</strong></p>
 <ul>
-<li>Async support</li>
+<li><del>Async support</del><ul>
+<li>Still needs to be tested, but the code is there</li>
+</ul>
+</li>
 <li>Pass data to children validators such as their name</li>
 </ul>
 <p><strong>Less important</strong></p>
