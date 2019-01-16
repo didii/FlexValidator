@@ -79,7 +79,8 @@
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><a class="xref" href="FlexValidator.Validator.html">Validator</a></div>
-    <div class="level2"><span class="xref">SimpleValidator&lt;T1, T2, T3&gt;</span></div>
+    <div class="level2"><a class="xref" href="FlexValidator.SimpleValidator.html">SimpleValidator</a></div>
+    <div class="level3"><span class="xref">SimpleValidator&lt;T1, T2, T3&gt;</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
@@ -87,6 +88,12 @@
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="FlexValidator.SimpleValidator.html#FlexValidator_SimpleValidator_Validate_System_Object___">SimpleValidator.Validate(Object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="FlexValidator.SimpleValidator.html#FlexValidator_SimpleValidator_ValidateAsync_System_Object___">SimpleValidator.ValidateAsync(Object[])</a>
+    </div>
     <div>
       <a class="xref" href="FlexValidator.Validator.html#FlexValidator_Validator_Result">Validator.Result</a>
     </div>
@@ -149,7 +156,7 @@
   <h6><strong>Assembly</strong>: FlexValidator.dll</h6>
   <h5 id="FlexValidator_SimpleValidator_3_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class SimpleValidator&lt;T1, T2, T3&gt; : Validator, IValidator&lt;T1, T2, T3&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class SimpleValidator&lt;T1, T2, T3&gt; : SimpleValidator, IValidator&lt;T1, T2, T3&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -181,7 +188,7 @@
     <a href="https://github.com/didii/FlexValidator/new/master/apiSpec/new?filename=FlexValidator_SimpleValidator_3_DoValidate__0__1__2_.md&amp;value=---%0Auid%3A%20FlexValidator.SimpleValidator%603.DoValidate(%600%2C%601%2C%602)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/didii/FlexValidator/blob/master/FlexValidator/SimpleValidator.cs/#L50">View Source</a>
+    <a href="https://github.com/didii/FlexValidator/blob/master/FlexValidator/SimpleValidator3.cs/#L22">View Source</a>
   </span>
   <a id="FlexValidator_SimpleValidator_3_DoValidate_" data-uid="FlexValidator.SimpleValidator`3.DoValidate*"></a>
   <h4 id="FlexValidator_SimpleValidator_3_DoValidate__0__1__2_" data-uid="FlexValidator.SimpleValidator`3.DoValidate(`0,`1,`2)">DoValidate(T1, T2, T3)</h4>
@@ -191,7 +198,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract void DoValidate(T1 obj1, T2 obj2, T3 obj3)</code></pre>
+    <pre><code class="lang-csharp hljs">protected virtual void DoValidate(T1 obj1, T2 obj2, T3 obj3)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -225,18 +232,52 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/didii/FlexValidator/new/master/apiSpec/new?filename=FlexValidator_SimpleValidator_3_Validate__0__1__2_.md&amp;value=---%0Auid%3A%20FlexValidator.SimpleValidator%603.Validate(%600%2C%601%2C%602)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/didii/FlexValidator/new/master/apiSpec/new?filename=FlexValidator_SimpleValidator_3_DoValidate_System_Object___.md&amp;value=---%0Auid%3A%20FlexValidator.SimpleValidator%603.DoValidate(System.Object%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/didii/FlexValidator/blob/master/FlexValidator/SimpleValidator.cs/#L37">View Source</a>
+    <a href="https://github.com/didii/FlexValidator/blob/master/FlexValidator/SimpleValidator3.cs/#L27">View Source</a>
   </span>
-  <a id="FlexValidator_SimpleValidator_3_Validate_" data-uid="FlexValidator.SimpleValidator`3.Validate*"></a>
-  <h4 id="FlexValidator_SimpleValidator_3_Validate__0__1__2_" data-uid="FlexValidator.SimpleValidator`3.Validate(`0,`1,`2)">Validate(T1, T2, T3)</h4>
+  <a id="FlexValidator_SimpleValidator_3_DoValidate_" data-uid="FlexValidator.SimpleValidator`3.DoValidate*"></a>
+  <h4 id="FlexValidator_SimpleValidator_3_DoValidate_System_Object___" data-uid="FlexValidator.SimpleValidator`3.DoValidate(System.Object[])">DoValidate(Object[])</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ValidationResult Validate(T1 obj1, T2 obj2, T3 obj3)</code></pre>
+    <pre><code class="lang-csharp hljs">protected override void DoValidate(object[] models)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">models</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="FlexValidator.SimpleValidator.html#FlexValidator_SimpleValidator_DoValidate_System_Object___">SimpleValidator.DoValidate(Object[])</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/didii/FlexValidator/new/master/apiSpec/new?filename=FlexValidator_SimpleValidator_3_DoValidateAsync__0__1__2_.md&amp;value=---%0Auid%3A%20FlexValidator.SimpleValidator%603.DoValidateAsync(%600%2C%601%2C%602)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/didii/FlexValidator/blob/master/FlexValidator/SimpleValidator3.cs/#L24">View Source</a>
+  </span>
+  <a id="FlexValidator_SimpleValidator_3_DoValidateAsync_" data-uid="FlexValidator.SimpleValidator`3.DoValidateAsync*"></a>
+  <h4 id="FlexValidator_SimpleValidator_3_DoValidateAsync__0__1__2_" data-uid="FlexValidator.SimpleValidator`3.DoValidateAsync(`0,`1,`2)">DoValidateAsync(T1, T2, T3)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual Task DoValidateAsync(T1 obj1, T2 obj2, T3 obj3)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -275,7 +316,170 @@
     </thead>
     <tbody>
       <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/didii/FlexValidator/new/master/apiSpec/new?filename=FlexValidator_SimpleValidator_3_DoValidateAsync_System_Object___.md&amp;value=---%0Auid%3A%20FlexValidator.SimpleValidator%603.DoValidateAsync(System.Object%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/didii/FlexValidator/blob/master/FlexValidator/SimpleValidator3.cs/#L32">View Source</a>
+  </span>
+  <a id="FlexValidator_SimpleValidator_3_DoValidateAsync_" data-uid="FlexValidator.SimpleValidator`3.DoValidateAsync*"></a>
+  <h4 id="FlexValidator_SimpleValidator_3_DoValidateAsync_System_Object___" data-uid="FlexValidator.SimpleValidator`3.DoValidateAsync(System.Object[])">DoValidateAsync(Object[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override Task DoValidateAsync(object[] models)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span>[]</td>
+        <td><span class="parametername">models</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="FlexValidator.SimpleValidator.html#FlexValidator_SimpleValidator_DoValidateAsync_System_Object___">SimpleValidator.DoValidateAsync(Object[])</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/didii/FlexValidator/new/master/apiSpec/new?filename=FlexValidator_SimpleValidator_3_Validate__0__1__2_.md&amp;value=---%0Auid%3A%20FlexValidator.SimpleValidator%603.Validate(%600%2C%601%2C%602)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/didii/FlexValidator/blob/master/FlexValidator/SimpleValidator3.cs/#L6">View Source</a>
+  </span>
+  <a id="FlexValidator_SimpleValidator_3_Validate_" data-uid="FlexValidator.SimpleValidator`3.Validate*"></a>
+  <h4 id="FlexValidator_SimpleValidator_3_Validate__0__1__2_" data-uid="FlexValidator.SimpleValidator`3.Validate(`0,`1,`2)">Validate(T1, T2, T3)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ValidationResult Validate(T1 model1, T2 model2, T3 model3)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">model1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T2</span></td>
+        <td><span class="parametername">model2</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T3</span></td>
+        <td><span class="parametername">model3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
         <td><a class="xref" href="FlexValidator.ValidationResult.html">ValidationResult</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/didii/FlexValidator/new/master/apiSpec/new?filename=FlexValidator_SimpleValidator_3_ValidateAsync__0__1__2_.md&amp;value=---%0Auid%3A%20FlexValidator.SimpleValidator%603.ValidateAsync(%600%2C%601%2C%602)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/didii/FlexValidator/blob/master/FlexValidator/SimpleValidator3.cs/#L11">View Source</a>
+  </span>
+  <a id="FlexValidator_SimpleValidator_3_ValidateAsync_" data-uid="FlexValidator.SimpleValidator`3.ValidateAsync*"></a>
+  <h4 id="FlexValidator_SimpleValidator_3_ValidateAsync__0__1__2_" data-uid="FlexValidator.SimpleValidator`3.ValidateAsync(`0,`1,`2)">ValidateAsync(T1, T2, T3)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ValidationResult&gt; ValidateAsync(T1 model1, T2 model2, T3 model3)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">model1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T2</span></td>
+        <td><span class="parametername">model2</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T3</span></td>
+        <td><span class="parametername">model3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FlexValidator.ValidationResult.html">ValidationResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -295,7 +499,7 @@
                     <a href="https://github.com/didii/FlexValidator/new/master/apiSpec/new?filename=FlexValidator_SimpleValidator_3.md&amp;value=---%0Auid%3A%20FlexValidator.SimpleValidator%603%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/didii/FlexValidator/blob/master/FlexValidator/SimpleValidator.cs/#L35" class="contribution-link">View Source</a>
+                    <a href="https://github.com/didii/FlexValidator/blob/master/FlexValidator/SimpleValidator3.cs/#L4" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -79,7 +79,8 @@
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><a class="xref" href="FlexValidator.Validator.html">Validator</a></div>
-    <div class="level2"><span class="xref">SectionedValidator&lt;T1, T2, T3&gt;</span></div>
+    <div class="level2"><a class="xref" href="FlexValidator.SectionedValidator.html">SectionedValidator</a></div>
+    <div class="level3"><span class="xref">SectionedValidator&lt;T1, T2, T3&gt;</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
@@ -150,7 +151,7 @@
   <h6><strong>Assembly</strong>: FlexValidator.dll</h6>
   <h5 id="FlexValidator_SectionedValidator_3_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class SectionedValidator&lt;T1, T2, T3&gt; : Validator, ISectionedValidator&lt;T1, T2, T3&gt;, IValidator&lt;T1, T2, T3&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class SectionedValidator&lt;T1, T2, T3&gt; : SectionedValidator, ISectionedValidator&lt;T1, T2, T3&gt;, IValidator&lt;T1, T2, T3&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -179,18 +180,18 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/didii/FlexValidator/new/master/apiSpec/new?filename=FlexValidator_SectionedValidator_3_Section_System_String_System_Action__0__1__2__.md&amp;value=---%0Auid%3A%20FlexValidator.SectionedValidator%603.Section(System.String%2CSystem.Action%7B%600%2C%601%2C%602%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/didii/FlexValidator/new/master/apiSpec/new?filename=FlexValidator_SectionedValidator_3_AsyncSection_System_String_System_Func__0__1__2_System_Threading_Tasks_Task__.md&amp;value=---%0Auid%3A%20FlexValidator.SectionedValidator%603.AsyncSection(System.String%2CSystem.Func%7B%600%2C%601%2C%602%2CSystem.Threading.Tasks.Task%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/didii/FlexValidator/blob/master/FlexValidator/SectionedValidator.cs/#L85">View Source</a>
+    <a href="https://github.com/didii/FlexValidator/blob/master/FlexValidator/SectionedValidator3.cs/#L30">View Source</a>
   </span>
-  <a id="FlexValidator_SectionedValidator_3_Section_" data-uid="FlexValidator.SectionedValidator`3.Section*"></a>
-  <h4 id="FlexValidator_SectionedValidator_3_Section_System_String_System_Action__0__1__2__" data-uid="FlexValidator.SectionedValidator`3.Section(System.String,System.Action{`0,`1,`2})">Section(String, Action&lt;T1, T2, T3&gt;)</h4>
+  <a id="FlexValidator_SectionedValidator_3_AsyncSection_" data-uid="FlexValidator.SectionedValidator`3.AsyncSection*"></a>
+  <h4 id="FlexValidator_SectionedValidator_3_AsyncSection_System_String_System_Func__0__1__2_System_Threading_Tasks_Task__" data-uid="FlexValidator.SectionedValidator`3.AsyncSection(System.String,System.Func{`0,`1,`2,System.Threading.Tasks.Task})">AsyncSection(String, Func&lt;T1, T2, T3, Task&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected void Section(string sectionName, Action&lt;T1, T2, T3&gt; validateFunc)</code></pre>
+    <pre><code class="lang-csharp hljs">protected void AsyncSection(string name, Func&lt;T1, T2, T3, Task&gt; asyncSection)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -204,12 +205,49 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">sectionName</span></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Func</span>&lt;T1, T2, T3, <span class="xref">System.Threading.Tasks.Task</span>&gt;</td>
+        <td><span class="parametername">asyncSection</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/didii/FlexValidator/new/master/apiSpec/new?filename=FlexValidator_SectionedValidator_3_Section_System_String_System_Action__0__1__2__.md&amp;value=---%0Auid%3A%20FlexValidator.SectionedValidator%603.Section(System.String%2CSystem.Action%7B%600%2C%601%2C%602%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/didii/FlexValidator/blob/master/FlexValidator/SectionedValidator3.cs/#L26">View Source</a>
+  </span>
+  <a id="FlexValidator_SectionedValidator_3_Section_" data-uid="FlexValidator.SectionedValidator`3.Section*"></a>
+  <h4 id="FlexValidator_SectionedValidator_3_Section_System_String_System_Action__0__1__2__" data-uid="FlexValidator.SectionedValidator`3.Section(System.String,System.Action{`0,`1,`2})">Section(String, Action&lt;T1, T2, T3&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void Section(string name, Action&lt;T1, T2, T3&gt; section)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
         <td></td>
       </tr>
       <tr>
         <td><span class="xref">System.Action</span>&lt;T1, T2, T3&gt;</td>
-        <td><span class="parametername">validateFunc</span></td>
+        <td><span class="parametername">section</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -219,7 +257,7 @@
     <a href="https://github.com/didii/FlexValidator/new/master/apiSpec/new?filename=FlexValidator_SectionedValidator_3_Validate__0__1__2_.md&amp;value=---%0Auid%3A%20FlexValidator.SectionedValidator%603.Validate(%600%2C%601%2C%602)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/didii/FlexValidator/blob/master/FlexValidator/SectionedValidator.cs/#L68">View Source</a>
+    <a href="https://github.com/didii/FlexValidator/blob/master/FlexValidator/SectionedValidator3.cs/#L7">View Source</a>
   </span>
   <a id="FlexValidator_SectionedValidator_3_Validate_" data-uid="FlexValidator.SectionedValidator`3.Validate*"></a>
   <h4 id="FlexValidator_SectionedValidator_3_Validate__0__1__2_" data-uid="FlexValidator.SectionedValidator`3.Validate(`0,`1,`2)">Validate(T1, T2, T3)</h4>
@@ -227,7 +265,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ValidationResult Validate(T1 obj1, T2 obj2, T3 obj3)</code></pre>
+    <pre><code class="lang-csharp hljs">public ValidationResult Validate(T1 model1, T2 model2, T3 model3)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -241,17 +279,17 @@
     <tbody>
       <tr>
         <td><span class="xref">T1</span></td>
-        <td><span class="parametername">obj1</span></td>
+        <td><span class="parametername">model1</span></td>
         <td></td>
       </tr>
       <tr>
         <td><span class="xref">T2</span></td>
-        <td><span class="parametername">obj2</span></td>
+        <td><span class="parametername">model2</span></td>
         <td></td>
       </tr>
       <tr>
         <td><span class="xref">T3</span></td>
-        <td><span class="parametername">obj3</span></td>
+        <td><span class="parametername">model3</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -273,10 +311,67 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/didii/FlexValidator/new/master/apiSpec/new?filename=FlexValidator_SectionedValidator_3_ValidateAsync__0__1__2_.md&amp;value=---%0Auid%3A%20FlexValidator.SectionedValidator%603.ValidateAsync(%600%2C%601%2C%602)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/didii/FlexValidator/blob/master/FlexValidator/SectionedValidator3.cs/#L12">View Source</a>
+  </span>
+  <a id="FlexValidator_SectionedValidator_3_ValidateAsync_" data-uid="FlexValidator.SectionedValidator`3.ValidateAsync*"></a>
+  <h4 id="FlexValidator_SectionedValidator_3_ValidateAsync__0__1__2_" data-uid="FlexValidator.SectionedValidator`3.ValidateAsync(`0,`1,`2)">ValidateAsync(T1, T2, T3)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ValidationResult&gt; ValidateAsync(T1 model1, T2 model2, T3 model3)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">model1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T2</span></td>
+        <td><span class="parametername">model2</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T3</span></td>
+        <td><span class="parametername">model3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FlexValidator.ValidationResult.html">ValidationResult</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/didii/FlexValidator/new/master/apiSpec/new?filename=FlexValidator_SectionedValidator_3_ValidateSection_System_String__0__1__2_.md&amp;value=---%0Auid%3A%20FlexValidator.SectionedValidator%603.ValidateSection(System.String%2C%600%2C%601%2C%602)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/didii/FlexValidator/blob/master/FlexValidator/SectionedValidator.cs/#L78">View Source</a>
+    <a href="https://github.com/didii/FlexValidator/blob/master/FlexValidator/SectionedValidator3.cs/#L17">View Source</a>
   </span>
   <a id="FlexValidator_SectionedValidator_3_ValidateSection_" data-uid="FlexValidator.SectionedValidator`3.ValidateSection*"></a>
   <h4 id="FlexValidator_SectionedValidator_3_ValidateSection_System_String__0__1__2_" data-uid="FlexValidator.SectionedValidator`3.ValidateSection(System.String,`0,`1,`2)">ValidateSection(String, T1, T2, T3)</h4>
@@ -284,7 +379,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ValidationResult ValidateSection(string sectionName, T1 obj1, T2 obj2, T3 obj3)</code></pre>
+    <pre><code class="lang-csharp hljs">public ValidationResult ValidateSection(string section, T1 model1, T2 model2, T3 model3)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -298,22 +393,22 @@
     <tbody>
       <tr>
         <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">sectionName</span></td>
+        <td><span class="parametername">section</span></td>
         <td></td>
       </tr>
       <tr>
         <td><span class="xref">T1</span></td>
-        <td><span class="parametername">obj1</span></td>
+        <td><span class="parametername">model1</span></td>
         <td></td>
       </tr>
       <tr>
         <td><span class="xref">T2</span></td>
-        <td><span class="parametername">obj2</span></td>
+        <td><span class="parametername">model2</span></td>
         <td></td>
       </tr>
       <tr>
         <td><span class="xref">T3</span></td>
-        <td><span class="parametername">obj3</span></td>
+        <td><span class="parametername">model3</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -329,6 +424,68 @@
     <tbody>
       <tr>
         <td><a class="xref" href="FlexValidator.ValidationResult.html">ValidationResult</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/didii/FlexValidator/new/master/apiSpec/new?filename=FlexValidator_SectionedValidator_3_ValidateSectionAsync_System_String__0__1__2_.md&amp;value=---%0Auid%3A%20FlexValidator.SectionedValidator%603.ValidateSectionAsync(System.String%2C%600%2C%601%2C%602)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/didii/FlexValidator/blob/master/FlexValidator/SectionedValidator3.cs/#L22">View Source</a>
+  </span>
+  <a id="FlexValidator_SectionedValidator_3_ValidateSectionAsync_" data-uid="FlexValidator.SectionedValidator`3.ValidateSectionAsync*"></a>
+  <h4 id="FlexValidator_SectionedValidator_3_ValidateSectionAsync_System_String__0__1__2_" data-uid="FlexValidator.SectionedValidator`3.ValidateSectionAsync(System.String,`0,`1,`2)">ValidateSectionAsync(String, T1, T2, T3)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;ValidationResult&gt; ValidateSectionAsync(string section, T1 model1, T2 model2, T3 model3)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">section</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T1</span></td>
+        <td><span class="parametername">model1</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T2</span></td>
+        <td><span class="parametername">model2</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">T3</span></td>
+        <td><span class="parametername">model3</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FlexValidator.ValidationResult.html">ValidationResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -351,7 +508,7 @@
                     <a href="https://github.com/didii/FlexValidator/new/master/apiSpec/new?filename=FlexValidator_SectionedValidator_3.md&amp;value=---%0Auid%3A%20FlexValidator.SectionedValidator%603%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/didii/FlexValidator/blob/master/FlexValidator/SectionedValidator.cs/#L64" class="contribution-link">View Source</a>
+                    <a href="https://github.com/didii/FlexValidator/blob/master/FlexValidator/SectionedValidator3.cs/#L5" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
