@@ -60,7 +60,7 @@
         ]
       }
     ],
-    "dest": "../../FlexValidator.gh-pages",
+    "dest": "../gh-pages",
     "template": [
       "default"
     ]
