@@ -3,12 +3,12 @@ using System.Linq;
 using NUnit.Framework;
 
 namespace FlexValidator.Example.App.Tests.Helpers {
-    public static class ValidationResultExtensions {
-        public static void ShouldPass(this ValidationResult source, string guid) {
+    public static class IValidationResultExtensions {
+        public static void ShouldPass(this IValidationResult source, string guid) {
             ShouldPass(source, new Guid(guid));
         }
 
-        public static void ShouldPass(this ValidationResult source, Guid guid) {
+        public static void ShouldPass(this IValidationResult source, Guid guid) {
             if (source == null)
                 throw new ArgumentNullException(nameof(source));
 
@@ -23,11 +23,11 @@ namespace FlexValidator.Example.App.Tests.Helpers {
             Assert.Fail($"Validation {guid} did not run...");
         }
 
-        public static void ShouldFail(this ValidationResult source, string guid) {
+        public static void ShouldFail(this IValidationResult source, string guid) {
             ShouldFail(source, new Guid(guid));
         }
 
-        public static void ShouldFail(this ValidationResult source, Guid guid) {
+        public static void ShouldFail(this IValidationResult source, Guid guid) {
             if (source == null)
                 throw new ArgumentNullException(nameof(source));
 
@@ -42,11 +42,11 @@ namespace FlexValidator.Example.App.Tests.Helpers {
             Assert.Fail($"Validation {guid} did not run...");
         }
 
-        public static void Should(this ValidationResult source, ValidationType type, string guid) {
+        public static void Should(this IValidationResult source, ValidationType type, string guid) {
             Should(source, type, new Guid(guid));
         }
 
-        public static void Should(this ValidationResult source, ValidationType type, Guid guid) {
+        public static void Should(this IValidationResult source, ValidationType type, Guid guid) {
             switch (type) {
                 case ValidationType.Pass:
                     ShouldPass(source, guid);

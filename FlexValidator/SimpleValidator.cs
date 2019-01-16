@@ -2,14 +2,14 @@
 
 namespace FlexValidator {
     public abstract class SimpleValidator : Validator {
-        protected internal ValidationResult Validate(object[] models) {
+        protected internal IValidationResult Validate(object[] models) {
             Reset();
             DoValidate(models);
             DoValidateAsync(models).GetAwaiter().GetResult();
             return Result;
         }
 
-        protected internal async Task<ValidationResult> ValidateAsync(object[] models) {
+        protected internal async Task<IValidationResult> ValidateAsync(object[] models) {
             Reset();
             var task = DoValidateAsync(models);
             DoValidate(models);

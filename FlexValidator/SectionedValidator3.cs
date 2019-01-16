@@ -4,22 +4,22 @@ using System.Threading.Tasks;
 namespace FlexValidator {
     public abstract class SectionedValidator<T1, T2, T3> : SectionedValidator, ISectionedValidator<T1, T2, T3> {
         /// <inheritdoc/>
-        public ValidationResult Validate(T1 model1, T2 model2, T3 model3) {
+        public IValidationResult Validate(T1 model1, T2 model2, T3 model3) {
             return Validate(Helper.Pack(model1, model2, model3));
         }
 
         /// <inheritdoc/>
-        public Task<ValidationResult> ValidateAsync(T1 model1, T2 model2, T3 model3) {
+        public Task<IValidationResult> ValidateAsync(T1 model1, T2 model2, T3 model3) {
             return ValidateAsync(Helper.Pack(model1, model2, model3));
         }
 
         /// <inheritdoc/>
-        public ValidationResult ValidateSection(string section, T1 model1, T2 model2, T3 model3) {
+        public IValidationResult ValidateSection(string section, T1 model1, T2 model2, T3 model3) {
             return ValidateSection(section, Helper.Pack(model1, model2, model3));
         }
 
         /// <inheritdoc/>
-        public Task<ValidationResult> ValidateSectionAsync(string section, T1 model1, T2 model2, T3 model3) {
+        public Task<IValidationResult> ValidateSectionAsync(string section, T1 model1, T2 model2, T3 model3) {
             return ValidateSectionAsync(section, Helper.Pack(model1, model2, model3));
         }
 

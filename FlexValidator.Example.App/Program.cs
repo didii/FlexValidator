@@ -11,9 +11,9 @@ namespace FlexValidator.Example.App {
             var model = CreateModel();
             Console.WriteLine();
 
-            var validationResult = ValidateModel(model);
+            var IValidationResult = ValidateModel(model);
 
-            LogResults(validationResult);
+            LogResults(IValidationResult);
         }
 
         private static SomeModel CreateModel() {
@@ -42,12 +42,12 @@ namespace FlexValidator.Example.App {
             return model;
         }
 
-        private static ValidationResult ValidateModel(SomeModel model) {
+        private static IValidationResult ValidateModel(SomeModel model) {
             var validator = new SomeModelValidator();
             return validator.Validate(model);
         }
 
-        private static void LogResults(ValidationResult result) {
+        private static void LogResults(IValidationResult result) {
             if (result.IsValid) {
                 Console.WriteLine("Validation succeeded");
                 return;

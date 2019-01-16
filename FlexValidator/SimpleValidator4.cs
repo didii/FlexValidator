@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 namespace FlexValidator {
     public abstract class SimpleValidator<T1, T2, T3, T4> : SimpleValidator, IValidator<T1, T2, T3, T4> {
         /// <inheritdoc/>
-        public ValidationResult Validate(T1 model1, T2 model2, T3 model3, T4 model4) {
+        public IValidationResult Validate(T1 model1, T2 model2, T3 model3, T4 model4) {
             return Validate(Helper.Pack(model1, model2, model3, model4));
         }
 
         /// <inheritdoc/>
-        public Task<ValidationResult> ValidateAsync(T1 model1, T2 model2, T3 model3, T4 model4) {
+        public Task<IValidationResult> ValidateAsync(T1 model1, T2 model2, T3 model3, T4 model4) {
             return ValidateAsync(Helper.Pack(model1, model2, model3, model4));
         }
 

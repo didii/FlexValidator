@@ -10,21 +10,21 @@ namespace FlexValidator {
         private readonly IDictionary<string, Action<object[]>> _sections = new Dictionary<string, Action<object[]>>();
         private readonly IDictionary<string, Func<object[], Task>> _asyncSections = new Dictionary<string, Func<object[], Task>>();
 
-        internal ValidationResult Validate(params object[] models) {
+        internal IValidationResult Validate(params object[] models) {
             Reset();
             RunSections(models);
             RunAsyncSections(models);
             return Result;
         }
 
-        internal async Task<ValidationResult> ValidateAsync(params object[] models) {
+        internal async Task<IValidationResult> ValidateAsync(params object[] models) {
             var task = RunAsyncSectionsAsync(models);
             RunSections(models);
             await task;
             return Result;
         }
 
-        internal ValidationResult ValidateSection(string name, params object[] models) {
+        internal IValidationResult ValidateSection(string name, params object[] models) {
             Reset();
             if (RunSection(name, models))
                 return Result;
@@ -33,7 +33,7 @@ namespace FlexValidator {
             throw new ValidatorSectionNotFoundException(name);
         }
 
-        internal async Task<ValidationResult> ValidateSectionAsync(string name, params object[] models) {
+        internal async Task<IValidationResult> ValidateSectionAsync(string name, params object[] models) {
             Reset();
             if (await RunAsyncSectionAsync(name, models))
                 return Result;

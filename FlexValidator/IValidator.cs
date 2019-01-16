@@ -11,14 +11,14 @@ namespace FlexValidator {
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>
-        ValidationResult Validate(T model);
+        IValidationResult Validate(T model);
 
         /// <summary>
         /// Async version of <see cref="Validate"/>
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>
-        Task<ValidationResult> ValidateAsync(T model);
+        Task<IValidationResult> ValidateAsync(T model);
     }
 
     /// <summary>
@@ -33,9 +33,9 @@ namespace FlexValidator {
         /// <param name="model1"></param>
         /// <param name="model2"></param>
         /// <returns></returns>
-        ValidationResult Validate(T1 model1, T2 model2);
+        IValidationResult Validate(T1 model1, T2 model2);
 
-        Task<ValidationResult> ValidateAsync(T1 model1, T2 model2);
+        Task<IValidationResult> ValidateAsync(T1 model1, T2 model2);
     }
 
     /// <summary>
@@ -52,9 +52,9 @@ namespace FlexValidator {
         /// <param name="model2"></param>
         /// <param name="model3"></param>
         /// <returns></returns>
-        ValidationResult Validate(T1 model1, T2 model2, T3 model3);
+        IValidationResult Validate(T1 model1, T2 model2, T3 model3);
 
-        Task<ValidationResult> ValidateAsync(T1 model1, T2 model2, T3 model3);
+        Task<IValidationResult> ValidateAsync(T1 model1, T2 model2, T3 model3);
     }
 
     /// <summary>
@@ -73,8 +73,8 @@ namespace FlexValidator {
         /// <param name="model3"></param>
         /// <param name="model4"></param>
         /// <returns></returns>
-        ValidationResult Validate(T1 model1, T2 model2, T3 model3, T4 model4);
+        IValidationResult Validate(T1 model1, T2 model2, T3 model3, T4 model4);
 
-        Task<ValidationResult> ValidateAsync(T1 model1, T2 model2, T3 model3, T4 model4);
+        Task<IValidationResult> ValidateAsync(T1 model1, T2 model2, T3 model3, T4 model4);
     }
 }

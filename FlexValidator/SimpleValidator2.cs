@@ -3,12 +3,12 @@
 namespace FlexValidator {
     public abstract class SimpleValidator<T1, T2> : SimpleValidator, IValidator<T1, T2> {
         /// <inheritdoc/>
-        public ValidationResult Validate(T1 model1, T2 model2) {
+        public IValidationResult Validate(T1 model1, T2 model2) {
             return Validate(Helper.Pack(model1, model2));
         }
 
         /// <inheritdoc/>
-        public async Task<ValidationResult> ValidateAsync(T1 model1, T2 model2) {
+        public async Task<IValidationResult> ValidateAsync(T1 model1, T2 model2) {
             return Validate(Helper.Pack(model1, model2));
         }
 
