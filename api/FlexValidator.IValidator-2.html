@@ -117,7 +117,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">ValidationResult Validate(T1 model1, T2 model2)</code></pre>
+    <pre><code class="lang-csharp hljs">IValidationResult Validate(T1 model1, T2 model2)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -151,7 +151,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="FlexValidator.ValidationResult.html">ValidationResult</a></td>
+        <td><a class="xref" href="FlexValidator.IValidationResult.html">IValidationResult</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -161,15 +161,16 @@
     <a href="https://github.com/didii/FlexValidator/new/master/apiSpec/new?filename=FlexValidator_IValidator_2_ValidateAsync__0__1_.md&amp;value=---%0Auid%3A%20FlexValidator.IValidator%602.ValidateAsync(%600%2C%601)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/didii/FlexValidator/blob/master/FlexValidator/IValidator.cs/#L38">View Source</a>
+    <a href="https://github.com/didii/FlexValidator/blob/master/FlexValidator/IValidator.cs/#L44">View Source</a>
   </span>
   <a id="FlexValidator_IValidator_2_ValidateAsync_" data-uid="FlexValidator.IValidator`2.ValidateAsync*"></a>
   <h4 id="FlexValidator_IValidator_2_ValidateAsync__0__1_" data-uid="FlexValidator.IValidator`2.ValidateAsync(`0,`1)">ValidateAsync(T1, T2)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Async version of <a class="xref" href="FlexValidator.IValidator-2.html#FlexValidator_IValidator_2_Validate__0__1_">Validate(T1, T2)</a></p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;ValidationResult&gt; ValidateAsync(T1 model1, T2 model2)</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IValidationResult&gt; ValidateAsync(T1 model1, T2 model2)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -203,7 +204,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FlexValidator.ValidationResult.html">ValidationResult</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="FlexValidator.IValidationResult.html">IValidationResult</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
