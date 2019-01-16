@@ -1,4 +1,6 @@
-﻿namespace FlexValidator {
+﻿using System.Threading.Tasks;
+
+namespace FlexValidator {
     /// <summary>
     /// Validates a single object
     /// </summary>
@@ -7,9 +9,16 @@
         /// <summary>
         /// Validates the model
         /// </summary>
-        /// <param name="obj"></param>
+        /// <param name="model"></param>
         /// <returns></returns>
-        ValidationResult Validate(T obj);
+        ValidationResult Validate(T model);
+
+        /// <summary>
+        /// Async version of <see cref="Validate"/>
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        Task<ValidationResult> ValidateAsync(T model);
     }
 
     /// <summary>
@@ -21,10 +30,12 @@
         /// <summary>
         /// Validates the pair of models
         /// </summary>
-        /// <param name="obj1"></param>
-        /// <param name="obj2"></param>
+        /// <param name="model1"></param>
+        /// <param name="model2"></param>
         /// <returns></returns>
-        ValidationResult Validate(T1 obj1, T2 obj2);
+        ValidationResult Validate(T1 model1, T2 model2);
+
+        Task<ValidationResult> ValidateAsync(T1 model1, T2 model2);
     }
 
     /// <summary>
@@ -37,11 +48,13 @@
         /// <summary>
         /// Validates the trio of models
         /// </summary>
-        /// <param name="obj1"></param>
-        /// <param name="obj2"></param>
-        /// <param name="obj3"></param>
+        /// <param name="model1"></param>
+        /// <param name="model2"></param>
+        /// <param name="model3"></param>
         /// <returns></returns>
-        ValidationResult Validate(T1 obj1, T2 obj2, T3 obj3);
+        ValidationResult Validate(T1 model1, T2 model2, T3 model3);
+
+        Task<ValidationResult> ValidateAsync(T1 model1, T2 model2, T3 model3);
     }
 
     /// <summary>
@@ -55,11 +68,13 @@
         /// <summary>
         /// Validates the quartet of models
         /// </summary>
-        /// <param name="obj1"></param>
-        /// <param name="obj2"></param>
-        /// <param name="obj3"></param>
-        /// <param name="obj4"></param>
+        /// <param name="model1"></param>
+        /// <param name="model2"></param>
+        /// <param name="model3"></param>
+        /// <param name="model4"></param>
         /// <returns></returns>
-        ValidationResult Validate(T1 obj1, T2 obj2, T3 obj3, T4 obj4);
+        ValidationResult Validate(T1 model1, T2 model2, T3 model3, T4 model4);
+
+        Task<ValidationResult> ValidateAsync(T1 model1, T2 model2, T3 model3, T4 model4);
     }
 }
