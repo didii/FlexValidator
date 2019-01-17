@@ -28,7 +28,7 @@ but is not suited for this kind of complex logic with numerous of properties.
 What we needed was:
 
 * Seperation of concerns
-  * E.g. Validating the connection between property A and property B has nothing to do with that of property A and property C. They should not be tested.
+  * E.g. Validating the connection between property A and property B has nothing to do with that of property A and property C. Test should isolate those validations.
 * Testability
   * We need to know whether a validation failed, but also when it passed
   * Seperation of concern is here related
@@ -41,12 +41,16 @@ So I came up with another way to write validations where you can simply make use
 When you already have a validator, it's as easy as it gets:
 
 ```csharp
+// Get your model and validator from somewhere
 SomeModel model = ...;
 IValidator<SomeModel> validator = ...;
+
+// Validate the model
 var result = validator.Validate(model);
 // or
 var result = await validator.ValidateAsync(model);
 
+// Check the result
 if (result.IsValid)
     // yay the model is valid
 else
