@@ -157,12 +157,12 @@ namespace FlexValidator.Tests {
 
         [Test]
         public void Passed_WithoutGuidInResult_ShouldThrow() {
-            TestThrow<ValidationNotFoundException>(x => _sut.Passed(guid));
+            TestThrow<ValidationNotFoundException>(x => _sut.Passed(guid.ToString()));
         }
 
         [Test]
         public void Failed_WithoutGuidInResult_ShouldThrow() {
-            TestThrow<ValidationNotFoundException>(x => _sut.Failed(guid));
+            TestThrow<ValidationNotFoundException>(x => _sut.Failed(guid.ToString()));
         }
 
         [Test]
@@ -170,7 +170,7 @@ namespace FlexValidator.Tests {
             //Arrange
             _sut = new TestSimpleValidator<SomeModel>() {
                 ValidateFunc = m => {
-                    _sut.Result.AddPass(new ValidationInfoBase(guid));
+                    _sut.Result.AddPass(new ValidationInfoBase(guid.ToString()));
                     Assert.IsTrue(_sut.Passed(guid));
                 }
             };
@@ -184,7 +184,7 @@ namespace FlexValidator.Tests {
             //Arrange
             _sut = new TestSimpleValidator<SomeModel>() {
                 ValidateFunc = m => {
-                    _sut.Result.AddFail(new ValidationInfoBase(guid));
+                    _sut.Result.AddFail(new ValidationInfoBase(guid.ToString()));
                     Assert.IsFalse(_sut.Passed(guid));
                 }
             };
@@ -198,7 +198,7 @@ namespace FlexValidator.Tests {
             //Arrange
             _sut = new TestSimpleValidator<SomeModel>() {
                 ValidateFunc = m => {
-                    _sut.Result.AddPass(new ValidationInfoBase(guid));
+                    _sut.Result.AddPass(new ValidationInfoBase(guid.ToString()));
                     Assert.IsFalse(_sut.Failed(guid));
                 }
             };
@@ -212,7 +212,7 @@ namespace FlexValidator.Tests {
             //Arrange
             _sut = new TestSimpleValidator<SomeModel>() {
                 ValidateFunc = m => {
-                    _sut.Result.AddFail(new ValidationInfoBase(guid));
+                    _sut.Result.AddFail(new ValidationInfoBase(guid.ToString()));
                     Assert.IsTrue(_sut.Failed(guid));
                 }
             };
