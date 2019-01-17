@@ -34,6 +34,34 @@ namespace FlexValidator.Tests {
         }
 
         [Test]
+        public void Validate_ShouldInvokeDoValidate() {
+            //Arrange
+            var isRun = false;
+            _sut = new TestSectionedValidator<SomeModel>();
+            _sut.Init(() => _sut.Section(Section, m => isRun = true));
+
+            //Act
+            _sut.Validate(_model);
+
+            //Assert
+            Assert.IsTrue(isRun);
+        }
+
+        [Test]
+        public void Validate_ShouldInvokeDoValidateAsync() {
+            //Arrange
+            var isRun = false;
+            _sut = new TestSectionedValidator<SomeModel>();
+            _sut.Init(() => _sut.AsyncSection(Section, async m => isRun = true));
+
+            //Act
+            _sut.Validate(_model);
+
+            //Assert
+            Assert.IsTrue(isRun);
+        }
+
+        [Test]
         public async Task ValidateAsync_ShouldInvokeDoValidateAsync() {
             //Arrange
             var isRun = false;
@@ -62,31 +90,55 @@ namespace FlexValidator.Tests {
         }
 
         [Test]
-        public void Validate_ShouldInvokeDoValidate() {
+        public void ValidateSection_WithSyncSection_ShouldReturnSomething() {
             //Arrange
-            var isRun = false;
             _sut = new TestSectionedValidator<SomeModel>();
-            _sut.Init(() => _sut.Section(Section, m => isRun = true));
+            _sut.Init(() => _sut.Section(Section, m => {}));
 
             //Act
-            _sut.Validate(_model);
+            var result = _sut.ValidateSection(Section, _model);
 
             //Assert
-            Assert.IsTrue(isRun);
+            Assert.NotNull(result);
         }
 
         [Test]
-        public void Validate_ShouldInvokeDoValidateAsync() {
+        public void ValidateSection_WithAsyncSection_ShouldReturnSomething() {
             //Arrange
-            var isRun = false;
             _sut = new TestSectionedValidator<SomeModel>();
-            _sut.Init(() => _sut.AsyncSection(Section, async m => isRun = true));
+            _sut.Init(() => _sut.AsyncSection(Section, async m => {}));
 
             //Act
-            _sut.Validate(_model);
+            var result = _sut.ValidateSection(Section, _model);
 
             //Assert
-            Assert.IsTrue(isRun);
+            Assert.NotNull(result);
+        }
+
+        [Test]
+        public async Task ValidateSectionAsync_WithSyncSection_ShouldReturnSomething() {
+            //Arrange
+            _sut = new TestSectionedValidator<SomeModel>();
+            _sut.Init(() => _sut.Section(Section, m => {}));
+
+            //Act
+            var result = await _sut.ValidateSectionAsync(Section, _model);
+
+            //Assert
+            Assert.NotNull(result);
+        }
+
+        [Test]
+        public async Task ValidateSectionAsync_WithAsyncSection_ShouldReturnSomething() {
+            //Arrange
+            _sut = new TestSectionedValidator<SomeModel>();
+            _sut.Init(() => _sut.AsyncSection(Section, async m => {}));
+
+            //Act
+            var result = await _sut.ValidateSectionAsync(Section, _model);
+
+            //Assert
+            Assert.NotNull(result);
         }
     }
 }
