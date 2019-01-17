@@ -6,7 +6,7 @@ using FlexValidator.Tests.Validators;
 using NUnit.Framework;
 
 namespace FlexValidator.Tests {
-    public class EmptyModelValidatorTests {
+    public class ValidatorTests {
         private TestSimpleValidator<SomeModel> _sut;
         private SomeModel _model = new SomeModel();
         private Guid guid = new Guid("de2319c3-5568-467b-b370-acb486a553f6");
