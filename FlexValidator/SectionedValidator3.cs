@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using FlexValidator.Base;
 using FlexValidator.Helpers;
 
 namespace FlexValidator {

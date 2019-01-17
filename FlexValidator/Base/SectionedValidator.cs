@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Xml.Schema;
 using FlexValidator.Exceptions;
 
-namespace FlexValidator {
+namespace FlexValidator.Base {
     /// <summary>
     /// Do not use. It's the base class of a sectioned validator that holds all logic and has no visible members outside of its assembly.
     /// </summary>

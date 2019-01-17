@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace FlexValidator {
+namespace FlexValidator.Base {
     /// <summary>
     /// Do not use. Base implementation of a simple validator that holds all logic and has no visible members outside of its assembly. 
     /// </summary>

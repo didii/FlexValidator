@@ -1,7 +1,7 @@
 ﻿using System;
 using FlexValidator.Exceptions;
 
-namespace FlexValidator {
+namespace FlexValidator.Base {
     /// <summary>
     /// The base of a validator holding common functions of the typed versions
     /// </summary>
