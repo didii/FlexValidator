@@ -13,8 +13,17 @@ namespace FlexValidator {
             return ValidateAsync(Helper.Pack(model));
         }
 
+        /// <summary>
+        /// Implement this method if you want sync validation. This method will be executed when you call <see cref="Validate"/> or <see cref="ValidateAsync"/>
+        /// </summary>
+        /// <param name="model"></param>
         protected virtual void DoValidate(T model) { }
 
+        /// <summary>
+        /// Implement this method if you async validation. This method will be executed when you call <see cref="Validate"/> or <see cref="ValidateAsync"/>
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         protected virtual async Task DoValidateAsync(T model) { }
 
         /// <inheritdoc/>

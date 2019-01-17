@@ -6,6 +6,9 @@ using System.Xml.Schema;
 using FlexValidator.Exceptions;
 
 namespace FlexValidator {
+    /// <summary>
+    /// Do not use. It's the base class of a sectioned validator that holds all logic and has no visible members outside of its assembly.
+    /// </summary>
     public abstract class SectionedValidator : Validator {
         private readonly IDictionary<string, Action<object[]>> _sections = new Dictionary<string, Action<object[]>>();
         private readonly IDictionary<string, Func<object[], Task>> _asyncSections = new Dictionary<string, Func<object[], Task>>();

@@ -2,7 +2,7 @@
 
 namespace FlexValidator {
     /// <summary>
-    /// Base implementation of a simple validator
+    /// Do not use. Base implementation of a simple validator that holds all logic and has no visible members outside of its assembly. 
     /// </summary>
     public abstract class SimpleValidator : Validator {
         /// <summary>

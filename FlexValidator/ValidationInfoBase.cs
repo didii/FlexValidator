@@ -23,6 +23,7 @@ namespace FlexValidator {
         }
 
         public Guid Guid { get; }
+
         public string Message { get; }
     }
 }
