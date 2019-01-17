@@ -18,6 +18,7 @@ namespace FlexValidator {
         }
 
         internal async Task<IValidationResult> ValidateAsync(params object[] models) {
+            Reset();
             var task = RunAsyncSectionsAsync(models);
             RunSections(models);
             await task;
