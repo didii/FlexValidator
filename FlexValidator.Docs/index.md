@@ -8,7 +8,7 @@ See the source code on GitHub: https://github.com/didii/FlexValidator.
   - [Table of contents](#table-of-contents)
   - [Why?](#why)
   - [How to use it?](#how-to-use-it)
-    - [Syntax](#syntax)
+    - [Validation Syntax](#validation-syntax)
     - [Testing](#testing)
     - [Validators](#validators)
       - [SimpleValidator](#simplevalidator)
@@ -25,10 +25,10 @@ We first started using [FluentValidator](https://github.com/JeremySkinner/Fluent
 which - don't get me wrong - is a good framework,
 but is not suited for this kind of complex logic with numerous of properties.
 
-What we neede was:
+What we needed was:
 
 * Seperation of concerns
-  * E.g. Validating the connection between property A and property B has nothing to do with validating the connection between property A and property C. They should not be tested or always run together.
+  * E.g. Validating the connection between property A and property B has nothing to do with that of property A and property C. They should not be tested.
 * Testability
   * We need to know whether a validation failed, but also when it passed
   * Seperation of concern is here related
@@ -56,7 +56,7 @@ else
 
 The `result` object contains a list of `Passes` and `Fails` so you can inspect what happened.
 
-### Syntax
+### Validation Syntax
 
 The default syntax is pretty straightforward.
 
@@ -328,6 +328,4 @@ These are things that still need to be added.
   * For now you can create a class that inherits from `ValidationInfo` and pass that to `Start`. You will however have to cast every validation result to your own type afterwards.
 * ~~Make lookups faster (used in `Passed` and `Failed`)~~
   * ~~The `List` should become a `Dictionary`~~
-* Make extensibility easier
-  * Currently, a lot of methods are marked `internal` which hides implementation details. This makes it easy to properly implement the `Simple`- and `SectionedValidator`. But it makes it hard to create custom validators such as the `Simple`- and `SectionedValidator`s.
-  * FYI, you can circumvent this currently by creating a project with the name `Validator.Extensions`. This is however not really ideal.
+* ~~Make extensibility easier~~

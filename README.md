@@ -128,14 +128,9 @@ These are things that still need to be added.
 
 **Important**
 
-* Async support
 * Pass data to children validators such as their name
 
 **Less important**
 
 * Custom `ValidationInfo` object in `Start` and `ValidationResult`
   * For now you can create a class that inherits from `ValidationInfo` and pass that to `Start`. You will however have to cast every validation result to your own type afterwards.
-* Make lookups faster (used in `Passed` and `Failed`)
-  * The `List` should become a `Dictionary`
-* Make extensibility easier
-  * Almost all methods and properties are marked as `protected`. If you want to add a utility method to `Validator` (the base class), right now it cannot be done with extension methods because they don't have access to the necessary properties. While extending `Validator` on your own is possible, you'll need to add quite some boilerplate code since all `SimpleValidator` and `SectionedValidator` classes won't suddenly inherit from your class.
