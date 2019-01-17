@@ -38,6 +38,24 @@ So I came up with another way to write validations where you can simply make use
 
 ## How to use it?
 
+When you already have a validator, it's as easy as it gets:
+
+```csharp
+SomeModel model = ...;
+IValidator<SomeModel> validator = ...;
+var result = validator.Validate(model);
+// or
+var result = await validator.ValidateAsync(model);
+
+if (result.IsValid)
+    // yay the model is valid
+else
+    // now it is not valid
+    // you can inspect result.Fails to see which ones failed
+```
+
+The `result` object contains a list of `Passes` and `Fails` so you can inspect what happened.
+
 ### Syntax
 
 The default syntax is pretty straightforward.
@@ -168,7 +186,7 @@ To be used for simple validations where you can test the whole model through.
 You don't need seperate _sections_ to seperate logic for testing.
 Ideal for small classes such as a base class that exposes an `Id`.
 
-To use, simply make a validator that inherits from `SimpleValidator` and specify (all) the model(s) you want to validate. Then override `DoValidate` and place your logic in there.
+To use, simply make a validator that inherits from `SimpleValidator<>` and specify (all) the model(s) you want to validate. Then override `DoValidate` and place your logic in there.
 
 ```csharp
 class SomeValidator : SimpleValidator<SomeModel> {
@@ -191,20 +209,20 @@ To be used for complex models.
 You want to seperate logic and isolate certain validation rules so they can be tested properly.
 You don't want the validation of your object to run in one go for testing purposes.
 
-Again, simply make a validator that inherits from `SectionedValidator` and specify (all) the model(s) you want to validate.
+Again, simply make a validator that inherits from `SectionedValidator<>` and specify (all) the model(s) you want to validate.
 
 ```csharp
 class OtherValidator : SectionedValidator<OtherModel> {
     // Declare publicly visible section names to be used in the tests
     public const string IdSection = "Id";
-    public const string SomeSection = "Some";
+    public const string NameSection = "Name";
     
     // Constructor where you define all your sections
     public OtherValidator() {
         //Create a validation section to validate only the Id
         Section(IdSection, ValidateId);
         //Create another section to only validate the Name
-        Section(SomeSection, ValidateSome);
+        Section(NameSection, ValidateSome);
     }
     
     private void ValidateId(OtherModel model) {
