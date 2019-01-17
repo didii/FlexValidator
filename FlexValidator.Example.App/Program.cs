@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.Threading.Tasks;
 using FlexValidator.Example.App.Models;
 using FlexValidator.Example.App.Validators;
 using Newtonsoft.Json;
@@ -11,9 +12,10 @@ namespace FlexValidator.Example.App {
             var model = CreateModel();
             Console.WriteLine();
 
-            var IValidationResult = ValidateModel(model);
+            var task = ValidateModelAsync(model);
+            var result = task.Result;
 
-            LogResults(IValidationResult);
+            LogResults(result);
         }
 
         private static SomeModel CreateModel() {
@@ -42,9 +44,9 @@ namespace FlexValidator.Example.App {
             return model;
         }
 
-        private static IValidationResult ValidateModel(SomeModel model) {
+        private static async Task<IValidationResult> ValidateModelAsync(SomeModel model) {
             var validator = new SomeModelValidator();
-            return validator.Validate(model);
+            return await validator.ValidateAsync(model);
         }
 
         private static void LogResults(IValidationResult result) {
