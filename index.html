@@ -94,7 +94,7 @@ but is not suited for this kind of complex logic with numerous of properties.</p
 <p>What we needed was:</p>
 <ul>
 <li>Seperation of concerns<ul>
-<li>E.g. Validating the connection between property A and property B has nothing to do with that of property A and property C. They should not be tested.</li>
+<li>E.g. Validating the connection between property A and property B has nothing to do with that of property A and property C. Test should isolate those validations.</li>
 </ul>
 </li>
 <li>Testability<ul>
@@ -107,12 +107,16 @@ but is not suited for this kind of complex logic with numerous of properties.</p
 <p>So I came up with another way to write validations where you can simply make use of statements you know: <code>if</code>, <code>else</code>, <code>&amp;&amp;</code>, .... And where every validation can be nicely seperated from the rest.</p>
 <h2 id="how-to-use-it">How to use it?</h2>
 <p>When you already have a validator, it&#39;s as easy as it gets:</p>
-<pre><code class="lang-csharp">SomeModel model = ...;
+<pre><code class="lang-csharp">// Get your model and validator from somewhere
+SomeModel model = ...;
 IValidator&lt;SomeModel&gt; validator = ...;
+
+// Validate the model
 var result = validator.Validate(model);
 // or
 var result = await validator.ValidateAsync(model);
 
+// Check the result
 if (result.IsValid)
     // yay the model is valid
 else
