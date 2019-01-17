@@ -9,6 +9,8 @@
     <PackageProjectUrl>https://didii.github.io/FlexValidator/</PackageProjectUrl>
     <PackageTags>validator, testable</PackageTags>
     <PackageId>didii.FlexValidator</PackageId>
+    <PackageLicenseUrl>https://choosealicense.com/licenses/gpl-3.0/</PackageLicenseUrl>
+    <Description>A flexible and testable validator library for C#.</Description>
   </PropertyGroup>
 
 </Project>
