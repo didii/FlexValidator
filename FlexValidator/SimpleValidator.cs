@@ -10,7 +10,7 @@ namespace FlexValidator {
         /// </summary>
         /// <param name="models"></param>
         /// <returns></returns>
-        protected internal IValidationResult Validate(object[] models) {
+        internal IValidationResult Validate(object[] models) {
             Reset();
             DoValidate(models);
             DoValidateAsync(models).GetAwaiter().GetResult();
@@ -22,7 +22,7 @@ namespace FlexValidator {
         /// </summary>
         /// <param name="models"></param>
         /// <returns></returns>
-        protected internal async Task<IValidationResult> ValidateAsync(object[] models) {
+        internal async Task<IValidationResult> ValidateAsync(object[] models) {
             Reset();
             var task = DoValidateAsync(models);
             DoValidate(models);
@@ -34,13 +34,13 @@ namespace FlexValidator {
         /// The sync to-be implemented method for you own validations. You can implement both sync and async version and both will run.
         /// </summary>
         /// <param name="models"></param>
-        protected internal abstract void DoValidate(object[] models);
+        internal abstract void DoValidate(object[] models);
 
         /// <summary>
         /// The async to-be implemented method for you own validations. You can implement both sync and async version and both will run.
         /// </summary>
         /// <param name="models"></param>
         /// <returns></returns>
-        protected internal abstract Task DoValidateAsync(object[] models);
+        internal abstract Task DoValidateAsync(object[] models);
     }
 }

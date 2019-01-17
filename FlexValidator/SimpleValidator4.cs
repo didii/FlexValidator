@@ -18,12 +18,12 @@ namespace FlexValidator {
         protected virtual async Task DoValidateAsync(T1 model1, T2 model2, T3 model3, T4 model4) { }
 
         /// <inheritdoc/>
-        protected internal override void DoValidate(object[] models) {
+        internal override void DoValidate(object[] models) {
             Helper.UnPack<T1, T2, T3, T4>(DoValidate, models);
         }
 
         /// <inheritdoc/>
-        protected internal override Task DoValidateAsync(object[] models) {
+        internal override Task DoValidateAsync(object[] models) {
             return Helper.UnPackAsync<T1, T2, T3, T4>(DoValidateAsync, models);
         }
     }
