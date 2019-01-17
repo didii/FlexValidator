@@ -1210,70 +1210,6 @@ references:
   commentId: T:FlexValidator.SimpleValidator
   fullName: FlexValidator.SimpleValidator
   nameWithType: SimpleValidator
-- uid: FlexValidator.SimpleValidator.DoValidate(System.Object[])
-  name: DoValidate(Object[])
-  href: api/FlexValidator.SimpleValidator.html#FlexValidator_SimpleValidator_DoValidate_System_Object___
-  commentId: M:FlexValidator.SimpleValidator.DoValidate(System.Object[])
-  name.vb: DoValidate(Object())
-  fullName: FlexValidator.SimpleValidator.DoValidate(System.Object[])
-  fullName.vb: FlexValidator.SimpleValidator.DoValidate(System.Object())
-  nameWithType: SimpleValidator.DoValidate(Object[])
-  nameWithType.vb: SimpleValidator.DoValidate(Object())
-- uid: FlexValidator.SimpleValidator.DoValidate*
-  name: DoValidate
-  href: api/FlexValidator.SimpleValidator.html#FlexValidator_SimpleValidator_DoValidate_
-  commentId: Overload:FlexValidator.SimpleValidator.DoValidate
-  isSpec: "True"
-  fullName: FlexValidator.SimpleValidator.DoValidate
-  nameWithType: SimpleValidator.DoValidate
-- uid: FlexValidator.SimpleValidator.DoValidateAsync(System.Object[])
-  name: DoValidateAsync(Object[])
-  href: api/FlexValidator.SimpleValidator.html#FlexValidator_SimpleValidator_DoValidateAsync_System_Object___
-  commentId: M:FlexValidator.SimpleValidator.DoValidateAsync(System.Object[])
-  name.vb: DoValidateAsync(Object())
-  fullName: FlexValidator.SimpleValidator.DoValidateAsync(System.Object[])
-  fullName.vb: FlexValidator.SimpleValidator.DoValidateAsync(System.Object())
-  nameWithType: SimpleValidator.DoValidateAsync(Object[])
-  nameWithType.vb: SimpleValidator.DoValidateAsync(Object())
-- uid: FlexValidator.SimpleValidator.DoValidateAsync*
-  name: DoValidateAsync
-  href: api/FlexValidator.SimpleValidator.html#FlexValidator_SimpleValidator_DoValidateAsync_
-  commentId: Overload:FlexValidator.SimpleValidator.DoValidateAsync
-  isSpec: "True"
-  fullName: FlexValidator.SimpleValidator.DoValidateAsync
-  nameWithType: SimpleValidator.DoValidateAsync
-- uid: FlexValidator.SimpleValidator.Validate(System.Object[])
-  name: Validate(Object[])
-  href: api/FlexValidator.SimpleValidator.html#FlexValidator_SimpleValidator_Validate_System_Object___
-  commentId: M:FlexValidator.SimpleValidator.Validate(System.Object[])
-  name.vb: Validate(Object())
-  fullName: FlexValidator.SimpleValidator.Validate(System.Object[])
-  fullName.vb: FlexValidator.SimpleValidator.Validate(System.Object())
-  nameWithType: SimpleValidator.Validate(Object[])
-  nameWithType.vb: SimpleValidator.Validate(Object())
-- uid: FlexValidator.SimpleValidator.Validate*
-  name: Validate
-  href: api/FlexValidator.SimpleValidator.html#FlexValidator_SimpleValidator_Validate_
-  commentId: Overload:FlexValidator.SimpleValidator.Validate
-  isSpec: "True"
-  fullName: FlexValidator.SimpleValidator.Validate
-  nameWithType: SimpleValidator.Validate
-- uid: FlexValidator.SimpleValidator.ValidateAsync(System.Object[])
-  name: ValidateAsync(Object[])
-  href: api/FlexValidator.SimpleValidator.html#FlexValidator_SimpleValidator_ValidateAsync_System_Object___
-  commentId: M:FlexValidator.SimpleValidator.ValidateAsync(System.Object[])
-  name.vb: ValidateAsync(Object())
-  fullName: FlexValidator.SimpleValidator.ValidateAsync(System.Object[])
-  fullName.vb: FlexValidator.SimpleValidator.ValidateAsync(System.Object())
-  nameWithType: SimpleValidator.ValidateAsync(Object[])
-  nameWithType.vb: SimpleValidator.ValidateAsync(Object())
-- uid: FlexValidator.SimpleValidator.ValidateAsync*
-  name: ValidateAsync
-  href: api/FlexValidator.SimpleValidator.html#FlexValidator_SimpleValidator_ValidateAsync_
-  commentId: Overload:FlexValidator.SimpleValidator.ValidateAsync
-  isSpec: "True"
-  fullName: FlexValidator.SimpleValidator.ValidateAsync
-  nameWithType: SimpleValidator.ValidateAsync
 - uid: FlexValidator.SimpleValidator`1
   name: SimpleValidator<T>
   href: api/FlexValidator.SimpleValidator-1.html
@@ -1291,15 +1227,6 @@ references:
   fullName.vb: FlexValidator.SimpleValidator(Of T).DoValidate(T)
   nameWithType: SimpleValidator<T>.DoValidate(T)
   nameWithType.vb: SimpleValidator(Of T).DoValidate(T)
-- uid: FlexValidator.SimpleValidator`1.DoValidate(System.Object[])
-  name: DoValidate(Object[])
-  href: api/FlexValidator.SimpleValidator-1.html#FlexValidator_SimpleValidator_1_DoValidate_System_Object___
-  commentId: M:FlexValidator.SimpleValidator`1.DoValidate(System.Object[])
-  name.vb: DoValidate(Object())
-  fullName: FlexValidator.SimpleValidator<T>.DoValidate(System.Object[])
-  fullName.vb: FlexValidator.SimpleValidator(Of T).DoValidate(System.Object())
-  nameWithType: SimpleValidator<T>.DoValidate(Object[])
-  nameWithType.vb: SimpleValidator(Of T).DoValidate(Object())
 - uid: FlexValidator.SimpleValidator`1.DoValidate*
   name: DoValidate
   href: api/FlexValidator.SimpleValidator-1.html#FlexValidator_SimpleValidator_1_DoValidate_
@@ -1317,15 +1244,6 @@ references:
   fullName.vb: FlexValidator.SimpleValidator(Of T).DoValidateAsync(T)
   nameWithType: SimpleValidator<T>.DoValidateAsync(T)
   nameWithType.vb: SimpleValidator(Of T).DoValidateAsync(T)
-- uid: FlexValidator.SimpleValidator`1.DoValidateAsync(System.Object[])
-  name: DoValidateAsync(Object[])
-  href: api/FlexValidator.SimpleValidator-1.html#FlexValidator_SimpleValidator_1_DoValidateAsync_System_Object___
-  commentId: M:FlexValidator.SimpleValidator`1.DoValidateAsync(System.Object[])
-  name.vb: DoValidateAsync(Object())
-  fullName: FlexValidator.SimpleValidator<T>.DoValidateAsync(System.Object[])
-  fullName.vb: FlexValidator.SimpleValidator(Of T).DoValidateAsync(System.Object())
-  nameWithType: SimpleValidator<T>.DoValidateAsync(Object[])
-  nameWithType.vb: SimpleValidator(Of T).DoValidateAsync(Object())
 - uid: FlexValidator.SimpleValidator`1.DoValidateAsync*
   name: DoValidateAsync
   href: api/FlexValidator.SimpleValidator-1.html#FlexValidator_SimpleValidator_1_DoValidateAsync_
@@ -1386,15 +1304,6 @@ references:
   fullName.vb: FlexValidator.SimpleValidator(Of T1, T2).DoValidate(T1, T2)
   nameWithType: SimpleValidator<T1, T2>.DoValidate(T1, T2)
   nameWithType.vb: SimpleValidator(Of T1, T2).DoValidate(T1, T2)
-- uid: FlexValidator.SimpleValidator`2.DoValidate(System.Object[])
-  name: DoValidate(Object[])
-  href: api/FlexValidator.SimpleValidator-2.html#FlexValidator_SimpleValidator_2_DoValidate_System_Object___
-  commentId: M:FlexValidator.SimpleValidator`2.DoValidate(System.Object[])
-  name.vb: DoValidate(Object())
-  fullName: FlexValidator.SimpleValidator<T1, T2>.DoValidate(System.Object[])
-  fullName.vb: FlexValidator.SimpleValidator(Of T1, T2).DoValidate(System.Object())
-  nameWithType: SimpleValidator<T1, T2>.DoValidate(Object[])
-  nameWithType.vb: SimpleValidator(Of T1, T2).DoValidate(Object())
 - uid: FlexValidator.SimpleValidator`2.DoValidate*
   name: DoValidate
   href: api/FlexValidator.SimpleValidator-2.html#FlexValidator_SimpleValidator_2_DoValidate_
@@ -1412,15 +1321,6 @@ references:
   fullName.vb: FlexValidator.SimpleValidator(Of T1, T2).DoValidateAsync(T1, T2)
   nameWithType: SimpleValidator<T1, T2>.DoValidateAsync(T1, T2)
   nameWithType.vb: SimpleValidator(Of T1, T2).DoValidateAsync(T1, T2)
-- uid: FlexValidator.SimpleValidator`2.DoValidateAsync(System.Object[])
-  name: DoValidateAsync(Object[])
-  href: api/FlexValidator.SimpleValidator-2.html#FlexValidator_SimpleValidator_2_DoValidateAsync_System_Object___
-  commentId: M:FlexValidator.SimpleValidator`2.DoValidateAsync(System.Object[])
-  name.vb: DoValidateAsync(Object())
-  fullName: FlexValidator.SimpleValidator<T1, T2>.DoValidateAsync(System.Object[])
-  fullName.vb: FlexValidator.SimpleValidator(Of T1, T2).DoValidateAsync(System.Object())
-  nameWithType: SimpleValidator<T1, T2>.DoValidateAsync(Object[])
-  nameWithType.vb: SimpleValidator(Of T1, T2).DoValidateAsync(Object())
 - uid: FlexValidator.SimpleValidator`2.DoValidateAsync*
   name: DoValidateAsync
   href: api/FlexValidator.SimpleValidator-2.html#FlexValidator_SimpleValidator_2_DoValidateAsync_
@@ -1481,15 +1381,6 @@ references:
   fullName.vb: FlexValidator.SimpleValidator(Of T1, T2, T3).DoValidate(T1, T2, T3)
   nameWithType: SimpleValidator<T1, T2, T3>.DoValidate(T1, T2, T3)
   nameWithType.vb: SimpleValidator(Of T1, T2, T3).DoValidate(T1, T2, T3)
-- uid: FlexValidator.SimpleValidator`3.DoValidate(System.Object[])
-  name: DoValidate(Object[])
-  href: api/FlexValidator.SimpleValidator-3.html#FlexValidator_SimpleValidator_3_DoValidate_System_Object___
-  commentId: M:FlexValidator.SimpleValidator`3.DoValidate(System.Object[])
-  name.vb: DoValidate(Object())
-  fullName: FlexValidator.SimpleValidator<T1, T2, T3>.DoValidate(System.Object[])
-  fullName.vb: FlexValidator.SimpleValidator(Of T1, T2, T3).DoValidate(System.Object())
-  nameWithType: SimpleValidator<T1, T2, T3>.DoValidate(Object[])
-  nameWithType.vb: SimpleValidator(Of T1, T2, T3).DoValidate(Object())
 - uid: FlexValidator.SimpleValidator`3.DoValidate*
   name: DoValidate
   href: api/FlexValidator.SimpleValidator-3.html#FlexValidator_SimpleValidator_3_DoValidate_
@@ -1507,15 +1398,6 @@ references:
   fullName.vb: FlexValidator.SimpleValidator(Of T1, T2, T3).DoValidateAsync(T1, T2, T3)
   nameWithType: SimpleValidator<T1, T2, T3>.DoValidateAsync(T1, T2, T3)
   nameWithType.vb: SimpleValidator(Of T1, T2, T3).DoValidateAsync(T1, T2, T3)
-- uid: FlexValidator.SimpleValidator`3.DoValidateAsync(System.Object[])
-  name: DoValidateAsync(Object[])
-  href: api/FlexValidator.SimpleValidator-3.html#FlexValidator_SimpleValidator_3_DoValidateAsync_System_Object___
-  commentId: M:FlexValidator.SimpleValidator`3.DoValidateAsync(System.Object[])
-  name.vb: DoValidateAsync(Object())
-  fullName: FlexValidator.SimpleValidator<T1, T2, T3>.DoValidateAsync(System.Object[])
-  fullName.vb: FlexValidator.SimpleValidator(Of T1, T2, T3).DoValidateAsync(System.Object())
-  nameWithType: SimpleValidator<T1, T2, T3>.DoValidateAsync(Object[])
-  nameWithType.vb: SimpleValidator(Of T1, T2, T3).DoValidateAsync(Object())
 - uid: FlexValidator.SimpleValidator`3.DoValidateAsync*
   name: DoValidateAsync
   href: api/FlexValidator.SimpleValidator-3.html#FlexValidator_SimpleValidator_3_DoValidateAsync_
@@ -1576,15 +1458,6 @@ references:
   fullName.vb: FlexValidator.SimpleValidator(Of T1, T2, T3, T4).DoValidate(T1, T2, T3, T4)
   nameWithType: SimpleValidator<T1, T2, T3, T4>.DoValidate(T1, T2, T3, T4)
   nameWithType.vb: SimpleValidator(Of T1, T2, T3, T4).DoValidate(T1, T2, T3, T4)
-- uid: FlexValidator.SimpleValidator`4.DoValidate(System.Object[])
-  name: DoValidate(Object[])
-  href: api/FlexValidator.SimpleValidator-4.html#FlexValidator_SimpleValidator_4_DoValidate_System_Object___
-  commentId: M:FlexValidator.SimpleValidator`4.DoValidate(System.Object[])
-  name.vb: DoValidate(Object())
-  fullName: FlexValidator.SimpleValidator<T1, T2, T3, T4>.DoValidate(System.Object[])
-  fullName.vb: FlexValidator.SimpleValidator(Of T1, T2, T3, T4).DoValidate(System.Object())
-  nameWithType: SimpleValidator<T1, T2, T3, T4>.DoValidate(Object[])
-  nameWithType.vb: SimpleValidator(Of T1, T2, T3, T4).DoValidate(Object())
 - uid: FlexValidator.SimpleValidator`4.DoValidate*
   name: DoValidate
   href: api/FlexValidator.SimpleValidator-4.html#FlexValidator_SimpleValidator_4_DoValidate_
@@ -1602,15 +1475,6 @@ references:
   fullName.vb: FlexValidator.SimpleValidator(Of T1, T2, T3, T4).DoValidateAsync(T1, T2, T3, T4)
   nameWithType: SimpleValidator<T1, T2, T3, T4>.DoValidateAsync(T1, T2, T3, T4)
   nameWithType.vb: SimpleValidator(Of T1, T2, T3, T4).DoValidateAsync(T1, T2, T3, T4)
-- uid: FlexValidator.SimpleValidator`4.DoValidateAsync(System.Object[])
-  name: DoValidateAsync(Object[])
-  href: api/FlexValidator.SimpleValidator-4.html#FlexValidator_SimpleValidator_4_DoValidateAsync_System_Object___
-  commentId: M:FlexValidator.SimpleValidator`4.DoValidateAsync(System.Object[])
-  name.vb: DoValidateAsync(Object())
-  fullName: FlexValidator.SimpleValidator<T1, T2, T3, T4>.DoValidateAsync(System.Object[])
-  fullName.vb: FlexValidator.SimpleValidator(Of T1, T2, T3, T4).DoValidateAsync(System.Object())
-  nameWithType: SimpleValidator<T1, T2, T3, T4>.DoValidateAsync(Object[])
-  nameWithType.vb: SimpleValidator(Of T1, T2, T3, T4).DoValidateAsync(Object())
 - uid: FlexValidator.SimpleValidator`4.DoValidateAsync*
   name: DoValidateAsync
   href: api/FlexValidator.SimpleValidator-4.html#FlexValidator_SimpleValidator_4_DoValidateAsync_

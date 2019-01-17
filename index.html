@@ -70,7 +70,7 @@
 <li><a href="#table-of-contents">Table of contents</a></li>
 <li><a href="#why">Why?</a></li>
 <li><a href="#how-to-use-it">How to use it?</a><ul>
-<li><a href="#syntax">Syntax</a></li>
+<li><a href="#validation-syntax">Validation Syntax</a></li>
 <li><a href="#testing">Testing</a></li>
 <li><a href="#validators">Validators</a><ul>
 <li><a href="#simplevalidator">SimpleValidator</a></li>
@@ -91,10 +91,10 @@ It was partly law-based and thus had rules with exceptions and exceptions and ex
 We first started using <a href="https://github.com/JeremySkinner/FluentValidation">FluentValidator</a>,
 which - don&#39;t get me wrong - is a good framework,
 but is not suited for this kind of complex logic with numerous of properties.</p>
-<p>What we neede was:</p>
+<p>What we needed was:</p>
 <ul>
 <li>Seperation of concerns<ul>
-<li>E.g. Validating the connection between property A and property B has nothing to do with validating the connection between property A and property C. They should not be tested or always run together.</li>
+<li>E.g. Validating the connection between property A and property B has nothing to do with that of property A and property C. They should not be tested.</li>
 </ul>
 </li>
 <li>Testability<ul>
@@ -106,7 +106,20 @@ but is not suited for this kind of complex logic with numerous of properties.</p
 </ul>
 <p>So I came up with another way to write validations where you can simply make use of statements you know: <code>if</code>, <code>else</code>, <code>&amp;&amp;</code>, .... And where every validation can be nicely seperated from the rest.</p>
 <h2 id="how-to-use-it">How to use it?</h2>
-<h3 id="syntax">Syntax</h3>
+<p>When you already have a validator, it&#39;s as easy as it gets:</p>
+<pre><code class="lang-csharp">SomeModel model = ...;
+IValidator&lt;SomeModel&gt; validator = ...;
+var result = validator.Validate(model);
+// or
+var result = await validator.ValidateAsync(model);
+
+if (result.IsValid)
+    // yay the model is valid
+else
+    // now it is not valid
+    // you can inspect result.Fails to see which ones failed
+</code></pre><p>The <code>result</code> object contains a list of <code>Passes</code> and <code>Fails</code> so you can inspect what happened.</p>
+<h3 id="validation-syntax">Validation Syntax</h3>
 <p>The default syntax is pretty straightforward.</p>
 <pre><code class="lang-csharp">private void ValidateName(SomeModel model) {
     //Start a single validation by calling Start and providing an instance of ValidationInfo
@@ -215,7 +228,7 @@ The <code>SimpleValidator</code> and the <code>SectionedValidator</code>.</p>
 <p>To be used for simple validations where you can test the whole model through.
 You don&#39;t need seperate <em>sections</em> to seperate logic for testing.
 Ideal for small classes such as a base class that exposes an <code>Id</code>.</p>
-<p>To use, simply make a validator that inherits from <code>SimpleValidator</code> and specify (all) the model(s) you want to validate. Then override <code>DoValidate</code> and place your logic in there.</p>
+<p>To use, simply make a validator that inherits from <code>SimpleValidator&lt;&gt;</code> and specify (all) the model(s) you want to validate. Then override <code>DoValidate</code> and place your logic in there.</p>
 <pre><code class="lang-csharp">class SomeValidator : SimpleValidator&lt;SomeModel&gt; {
     // Override the DoValidate method 
     protected override void DoValidate(SomeModel model) {
@@ -232,18 +245,18 @@ Ideal for small classes such as a base class that exposes an <code>Id</code>.</p
 <p>To be used for complex models.
 You want to seperate logic and isolate certain validation rules so they can be tested properly.
 You don&#39;t want the validation of your object to run in one go for testing purposes.</p>
-<p>Again, simply make a validator that inherits from <code>SectionedValidator</code> and specify (all) the model(s) you want to validate.</p>
+<p>Again, simply make a validator that inherits from <code>SectionedValidator&lt;&gt;</code> and specify (all) the model(s) you want to validate.</p>
 <pre><code class="lang-csharp">class OtherValidator : SectionedValidator&lt;OtherModel&gt; {
     // Declare publicly visible section names to be used in the tests
     public const string IdSection = &quot;Id&quot;;
-    public const string SomeSection = &quot;Some&quot;;
+    public const string NameSection = &quot;Name&quot;;
 
     // Constructor where you define all your sections
     public OtherValidator() {
         //Create a validation section to validate only the Id
         Section(IdSection, ValidateId);
         //Create another section to only validate the Name
-        Section(SomeSection, ValidateSome);
+        Section(NameSection, ValidateSome);
     }
 
     private void ValidateId(OtherModel model) {
@@ -350,11 +363,7 @@ Ctrl+F, Ctrl+V and BOOM, you can correct the validation.</p>
 <li><del>The <code>List</code> should become a <code>Dictionary</code></del></li>
 </ul>
 </li>
-<li>Make extensibility easier<ul>
-<li>Currently, a lot of methods are marked <code>internal</code> which hides implementation details. This makes it easy to properly implement the <code>Simple</code>- and <code>SectionedValidator</code>. But it makes it hard to create custom validators such as the <code>Simple</code>- and <code>SectionedValidator</code>s.</li>
-<li>FYI, you can circumvent this currently by creating a project with the name <code>Validator.Extensions</code>. This is however not really ideal.</li>
-</ul>
-</li>
+<li><del>Make extensibility easier</del></li>
 </ul>
 </article>
           </div>
