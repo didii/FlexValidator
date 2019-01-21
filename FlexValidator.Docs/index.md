@@ -7,6 +7,7 @@ See the source code on GitHub: https://github.com/didii/FlexValidator.
 - [FlexValidator](#flexvalidator)
   - [Table of contents](#table-of-contents)
   - [Why?](#why)
+  - [Installation](#installation)
   - [How to use it?](#how-to-use-it)
     - [Validation Syntax](#validation-syntax)
     - [Testing](#testing)
@@ -35,6 +36,22 @@ What we needed was:
 * Complex logic has still to be readable
 
 So I came up with another way to write validations where you can simply make use of statements you know: `if`, `else`, `&&`, .... And where every validation can be nicely seperated from the rest.
+
+## Installation
+
+Either in Visual Studio, using the *Manage NuGet Packages...* menu-item on your project or solution.
+
+Or using the Package Manager console:
+
+```
+PM> Install-Package didii.FlexValidator
+```
+
+Or using the .NET CLI:
+
+```
+> dotnet add package didii.FlexValidator
+```
 
 ## How to use it?
 
