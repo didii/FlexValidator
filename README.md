@@ -2,7 +2,23 @@
 A flexible and testable validator made for C#.
 
 See the docs for all info you need: [API docs](https://didii.github.io/FlexValidator/).
-This readme is only part of it
+This readme is only part of it.
+
+## Installation
+
+Either in Visual Studio, using the *Manage NuGet Packages...* menu-item on your project or solution.
+
+Or using the Package Manager console:
+
+```
+PM> Install-Package didii.FlexValidator
+```
+
+Or using the .NET CLI:
+
+```
+> dotnet add package didii.FlexValidator
+```
 
 ## Syntax
 
