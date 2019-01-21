@@ -32,7 +32,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "9DZqDKWC8kUTSQvYvQga2A=="
+          "hash": "T6+ca5pMvAq4g/xnSv82Xg=="
         }
       },
       "is_incremental": false,
@@ -452,11 +452,11 @@
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "ConceptualDocumentProcessor": {
+        "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build"
         },
-        "ManagedReferenceDocumentProcessor": {
+        "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build"
         }

@@ -69,6 +69,7 @@
 <li><a href="#flexvalidator">FlexValidator</a><ul>
 <li><a href="#table-of-contents">Table of contents</a></li>
 <li><a href="#why">Why?</a></li>
+<li><a href="#installation">Installation</a></li>
 <li><a href="#how-to-use-it">How to use it?</a><ul>
 <li><a href="#validation-syntax">Validation Syntax</a></li>
 <li><a href="#testing">Testing</a></li>
@@ -105,7 +106,13 @@ but is not suited for this kind of complex logic with numerous of properties.</p
 <li>Complex logic has still to be readable</li>
 </ul>
 <p>So I came up with another way to write validations where you can simply make use of statements you know: <code>if</code>, <code>else</code>, <code>&amp;&amp;</code>, .... And where every validation can be nicely seperated from the rest.</p>
-<h2 id="how-to-use-it">How to use it?</h2>
+<h2 id="installation">Installation</h2>
+<p>Either in Visual Studio, using the <em>Manage NuGet Packages...</em> menu-item on your project or solution.</p>
+<p>Or using the Package Manager console:</p>
+<pre><code>PM&gt; Install-Package didii.FlexValidator
+</code></pre><p>Or using the .NET CLI:</p>
+<pre><code>&gt; dotnet add package didii.FlexValidator
+</code></pre><h2 id="how-to-use-it">How to use it?</h2>
 <p>When you already have a validator, it&#39;s as easy as it gets:</p>
 <pre><code class="lang-csharp">// Get your model and validator from somewhere
 SomeModel model = ...;
