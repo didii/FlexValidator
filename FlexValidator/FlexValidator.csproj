@@ -7,10 +7,11 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <RepositoryUrl>https://github.com/didii/FlexValidator</RepositoryUrl>
     <PackageProjectUrl>https://didii.github.io/FlexValidator/</PackageProjectUrl>
-    <PackageTags>validator, testable</PackageTags>
+    <PackageTags>validator, testing, testable, GPLv3, async</PackageTags>
     <PackageId>didii.FlexValidator</PackageId>
-    <PackageLicenseUrl>https://choosealicense.com/licenses/gpl-3.0/</PackageLicenseUrl>
+    <PackageLicenseUrl>https://www.gnu.org/licenses/gpl-3.0.en.html</PackageLicenseUrl>
     <Description>A flexible and testable validator library for C#.</Description>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
 </Project>
