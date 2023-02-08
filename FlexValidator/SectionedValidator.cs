@@ -8,7 +8,7 @@ namespace FlexValidator {
     /// <summary>
     /// Do not use. It's the base class of a sectioned validator that holds all logic and has no visible members outside of its assembly.
     /// </summary>
-    public abstract class SectionedValidator<T> : Validator, IValidator<T> {
+    public abstract class SectionedValidator<T> : Validator, ISectionedValidator<T> {
         private readonly IDictionary<string, Action<T>> _sections = new Dictionary<string, Action<T>>();
         private readonly IDictionary<string, Func<T, Task>> _asyncSections = new Dictionary<string, Func<T, Task>>();
 
