@@ -1,7 +1,7 @@
 ﻿using System;
 using FlexValidator.Exceptions;
 
-namespace FlexValidator.Base {
+namespace FlexValidator {
     /// <summary>
     /// The base of a validator holding common functions of the typed versions
     /// </summary>
@@ -144,51 +144,6 @@ namespace FlexValidator.Base {
         /// <param name="obj"></param>
         protected internal void RunValidator<T>(IValidator<T> validator, T obj) {
             var subResult = validator.Validate(obj);
-            Result.Combine(subResult);
-        }
-
-        /// <summary>
-        /// Run a sub-validator on the given models and capture its results
-        /// </summary>
-        /// <typeparam name="T1"></typeparam>
-        /// <typeparam name="T2"></typeparam>
-        /// <param name="validator"></param>
-        /// <param name="obj1"></param>
-        /// <param name="obj2"></param>
-        protected internal void RunValidator<T1, T2>(IValidator<T1, T2> validator, T1 obj1, T2 obj2) {
-            var subResult = validator.Validate(obj1, obj2);
-            Result.Combine(subResult);
-        }
-
-        /// <summary>
-        /// Run a sub-validator on the given models and capture its results
-        /// </summary>
-        /// <typeparam name="T1"></typeparam>
-        /// <typeparam name="T2"></typeparam>
-        /// <typeparam name="T3"></typeparam>
-        /// <param name="validator"></param>
-        /// <param name="obj1"></param>
-        /// <param name="obj2"></param>
-        /// <param name="obj3"></param>
-        protected internal void RunValidator<T1, T2, T3>(IValidator<T1, T2, T3> validator, T1 obj1, T2 obj2, T3 obj3) {
-            var subResult = validator.Validate(obj1, obj2, obj3);
-            Result.Combine(subResult);
-        }
-
-        /// <summary>
-        /// Run a sub-validator on the given models and capture its results
-        /// </summary>
-        /// <typeparam name="T1"></typeparam>
-        /// <typeparam name="T2"></typeparam>
-        /// <typeparam name="T3"></typeparam>
-        /// <typeparam name="T4"></typeparam>
-        /// <param name="validator"></param>
-        /// <param name="obj1"></param>
-        /// <param name="obj2"></param>
-        /// <param name="obj3"></param>
-        /// <param name="obj4"></param>
-        protected internal void RunValidator<T1, T2, T3, T4>(IValidator<T1, T2, T3, T4> validator, T1 obj1, T2 obj2, T3 obj3, T4 obj4) {
-            var subResult = validator.Validate(obj1, obj2, obj3, obj4);
             Result.Combine(subResult);
         }
 
