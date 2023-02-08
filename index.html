@@ -1,21 +1,20 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
-  
+
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>FlexValidator </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="FlexValidator ">
-    <meta name="generator" content="docfx 2.40.7.0">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>FlexValidator </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="FlexValidator ">
     
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="stylesheet" href="styles/docfx.vendor.css">
-    <link rel="stylesheet" href="styles/docfx.css">
-    <link rel="stylesheet" href="styles/main.css">
-    <meta property="docfx:navrel" content="toc.html">
-    <meta property="docfx:tocrel" content="toc.html">
+      <link rel="shortcut icon" href="favicon.ico">
+      <link rel="stylesheet" href="styles/docfx.vendor.css">
+      <link rel="stylesheet" href="styles/docfx.css">
+      <link rel="stylesheet" href="styles/main.css">
+      <meta property="docfx:navrel" content="toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
     
     
     
@@ -23,7 +22,7 @@
   <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -33,7 +32,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <a class="navbar-brand" href="index.html">
                 <img id="logo" class="svg" src="logo.svg" alt="">
               </a>
@@ -47,7 +46,7 @@
             </div>
           </div>
         </nav>
-        
+
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -66,14 +65,17 @@
 <p>See the source code on GitHub: <a href="https://github.com/didii/FlexValidator">https://github.com/didii/FlexValidator</a>.</p>
 <h2 id="table-of-contents">Table of contents</h2>
 <ul>
-<li><a href="#flexvalidator">FlexValidator</a><ul>
+<li><a href="#flexvalidator">FlexValidator</a>
+<ul>
 <li><a href="#table-of-contents">Table of contents</a></li>
 <li><a href="#why">Why?</a></li>
 <li><a href="#installation">Installation</a></li>
-<li><a href="#how-to-use-it">How to use it?</a><ul>
+<li><a href="#how-to-use-it">How to use it?</a>
+<ul>
 <li><a href="#validation-syntax">Validation Syntax</a></li>
 <li><a href="#testing">Testing</a></li>
-<li><a href="#validators">Validators</a><ul>
+<li><a href="#validators">Validators</a>
+<ul>
 <li><a href="#simplevalidator">SimpleValidator</a></li>
 <li><a href="#sectionedvalidator">SectionedValidator</a></li>
 </ul>
@@ -87,18 +89,20 @@
 </li>
 </ul>
 <h2 id="why">Why?</h2>
-<p>I&#39;ve recently been in a project that had a lot of very complex business rules.
+<p>I've recently been in a project that had a lot of very complex business rules.
 It was partly law-based and thus had rules with exceptions and exceptions and exceptions.
 We first started using <a href="https://github.com/JeremySkinner/FluentValidation">FluentValidator</a>,
-which - don&#39;t get me wrong - is a good framework,
+which - don't get me wrong - is a good framework,
 but is not suited for this kind of complex logic with numerous of properties.</p>
 <p>What we needed was:</p>
 <ul>
-<li>Seperation of concerns<ul>
+<li>Seperation of concerns
+<ul>
 <li>E.g. Validating the connection between property A and property B has nothing to do with that of property A and property C. Test should isolate those validations.</li>
 </ul>
 </li>
-<li>Testability<ul>
+<li>Testability
+<ul>
 <li>We need to know whether a validation failed, but also when it passed</li>
 <li>Seperation of concern is here related</li>
 </ul>
@@ -110,10 +114,12 @@ but is not suited for this kind of complex logic with numerous of properties.</p
 <p>Either in Visual Studio, using the <em>Manage NuGet Packages...</em> menu-item on your project or solution.</p>
 <p>Or using the Package Manager console:</p>
 <pre><code>PM&gt; Install-Package didii.FlexValidator
-</code></pre><p>Or using the .NET CLI:</p>
+</code></pre>
+<p>Or using the .NET CLI:</p>
 <pre><code>&gt; dotnet add package didii.FlexValidator
-</code></pre><h2 id="how-to-use-it">How to use it?</h2>
-<p>When you already have a validator, it&#39;s as easy as it gets:</p>
+</code></pre>
+<h2 id="how-to-use-it">How to use it?</h2>
+<p>When you already have a validator, it's as easy as it gets:</p>
 <pre><code class="lang-csharp">// Get your model and validator from somewhere
 SomeModel model = ...;
 IValidator&lt;SomeModel&gt; validator = ...;
@@ -129,7 +135,8 @@ if (result.IsValid)
 else
     // now it is not valid
     // you can inspect result.Fails to see which ones failed
-</code></pre><p>The <code>result</code> object contains a list of <code>Passes</code> and <code>Fails</code> so you can inspect what happened.</p>
+</code></pre>
+<p>The <code>result</code> object contains a list of <code>Passes</code> and <code>Fails</code> so you can inspect what happened.</p>
 <h3 id="validation-syntax">Validation Syntax</h3>
 <p>The default syntax is pretty straightforward.</p>
 <pre><code class="lang-csharp">private void ValidateName(SomeModel model) {
@@ -142,23 +149,27 @@ else
         Fail(); //This fails the last started validation
     else
         Pass(); //This passes the last started validation
-
+    
     //Complete the validation
     Complete();
     //Using Complete without arguments is recommended, but not required
 }
-</code></pre><p>The structure is like this:</p>
+</code></pre>
+<p>The structure is like this:</p>
 <ol>
-<li>Start the validation by calling <code>Start</code> and provide it with information about the validation.<ol>
+<li>Start the validation by calling <code>Start</code> and provide it with information about the validation.
+<ol>
 <li>If you want more properties, simply extend <code>ValidationInfo</code> and add the properties you need</li>
 </ol>
 </li>
-<li>After <code>Start</code> you can write your custom business logic that leads to calls to <code>Pass</code> or <code>Fail</code>.<ol>
+<li>After <code>Start</code> you can write your custom business logic that leads to calls to <code>Pass</code> or <code>Fail</code>.
+<ol>
 <li>A single validation rule can only fail or pass once. When <code>Fail</code> or <code>Pass</code> is encoutered multiple times, it will throw a <code>InvalidValidatorStateException</code>.</li>
 </ol>
 </li>
-<li>You can complete the rule by calling <code>Complete</code><ol>
-<li>It&#39;s recommended to always do this. Calling it without arguments does a check to see if the current rule had a call to <code>Fail</code> or <code>Pass</code>. If not, it will throw a <code>InvalidValidatorStateException</code>.</li>
+<li>You can complete the rule by calling <code>Complete</code>
+<ol>
+<li>It's recommended to always do this. Calling it without arguments does a check to see if the current rule had a call to <code>Fail</code> or <code>Pass</code>. If not, it will throw a <code>InvalidValidatorStateException</code>.</li>
 </ol>
 </li>
 </ol>
@@ -169,14 +180,15 @@ else
         Fail();
     Complete(Assume.Pass);
 }
-</code></pre><p>Now when <code>Complete</code> is encountered and no call to <code>Pass</code> or <code>Fail</code> were made beforehand, it will call <code>Pass</code> for you.
+</code></pre>
+<p>Now when <code>Complete</code> is encountered and no call to <code>Pass</code> or <code>Fail</code> were made beforehand, it will call <code>Pass</code> for you.
 You can also use <code>Assume.Fail</code> to assume the test to be failed if no <code>Pass</code> or <code>Fail</code> was encountered.</p>
 <p>Validations can follow each other up as much as you want</p>
 <pre><code class="lang-csharp">private void ValidateName(SomeModel model) {
     Start(new ValidationInfo(&quot;d4c99639-dd0f-49ba-921f-0c53653b2326&quot;, &quot;Name cannot be null&quot;));
     if (model.Name == null) {
         Fail();
-        //Short-circuit here: other validations don&#39;t matter if Name is null
+        //Short-circuit here: other validations don't matter if Name is null
         return;
     }
     Complete(Assume.Pass);
@@ -196,11 +208,12 @@ You can also use <code>Assume.Fail</code> to assume the test to be failed if no 
 
     //...
 }
-</code></pre><p>Note that since we write our validations using simple statements, we can short-circuit out a validation.
+</code></pre>
+<p>Note that since we write our validations using simple statements, we can short-circuit out a validation.
 If <code>Name</code> is <code>null</code>, it does not make sense to still try and run the other validations.
 The second validation will fail anyway since this will throw a <code>NullReferenceException</code>.</p>
 <h3 id="testing">Testing</h3>
-<p>You&#39;re probably also here to know whether or not this makes testing validations easier or not.
+<p>You're probably also here to know whether or not this makes testing validations easier or not.
 Well, according to my findings, it does.
 This is why we need the GUID so that a single validation rule can always be identified.
 See more below why I chose to use GUIDs.</p>
@@ -227,17 +240,18 @@ public void Validate_NameCannotBeNull(Must type, string name) {
     //Assert
     result.Should(type, &quot;d4c99639-dd0f-49ba-921f-0c53653b2326&quot;);
 }
-</code></pre><p>We have defined an extension method <code>Should</code> on <code>ValidationResult</code> to make our lives easier.
+</code></pre>
+<p>We have defined an extension method <code>Should</code> on <code>ValidationResult</code> to make our lives easier.
 See <a href="https://github.com/didii/FlexValidator/blob/master/FlexValidator.Example.App.Tests/Helpers/ValidationResultExtensions.cs">ValidationResultExtensions.cs</a> for the implemenatation.
-In words, it simply checks if <code>result</code> has the given validation (identified by the GUID) in its collection of <code>Fails</code> or <code>Passes</code> and calls <code>Assert.Fail</code> when it&#39;s in the wrong collection or it does not exist.</p>
+In words, it simply checks if <code>result</code> has the given validation (identified by the GUID) in its collection of <code>Fails</code> or <code>Passes</code> and calls <code>Assert.Fail</code> when it's in the wrong collection or it does not exist.</p>
 <p>Take note that the GUID is the same as the first validation we defined above.</p>
 <h3 id="validators">Validators</h3>
 <p>So, where do you write that code you ask?
-I&#39;ve created 2 validators that you can extend to write your logic for you objects.
+I've created 2 validators that you can extend to write your logic for you objects.
 The <code>SimpleValidator</code> and the <code>SectionedValidator</code>.</p>
 <h4 id="simplevalidator">SimpleValidator</h4>
 <p>To be used for simple validations where you can test the whole model through.
-You don&#39;t need seperate <em>sections</em> to seperate logic for testing.
+You don't need seperate <em>sections</em> to seperate logic for testing.
 Ideal for small classes such as a base class that exposes an <code>Id</code>.</p>
 <p>To use, simply make a validator that inherits from <code>SimpleValidator&lt;&gt;</code> and specify (all) the model(s) you want to validate. Then override <code>DoValidate</code> and place your logic in there.</p>
 <pre><code class="lang-csharp">class SomeValidator : SimpleValidator&lt;SomeModel&gt; {
@@ -252,16 +266,17 @@ Ideal for small classes such as a base class that exposes an <code>Id</code>.</p
         Complete(Assume.Pass);
     }
 }
-</code></pre><h4 id="sectionedvalidator">SectionedValidator</h4>
+</code></pre>
+<h4 id="sectionedvalidator">SectionedValidator</h4>
 <p>To be used for complex models.
 You want to seperate logic and isolate certain validation rules so they can be tested properly.
-You don&#39;t want the validation of your object to run in one go for testing purposes.</p>
+You don't want the validation of your object to run in one go for testing purposes.</p>
 <p>Again, simply make a validator that inherits from <code>SectionedValidator&lt;&gt;</code> and specify (all) the model(s) you want to validate.</p>
 <pre><code class="lang-csharp">class OtherValidator : SectionedValidator&lt;OtherModel&gt; {
     // Declare publicly visible section names to be used in the tests
     public const string IdSection = &quot;Id&quot;;
     public const string NameSection = &quot;Name&quot;;
-
+    
     // Constructor where you define all your sections
     public OtherValidator() {
         //Create a validation section to validate only the Id
@@ -269,14 +284,14 @@ You don&#39;t want the validation of your object to run in one go for testing pu
         //Create another section to only validate the Name
         Section(NameSection, ValidateSome);
     }
-
+    
     private void ValidateId(OtherModel model) {
         Start(new ValidationInfo(&quot;someGuid&quot;, &quot;Id must be greater than 0&quot;));
         if (model.Id &gt; 0)
             Pass();
         Complete(Assume.Fail); 
     }
-
+    
     private void ValidateName(OtherModel model) {
         Start(new ValidationInfo(&quot;someOtherGuid&quot;, &quot;Name cannot be null or empty&quot;));
         if (string.IsNullOrEmpty(model.Name))
@@ -284,11 +299,12 @@ You don&#39;t want the validation of your object to run in one go for testing pu
         Complete(Assume.Pass);
     }
 }
-</code></pre><p>In the constructor we create 2 sections that validate each property of <code>OtherModel</code> seperately.
+</code></pre>
+<p>In the constructor we create 2 sections that validate each property of <code>OtherModel</code> seperately.
 The end result will be exactly the same: running <code>validator.Validate(model)</code> will still execute each section and all validations will be run.
 But for tests it is different.</p>
 <p>Here we can call the method <code>ValidateSection</code> instead to make sure only that part is called.
-If we have left a <code>throw Exception()</code> in another section, this test won&#39;t be influenced at all.</p>
+If we have left a <code>throw Exception()</code> in another section, this test won't be influenced at all.</p>
 <pre><code class="lang-csharp">[TestCase(Must.Fail, -5)]
 [TestCase(Must.Fail, 0)]
 [TestCase(Must.Pass, 9)]
@@ -298,14 +314,15 @@ public void Validate_IdSection_IdMustBeGreaterThanZero(Must type, long id) {
     var model = new SomeModel() {
         Id = id
     };
-
+    
     //Act
     var result = validator.ValidateSection(SomeValidator.IdSection, model);
-
+    
     //Assert
     result.Should(type, &quot;someGuid&quot;);
 }
-</code></pre><p>Note that internally the sections are stored in a dictionary. This means order is not guaranteed to be reserved when executing <code>Validate</code>. This is intentional and makes it so that your sections need to be entirely independent of each other.</p>
+</code></pre>
+<p>Note that internally the sections are stored in a dictionary. This means order is not guaranteed to be reserved when executing <code>Validate</code>. This is intentional and makes it so that your sections need to be entirely independent of each other.</p>
 <h3 id="utility-methods">Utility methods</h3>
 <p>There are also a couple of utility methods available.</p>
 <table>
@@ -318,7 +335,7 @@ public void Validate_IdSection_IdMustBeGreaterThanZero(Must type, long id) {
 <tbody>
 <tr>
 <td><code>RunValidator</code></td>
-<td>Runs another validator on the model you&#39;ve given it. To be used for nested models.</td>
+<td>Runs another validator on the model you've given it. To be used for nested models.</td>
 </tr>
 <tr>
 <td><code>Passed</code></td>
@@ -332,33 +349,38 @@ public void Validate_IdSection_IdMustBeGreaterThanZero(Must type, long id) {
 </table>
 <p>Check the API for more info.</p>
 <h2 id="the-guid-thing">The GUID thing</h2>
-<p>I&#39;ve chosen to work with GUIDs to identify the tests.
-There are a couple of reasons why I don&#39;t want this to be different.</p>
-<blockquote><p><strong>GUIDs don&#39;t contain human-readable information about the test.</strong></p>
+<p>I've chosen to work with GUIDs to identify the tests.
+There are a couple of reasons why I don't want this to be different.</p>
+<blockquote>
+<p><strong>GUIDs don't contain human-readable information about the test.</strong></p>
 <p>This actively discourages to find a method to identify the tests based on its ID.
-It&#39;s a good thing because you don&#39;t ever want to rename the ID.
+It's a good thing because you don't ever want to rename the ID.
 You write the test once, use it again once in your tests and done.
 Never touch the GUID again.</p>
 <p>I know at least I have the urge to rename them if I find a better way.</p>
 </blockquote>
-<blockquote><p><strong>GUIDs are very unique</strong></p>
-<p>Grab any online GUID generator, generate 100&#39;s of them and you won&#39;t get a duplicate.
-Hence, it&#39;s a good unique identifier.</p>
+<blockquote>
+<p><strong>GUIDs are very unique</strong></p>
+<p>Grab any online GUID generator, generate 100's of them and you won't get a duplicate.
+Hence, it's a good unique identifier.</p>
 </blockquote>
-<blockquote><p><strong>The Ctrl+F method</strong></p>
-<p>Do you see a validation pop up in your frontend where you didn&#39;t expect it?
+<blockquote>
+<p><strong>The Ctrl+F method</strong></p>
+<p>Do you see a validation pop up in your frontend where you didn't expect it?
 Make a simple dev tool: e.g. triple click the message to copy the GUID to the clipboard.
 Ctrl+F, Ctrl+V and BOOM, you can correct the validation.</p>
-<p>No, you can&#39;t always do it with the message because variable data could be shown (<code>$&quot;Last must come after {model.First}&quot;</code>).</p>
+<p>No, you can't always do it with the message because variable data could be shown (<code>$&quot;Last must come after {model.First}&quot;</code>).</p>
 </blockquote>
-<blockquote><p><strong>But GUIDs are ugly</strong></p>
-<p>Well, it&#39;s more ugly to have inconsistent code-names spread throughout your application.</p>
+<blockquote>
+<p><strong>But GUIDs are ugly</strong></p>
+<p>Well, it's more ugly to have inconsistent code-names spread throughout your application.</p>
 </blockquote>
 <h2 id="todo">Todo</h2>
 <p>These are things that still need to be added.</p>
 <p><strong>Important</strong></p>
 <ul>
-<li><del>Async support</del><ul>
+<li><del>Async support</del>
+<ul>
 <li>Still needs to be tested, but the code is there</li>
 </ul>
 </li>
@@ -366,11 +388,13 @@ Ctrl+F, Ctrl+V and BOOM, you can correct the validation.</p>
 </ul>
 <p><strong>Less important</strong></p>
 <ul>
-<li>Custom <code>ValidationInfo</code> object in <code>Start</code> and <code>ValidationResult</code><ul>
+<li>Custom <code>ValidationInfo</code> object in <code>Start</code> and <code>ValidationResult</code>
+<ul>
 <li>For now you can create a class that inherits from <code>ValidationInfo</code> and pass that to <code>Start</code>. You will however have to cast every validation result to your own type afterwards.</li>
 </ul>
 </li>
-<li><del>Make lookups faster (used in <code>Passed</code> and <code>Failed</code>)</del><ul>
+<li><del>Make lookups faster (used in <code>Passed</code> and <code>Failed</code>)</del>
+<ul>
 <li><del>The <code>List</code> should become a <code>Dictionary</code></del></li>
 </ul>
 </li>
@@ -378,24 +402,25 @@ Ctrl+F, Ctrl+V and BOOM, you can correct the validation.</p>
 </ul>
 </article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/didii/FlexValidator/blob/master/FlexValidator.Docs/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/didii/FlexValidator/blob/master/docfx_project/index.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -403,13 +428,13 @@ Ctrl+F, Ctrl+V and BOOM, you can correct the validation.</p>
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            
-            <span>Generated by <strong>DocFX</strong></span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
           </div>
         </div>
       </footer>
     </div>
-    
+
     <script type="text/javascript" src="styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="styles/docfx.js"></script>
     <script type="text/javascript" src="styles/main.js"></script>
