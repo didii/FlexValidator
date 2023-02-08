@@ -6,35 +6,28 @@
           "files": [
             "*.csproj"
           ],
-          "cwd": "../FlexValidator",
-          "exclude": [
-            "**/obj/**",
-            "**/bin/**",
-            "_site/**"
-          ]
+          "cwd": "../FlexValidator"
         }
       ],
-      "dest": "obj/api"
+      "dest": "api",
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false
     }
   ],
   "build": {
     "content": [
       {
         "files": [
-          "api/**.yml"
-        ],
-        "cwd": "obj"
+          "api/**.yml",
+          "api/index.md"
+        ]
       },
       {
         "files": [
-          "api/*.md",
           "articles/**.md",
+          "articles/**/toc.yml",
           "toc.yml",
           "*.md"
-        ],
-        "exclude": [
-          "obj/**",
-          "_site/**"
         ]
       }
     ],
@@ -42,10 +35,6 @@
       {
         "files": [
           "images/**"
-        ],
-        "exclude": [
-          "obj/**",
-          "_site/**"
         ]
       }
     ],
@@ -60,10 +49,16 @@
         ]
       }
     ],
-    "dest": "../gh-pages",
+    "dest": "_site",
+    "globalMetadataFiles": [],
+    "fileMetadataFiles": [],
     "template": [
       "default"
     ],
-    "markdownEngineName": "dfm-latest"
+    "postProcessors": [],
+    "noLangKeyword": false,
+    "keepFileLink": false,
+    "cleanupCacheHistory": false,
+    "disableGitFeatures": false
   }
 }
