@@ -3,7 +3,7 @@ using FlexValidator.Exceptions;
 
 namespace FlexValidator {
     /// <summary>
-    /// The base of a validator holding common functions of the typed versions
+    /// The base of a validator holding common functions
     /// </summary>
     /// <remarks>
     /// In it's simplest form, this is how the validation should be used.
@@ -102,37 +102,29 @@ namespace FlexValidator {
             ResetValidation();
         }
 
-        protected internal bool Passed(string guid) {
-            return Passed(new Guid(guid));
-        }
-
         /// <summary>
         /// Check if the given validation was a success
         /// </summary>
-        /// <param name="guid"></param>
+        /// <param name="id"></param>
         /// <exception cref="InvalidValidatorStateException">Thrown when the given validation does not exist</exception>
         /// <returns></returns>
-        protected internal bool Passed(Guid guid) {
-            var result = Result.Check(guid);
+        protected internal bool Passed(string id) {
+            var result = Result.Check(id);
             if (result == null)
-                throw new ValidationNotFoundException(guid);
+                throw new ValidationNotFoundException(id);
             return result.Value;
         }
 
-        protected internal bool Failed(string guid) {
-            return Failed(new Guid(guid));
-        }
-
         /// <summary>
-        /// Check if the given validatino failed
+        /// Check if the given validation failed
         /// </summary>
-        /// <param name="guid"></param>
+        /// <param name="id"></param>
         /// <exception cref="InvalidValidatorStateException">Thrown when the given validation does not exist</exception>
         /// <returns></returns>
-        protected internal bool Failed(Guid guid) {
-            var result = Result.Check(guid);
+        protected internal bool Failed(string id) {
+            var result = Result.Check(id);
             if (result == null)
-                throw new ValidationNotFoundException(guid);
+                throw new ValidationNotFoundException(id);
             return !result.Value;
         }
 

@@ -15,7 +15,6 @@ See the source code on GitHub: https://github.com/didii/FlexValidator.
       - [SimpleValidator](#simplevalidator)
       - [SectionedValidator](#sectionedvalidator)
     - [Utility methods](#utility-methods)
-  - [The GUID thing](#the-guid-thing)
   - [Todo](#todo)
 
 ## Why?
@@ -302,36 +301,6 @@ There are also a couple of utility methods available.
 
 Check the API for more info.
 
-## The GUID thing
-
-I've chosen to work with GUIDs to identify the tests.
-There are a couple of reasons why I don't want this to be different.
-
-> **GUIDs don't contain human-readable information about the test.**
-> 
-> This actively discourages to find a method to identify the tests based on its ID.
-> It's a good thing because you don't ever want to rename the ID.
-> You write the test once, use it again once in your tests and done.
-> Never touch the GUID again.
-> 
-> I know at least I have the urge to rename them if I find a better way.
-
-> **GUIDs are very unique**
->
-> Grab any online GUID generator, generate 100's of them and you won't get a duplicate.
-> Hence, it's a good unique identifier.
-
-> **The Ctrl+F method**
->
-> Do you see a validation pop up in your frontend where you didn't expect it?
-> Make a simple dev tool: e.g. triple click the message to copy the GUID to the clipboard.
-> Ctrl+F, Ctrl+V and BOOM, you can correct the validation.
->
-> No, you can't always do it with the message because variable data could be shown (`$"Last must come after {model.First}"`).
-
-> **But GUIDs are ugly**
-> 
-> Well, it's more ugly to have inconsistent code-names spread throughout your application.
 
 ## Todo
 

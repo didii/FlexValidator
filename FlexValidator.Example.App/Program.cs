@@ -55,7 +55,7 @@ namespace FlexValidator.Example.App {
                 return;
             }
             foreach (var fail in result.Fails)
-                Console.WriteLine($"{fail.Guid}: {fail.Message}");
+                Console.WriteLine($"{fail.Id}: {fail.Message}");
         }
     }
 }

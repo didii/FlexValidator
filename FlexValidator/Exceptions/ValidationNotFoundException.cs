@@ -5,14 +5,14 @@ using System.Text;
 
 namespace FlexValidator.Exceptions {
     public class ValidationNotFoundException : Exception {
-        private static string CreateMessage(Guid guid) {
-            return $"Validation with ID {guid} was not found";
+        private static string CreateMessage(string id) {
+            return $"Validation with ID {id} was not found";
         }
 
         /// <inheritdoc />
-        public ValidationNotFoundException(Guid guid) : base(CreateMessage(guid)) { }
+        public ValidationNotFoundException(string id) : base(CreateMessage(id)) { }
 
         /// <inheritdoc />
-        public ValidationNotFoundException(Guid guid, Exception innerException) : base(CreateMessage(guid), innerException) { }
+        public ValidationNotFoundException(string id, Exception innerException) : base(CreateMessage(id), innerException) { }
     }
 }

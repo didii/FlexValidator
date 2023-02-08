@@ -44,6 +44,6 @@ namespace FlexValidator {
         /// </summary>
         /// <param name="guid"></param>
         /// <returns>True when it passed, false when it failed, null if it doesn't exist</returns>
-        bool? Check(Guid guid);
+        bool? Check(string guid);
     }
 }

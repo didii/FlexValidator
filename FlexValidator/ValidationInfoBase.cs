@@ -2,27 +2,17 @@
 
 namespace FlexValidator {
     public class ValidationInfoBase {
-        public ValidationInfoBase(string guid) {
-            Guid = new Guid(guid);
+        public ValidationInfoBase(string id) {
+            Id = id;
             Message = null;
         }
 
-        public ValidationInfoBase(string guid, string message) {
-            Guid = new Guid(guid);
+        public ValidationInfoBase(string id, string message) {
+            Id = id;
             Message = message;
         }
 
-        public ValidationInfoBase(Guid guid) {
-            Guid = guid;
-            Message = null;
-        }
-
-        public ValidationInfoBase(Guid guid, string message) {
-            Guid = guid;
-            Message = message;
-        }
-
-        public Guid Guid { get; }
+        public string Id { get; }
 
         public string Message { get; }
     }

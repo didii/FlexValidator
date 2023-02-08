@@ -10,8 +10,8 @@ namespace FlexValidator.Tests {
         private TestSectionedValidator<SomeModel> _sut;
         private const string Section = "section";
         private const string Section2 = "otherSection";
-        private readonly Guid _guid = new Guid("de2319c3-5568-467b-b370-acb486a553f6");
-        private readonly Guid _guid2 = new Guid("4ac89b89-52ea-4b50-a283-ea79f29c7122");
+        private readonly string _id1 = "de2319c3-5568-467b-b370-acb486a553f6";
+        private readonly string _id2 = "4ac89b89-52ea-4b50-a283-ea79f29c7122";
         private SomeModel _model = new SomeModel();
 
         [Test]
@@ -20,7 +20,7 @@ namespace FlexValidator.Tests {
             _sut = new TestSectionedValidator<SomeModel>();
             _sut.Init(() => {
                 _sut.Section(Section, x => {
-                    _sut.Start(new ValidationInfoBase(_guid));
+                    _sut.Start(new ValidationInfoBase(_id1));
                     _sut.Pass();
                 });
             });
@@ -30,7 +30,7 @@ namespace FlexValidator.Tests {
 
             //Assert
             Assert.IsTrue(result.Passes.Count() == 1);
-            Assert.IsTrue(result.Passes.First().Guid == _guid);
+            Assert.IsTrue(result.Passes.First().Id == _id1);
             Assert.IsFalse(result.Fails.Any());
         }
 
@@ -40,11 +40,11 @@ namespace FlexValidator.Tests {
             _sut = new TestSectionedValidator<SomeModel>();
             _sut.Init(() => {
                 _sut.Section(Section, x => {
-                    _sut.Start(new ValidationInfoBase(_guid));
+                    _sut.Start(new ValidationInfoBase(_id1));
                     _sut.Pass();
                 });
                 _sut.Section(Section2, x => {
-                    _sut.Start(new ValidationInfoBase(_guid2));
+                    _sut.Start(new ValidationInfoBase(_id2));
                     _sut.Fail();
                 });
             });
@@ -54,9 +54,9 @@ namespace FlexValidator.Tests {
 
             //Assert
             Assert.IsTrue(result.Passes.Count() == 1);
-            Assert.IsTrue(result.Passes.First().Guid == _guid);
+            Assert.IsTrue(result.Passes.First().Id == _id1);
             Assert.IsTrue(result.Fails.Count() == 1);
-            Assert.IsTrue(result.Fails.First().Guid == _guid2);
+            Assert.IsTrue(result.Fails.First().Id == _id2);
         }
 
         [Test]
@@ -65,11 +65,11 @@ namespace FlexValidator.Tests {
             _sut = new TestSectionedValidator<SomeModel>();
             _sut.Init(() => {
                 _sut.Section(Section, x => {
-                    _sut.Start(new ValidationInfoBase(_guid));
+                    _sut.Start(new ValidationInfoBase(_id1));
                     _sut.Pass();
                 });
                 _sut.Section(Section2, x => {
-                    _sut.Start(new ValidationInfoBase(_guid2));
+                    _sut.Start(new ValidationInfoBase(_id2));
                     _sut.Fail();
                 });
             });
@@ -79,7 +79,7 @@ namespace FlexValidator.Tests {
 
             //Assert
             Assert.IsTrue(result.Passes.Count() == 1);
-            Assert.IsTrue(result.Passes.First().Guid == _guid);
+            Assert.IsTrue(result.Passes.First().Id == _id1);
             Assert.IsFalse(result.Fails.Any());
         }
 
@@ -89,11 +89,11 @@ namespace FlexValidator.Tests {
             _sut = new TestSectionedValidator<SomeModel>();
             _sut.Init(() => {
                 _sut.Section(Section, x => {
-                    _sut.Start(new ValidationInfoBase(_guid));
+                    _sut.Start(new ValidationInfoBase(_id1));
                     _sut.Pass();
                 });
                 _sut.Section(Section2, x => {
-                    _sut.Start(new ValidationInfoBase(_guid2));
+                    _sut.Start(new ValidationInfoBase(_id2));
                     _sut.Fail();
                 });
             });
@@ -104,7 +104,7 @@ namespace FlexValidator.Tests {
             //Assert
             Assert.IsFalse(result.Passes.Any());
             Assert.IsTrue(result.Fails.Count() == 1);
-            Assert.IsTrue(result.Fails.First().Guid == _guid2);
+            Assert.IsTrue(result.Fails.First().Id == _id2);
         }
 
         [Test]
@@ -112,7 +112,7 @@ namespace FlexValidator.Tests {
             //Arrange
             var other = new TestSimpleValidator<SomeModel>();
             other.ValidateFunc = x => {
-                other.Start(new ValidationInfoBase(_guid));
+                other.Start(new ValidationInfoBase(_id1));
                 other.Pass();
             };
 
@@ -124,7 +124,7 @@ namespace FlexValidator.Tests {
 
             //Assert
             Assert.IsTrue(result.Passes.Count() == 1);
-            Assert.IsTrue(result.Passes.First().Guid == _guid);
+            Assert.IsTrue(result.Passes.First().Id == _id1);
             Assert.IsFalse(result.Fails.Any());
         }
 
@@ -133,7 +133,7 @@ namespace FlexValidator.Tests {
             //Arrange
             var sub1 = new TestSimpleValidator<SomeModel>();
             sub1.ValidateFunc = x => {
-                sub1.Start(new ValidationInfoBase(_guid));
+                sub1.Start(new ValidationInfoBase(_id1));
                 sub1.Pass();
             };
             _sut = new TestSectionedValidator<SomeModel>();
@@ -144,7 +144,7 @@ namespace FlexValidator.Tests {
 
             //Assert
             Assert.IsTrue(result.Passes.Count() == 1);
-            Assert.IsTrue(result.Passes.First().Guid == _guid);
+            Assert.IsTrue(result.Passes.First().Id == _id1);
             Assert.IsFalse(result.Fails.Any());
         }
 
@@ -153,12 +153,12 @@ namespace FlexValidator.Tests {
             //Arrange
             var doubleLeft = new TestSimpleValidator<SomeModel>();
             doubleLeft.ValidateFunc = x => {
-                doubleLeft.Start(new ValidationInfoBase(_guid));
+                doubleLeft.Start(new ValidationInfoBase(_id1));
                 doubleLeft.Pass();
             };
             var doubleRight = new TestSimpleValidator<SomeModel>();
             doubleRight.ValidateFunc = x => {
-                doubleRight.Start(new ValidationInfoBase(_guid2));
+                doubleRight.Start(new ValidationInfoBase(_id2));
                 doubleRight.Fail();
             };
             _sut = new TestSectionedValidator<SomeModel>();
@@ -172,9 +172,9 @@ namespace FlexValidator.Tests {
 
             //Assert
             Assert.IsTrue(result.Passes.Count() == 1);
-            Assert.IsTrue(result.Passes.First().Guid == _guid);
+            Assert.IsTrue(result.Passes.First().Id == _id1);
             Assert.IsTrue(result.Fails.Count() == 1);
-            Assert.IsTrue(result.Fails.First().Guid == _guid2);
+            Assert.IsTrue(result.Fails.First().Id == _id2);
         }
 
         [Test]
@@ -182,12 +182,12 @@ namespace FlexValidator.Tests {
             //Arrange
             var doubleLeft = new TestSimpleValidator<SomeModel>();
             doubleLeft.ValidateFunc = x => {
-                doubleLeft.Start(new ValidationInfoBase(_guid));
+                doubleLeft.Start(new ValidationInfoBase(_id1));
                 doubleLeft.Pass();
             };
             var doubleRight = new TestSimpleValidator<SomeModel>();
             doubleRight.ValidateFunc = x => {
-                doubleRight.Start(new ValidationInfoBase(_guid2));
+                doubleRight.Start(new ValidationInfoBase(_id2));
                 doubleRight.Fail();
             };
             _sut = new TestSectionedValidator<SomeModel>();
@@ -201,7 +201,7 @@ namespace FlexValidator.Tests {
 
             //Assert
             Assert.IsTrue(result.Passes.Count() == 1);
-            Assert.IsTrue(result.Passes.First().Guid == _guid);
+            Assert.IsTrue(result.Passes.First().Id == _id1);
             Assert.IsFalse(result.Fails.Any());
         }
 
@@ -210,12 +210,12 @@ namespace FlexValidator.Tests {
             //Arrange
             var doubleLeft = new TestSimpleValidator<SomeModel>();
             doubleLeft.ValidateFunc = x => {
-                doubleLeft.Start(new ValidationInfoBase(_guid));
+                doubleLeft.Start(new ValidationInfoBase(_id1));
                 doubleLeft.Pass();
             };
             var doubleRight = new TestSimpleValidator<SomeModel>();
             doubleRight.ValidateFunc = x => {
-                doubleRight.Start(new ValidationInfoBase(_guid2));
+                doubleRight.Start(new ValidationInfoBase(_id2));
                 doubleRight.Fail();
             };
             _sut = new TestSectionedValidator<SomeModel>();
@@ -230,7 +230,7 @@ namespace FlexValidator.Tests {
             //Assert
             Assert.IsFalse(result.Passes.Any());
             Assert.IsTrue(result.Fails.Count() == 1);
-            Assert.IsTrue(result.Fails.First().Guid == _guid2);
+            Assert.IsTrue(result.Fails.First().Id == _id2);
         }
 
         [Test]

@@ -9,7 +9,7 @@ namespace FlexValidator.Tests {
     public class RunValidatorTests {
         private TestSimpleValidator<SomeModel> _sut;
         private TestSimpleValidator<SomeModel> _validator1 = new TestSimpleValidator<SomeModel>();
-        private Guid guid = new Guid("12b696db-1612-4390-805f-e8972d12a12a");
+        private string _id = "12b696db-1612-4390-805f-e8972d12a12a";
 
         private SomeModel _model = new SomeModel() {
             Some = new SomeModel() {
@@ -37,7 +37,7 @@ namespace FlexValidator.Tests {
             //Arrange
             _validator1 = new TestSimpleValidator<SomeModel>() {
                 ValidateFunc = m => {
-                    _validator1.Start(new ValidationInfoBase(guid));
+                    _validator1.Start(new ValidationInfoBase(_id));
                     _validator1.Pass();
                 }
             };
@@ -49,7 +49,7 @@ namespace FlexValidator.Tests {
             var result = _sut.Validate(_model);
 
             //Assert
-            Assert.IsTrue(result.Check(guid));
+            Assert.IsTrue(result.Check(_id));
         }
 
         [Test]
@@ -57,7 +57,7 @@ namespace FlexValidator.Tests {
             //Arrange
             _validator1 = new TestSimpleValidator<SomeModel>() {
                 ValidateFunc = m => {
-                    _validator1.Start(new ValidationInfoBase(guid));
+                    _validator1.Start(new ValidationInfoBase(_id));
                     _validator1.Fail();
                 }
             };
@@ -69,7 +69,7 @@ namespace FlexValidator.Tests {
             var result = _sut.Validate(_model);
 
             //Assert
-            Assert.IsFalse(result.Check(guid));
+            Assert.IsFalse(result.Check(_id));
         }
     }
 }

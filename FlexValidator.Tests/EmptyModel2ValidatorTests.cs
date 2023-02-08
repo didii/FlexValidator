@@ -8,9 +8,9 @@ namespace FlexValidator.Tests {
 
     public class EmptyModel2ValidatorTests {
         private TestSimpleValidator<(SomeModel, SomeModel)> _sut;
-        private SomeModel _model1 = new SomeModel();
-        private SomeModel _model2 = new SomeModel();
-        private Guid guid = new Guid("de2319c3-5568-467b-b370-acb486a553f6");
+        private SomeModel _model1 = new();
+        private SomeModel _model2 = new();
+        private string _id = "de2319c3-5568-467b-b370-acb486a553f6";
 
         [Test]
         public void Validate_ShouldPassModels() {
@@ -34,7 +34,7 @@ namespace FlexValidator.Tests {
             //Assert
             _sut = new TestSimpleValidator<(SomeModel, SomeModel)>() {
                 ValidateFunc = (models) => {
-                    _sut.Start(new ValidationInfoBase(guid));
+                    _sut.Start(new ValidationInfoBase(_id));
                     _sut.Pass();
                 }
             };
@@ -44,7 +44,7 @@ namespace FlexValidator.Tests {
 
             //Assert
             Assert.IsTrue(result.Passes.Count() == 1);
-            Assert.IsTrue(result.Passes.First().Guid == guid);
+            Assert.IsTrue(result.Passes.First().Id == _id);
             Assert.IsFalse(result.Fails.Any());
         }
     }
