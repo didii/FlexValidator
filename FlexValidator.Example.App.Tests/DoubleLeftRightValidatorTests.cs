@@ -26,7 +26,7 @@ namespace FlexValidator.Example.App.Tests {
             };
 
             //Act
-            var result = _sut.ValidateSection(DoubleLeftRightValidator.InInSection, left, right);
+            var result = _sut.ValidateSection(DoubleLeftRightValidator.InInSection, (left, right));
 
             //Assert
             result.Should(type, "e229be44-ec96-436a-916c-dbbfabe7a7f3");
@@ -47,7 +47,7 @@ namespace FlexValidator.Example.App.Tests {
             };
 
             //Act
-            var result = _sut.ValidateSection(DoubleLeftRightValidator.InOutSection, left, right);
+            var result = _sut.ValidateSection(DoubleLeftRightValidator.InOutSection, (left, right));
 
             //Assert
             result.Should(type, "66a73e51-1c21-4ef7-958c-ae45acfd9f45");
@@ -65,7 +65,7 @@ namespace FlexValidator.Example.App.Tests {
             };
 
             //Act
-            var result = _sut.ValidateSection(DoubleLeftRightValidator.InOutSection, left, right);
+            var result = _sut.ValidateSection(DoubleLeftRightValidator.InOutSection, (left, right));
 
             //Assert
             result.Should(type, "670ac060-d954-4518-8d03-155130391b92");

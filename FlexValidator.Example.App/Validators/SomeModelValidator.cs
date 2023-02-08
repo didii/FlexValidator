@@ -92,7 +92,7 @@ namespace FlexValidator.Example.App.Validators {
 
             //Rule: Run coupled validator if both are non-null
             if (Passed("8d0a0e11-c794-42bf-89e1-5e0969c3b59f") && Passed("29c0672a-72db-4894-b250-bd40d054cc76")) {
-                RunValidator(new DoubleLeftRightValidator(), model.DoubleLeft, model.DoubleRight);
+                RunValidator(new DoubleLeftRightValidator(), (model.DoubleLeft, model.DoubleRight));
             }
         }
     }

@@ -9,9 +9,6 @@ namespace FlexValidator.Tests {
     public class RunValidatorTests {
         private TestSimpleValidator<SomeModel> _sut;
         private TestSimpleValidator<SomeModel> _validator1 = new TestSimpleValidator<SomeModel>();
-        private TestSimpleValidator<SomeModel, SomeModel> _validator2 = new TestSimpleValidator<SomeModel, SomeModel>();
-        private TestSimpleValidator<SomeModel, SomeModel, SomeModel> _validator3 = new TestSimpleValidator<SomeModel, SomeModel, SomeModel>();
-        private TestSimpleValidator<SomeModel, SomeModel, SomeModel, SomeModel> _validator4 = new TestSimpleValidator<SomeModel, SomeModel, SomeModel, SomeModel>();
         private Guid guid = new Guid("12b696db-1612-4390-805f-e8972d12a12a");
 
         private SomeModel _model = new SomeModel() {
@@ -29,39 +26,6 @@ namespace FlexValidator.Tests {
             //Arrange
             _sut = new TestSimpleValidator<SomeModel>() {
                 ValidateFunc = m => { _sut.RunValidator(_validator1, m.Some); }
-            };
-
-            //Act
-            _sut.Validate(_model);
-        }
-
-        [Test]
-        public void RunValidator2_ShouldNotThrow() {
-            //Arrange
-            _sut = new TestSimpleValidator<SomeModel>() {
-                ValidateFunc = m => _sut.RunValidator(_validator2, m.Some, m.Some.Some)
-            };
-
-            //Act
-            _sut.Validate(_model);
-        }
-
-        [Test]
-        public void RunValidator3_ShouldNotThrow() {
-            //Arrange
-            _sut = new TestSimpleValidator<SomeModel>() {
-                ValidateFunc = m => _sut.RunValidator(_validator3, m.Some, m.Some.Some, m.Some.Some.Some)
-            };
-
-            //Act
-            _sut.Validate(_model);
-        }
-
-        [Test]
-        public void RunValidator4_ShouldNotThrow() {
-            //Arrange
-            _sut = new TestSimpleValidator<SomeModel>() {
-                ValidateFunc = m => _sut.RunValidator(_validator4, m.Some, m.Some.Some, m.Some.Some.Some, m.Some.Some.Some.Some)
             };
 
             //Act
