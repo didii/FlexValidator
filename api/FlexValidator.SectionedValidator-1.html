@@ -83,6 +83,7 @@
   </div>
   <div class="implements">
     <h5>Implements</h5>
+    <div><a class="xref" href="FlexValidator.ISectionedValidator-1.html">ISectionedValidator</a>&lt;T&gt;</div>
     <div><a class="xref" href="FlexValidator.IValidator-1.html">IValidator</a>&lt;T&gt;</div>
   </div>
   <div class="inheritedMembers">
@@ -106,13 +107,7 @@
       <a class="xref" href="FlexValidator.Validator.html#FlexValidator_Validator_Passed_System_String_">Validator.Passed(string)</a>
     </div>
     <div>
-      <a class="xref" href="FlexValidator.Validator.html#FlexValidator_Validator_Passed_System_Guid_">Validator.Passed(Guid)</a>
-    </div>
-    <div>
       <a class="xref" href="FlexValidator.Validator.html#FlexValidator_Validator_Failed_System_String_">Validator.Failed(string)</a>
-    </div>
-    <div>
-      <a class="xref" href="FlexValidator.Validator.html#FlexValidator_Validator_Failed_System_Guid_">Validator.Failed(Guid)</a>
     </div>
     <div>
       <a class="xref" href="FlexValidator.Validator.html#FlexValidator_Validator_RunValidator__1_FlexValidator_IValidator___0____0_">Validator.RunValidator&lt;T&gt;(IValidator&lt;T&gt;, T)</a>
@@ -146,7 +141,7 @@
   <h6><strong>Assembly</strong>: FlexValidator.dll</h6>
   <h5 id="FlexValidator_SectionedValidator_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class SectionedValidator&lt;T&gt; : Validator, IValidator&lt;T&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class SectionedValidator&lt;T&gt; : Validator, ISectionedValidator&lt;T&gt;, IValidator&lt;T&gt;</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -438,6 +433,9 @@
     </tbody>
   </table>
   <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="FlexValidator.ISectionedValidator-1.html">ISectionedValidator&lt;T&gt;</a>
+  </div>
   <div>
       <a class="xref" href="FlexValidator.IValidator-1.html">IValidator&lt;T&gt;</a>
   </div>

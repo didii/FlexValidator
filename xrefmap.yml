@@ -80,24 +80,24 @@ references:
   commentId: T:FlexValidator.Exceptions.ValidationNotFoundException
   fullName: FlexValidator.Exceptions.ValidationNotFoundException
   nameWithType: ValidationNotFoundException
-- uid: FlexValidator.Exceptions.ValidationNotFoundException.#ctor(System.Guid,System.Exception)
-  name: ValidationNotFoundException(Guid, Exception)
-  href: api/FlexValidator.Exceptions.ValidationNotFoundException.html#FlexValidator_Exceptions_ValidationNotFoundException__ctor_System_Guid_System_Exception_
-  commentId: M:FlexValidator.Exceptions.ValidationNotFoundException.#ctor(System.Guid,System.Exception)
-  name.vb: New(Guid, Exception)
-  fullName: FlexValidator.Exceptions.ValidationNotFoundException.ValidationNotFoundException(System.Guid, System.Exception)
-  fullName.vb: FlexValidator.Exceptions.ValidationNotFoundException.New(System.Guid, System.Exception)
-  nameWithType: ValidationNotFoundException.ValidationNotFoundException(Guid, Exception)
-  nameWithType.vb: ValidationNotFoundException.New(Guid, Exception)
-- uid: FlexValidator.Exceptions.ValidationNotFoundException.#ctor(System.Guid)
-  name: ValidationNotFoundException(Guid)
-  href: api/FlexValidator.Exceptions.ValidationNotFoundException.html#FlexValidator_Exceptions_ValidationNotFoundException__ctor_System_Guid_
-  commentId: M:FlexValidator.Exceptions.ValidationNotFoundException.#ctor(System.Guid)
-  name.vb: New(Guid)
-  fullName: FlexValidator.Exceptions.ValidationNotFoundException.ValidationNotFoundException(System.Guid)
-  fullName.vb: FlexValidator.Exceptions.ValidationNotFoundException.New(System.Guid)
-  nameWithType: ValidationNotFoundException.ValidationNotFoundException(Guid)
-  nameWithType.vb: ValidationNotFoundException.New(Guid)
+- uid: FlexValidator.Exceptions.ValidationNotFoundException.#ctor(System.String,System.Exception)
+  name: ValidationNotFoundException(string, Exception)
+  href: api/FlexValidator.Exceptions.ValidationNotFoundException.html#FlexValidator_Exceptions_ValidationNotFoundException__ctor_System_String_System_Exception_
+  commentId: M:FlexValidator.Exceptions.ValidationNotFoundException.#ctor(System.String,System.Exception)
+  name.vb: New(String, Exception)
+  fullName: FlexValidator.Exceptions.ValidationNotFoundException.ValidationNotFoundException(string, System.Exception)
+  fullName.vb: FlexValidator.Exceptions.ValidationNotFoundException.New(String, System.Exception)
+  nameWithType: ValidationNotFoundException.ValidationNotFoundException(string, Exception)
+  nameWithType.vb: ValidationNotFoundException.New(String, Exception)
+- uid: FlexValidator.Exceptions.ValidationNotFoundException.#ctor(System.String)
+  name: ValidationNotFoundException(string)
+  href: api/FlexValidator.Exceptions.ValidationNotFoundException.html#FlexValidator_Exceptions_ValidationNotFoundException__ctor_System_String_
+  commentId: M:FlexValidator.Exceptions.ValidationNotFoundException.#ctor(System.String)
+  name.vb: New(String)
+  fullName: FlexValidator.Exceptions.ValidationNotFoundException.ValidationNotFoundException(string)
+  fullName.vb: FlexValidator.Exceptions.ValidationNotFoundException.New(String)
+  nameWithType: ValidationNotFoundException.ValidationNotFoundException(string)
+  nameWithType.vb: ValidationNotFoundException.New(String)
 - uid: FlexValidator.Exceptions.ValidationNotFoundException.#ctor*
   name: ValidationNotFoundException
   href: api/FlexValidator.Exceptions.ValidationNotFoundException.html#FlexValidator_Exceptions_ValidationNotFoundException__ctor_
@@ -142,199 +142,6 @@ references:
   fullName.vb: FlexValidator.Exceptions.ValidatorSectionNotFoundException.New
   nameWithType: ValidatorSectionNotFoundException.ValidatorSectionNotFoundException
   nameWithType.vb: ValidatorSectionNotFoundException.New
-- uid: FlexValidator.Helpers
-  name: FlexValidator.Helpers
-  href: api/FlexValidator.Helpers.html
-  commentId: N:FlexValidator.Helpers
-  fullName: FlexValidator.Helpers
-  nameWithType: FlexValidator.Helpers
-- uid: FlexValidator.Helpers.Helper
-  name: Helper
-  href: api/FlexValidator.Helpers.Helper.html
-  commentId: T:FlexValidator.Helpers.Helper
-  fullName: FlexValidator.Helpers.Helper
-  nameWithType: Helper
-- uid: FlexValidator.Helpers.Helper.Convert*
-  name: Convert
-  href: api/FlexValidator.Helpers.Helper.html#FlexValidator_Helpers_Helper_Convert_
-  commentId: Overload:FlexValidator.Helpers.Helper.Convert
-  isSpec: "True"
-  fullName: FlexValidator.Helpers.Helper.Convert
-  nameWithType: Helper.Convert
-- uid: FlexValidator.Helpers.Helper.Convert``1(System.Action{``0})
-  name: Convert<T>(Action<T>)
-  href: api/FlexValidator.Helpers.Helper.html#FlexValidator_Helpers_Helper_Convert__1_System_Action___0__
-  commentId: M:FlexValidator.Helpers.Helper.Convert``1(System.Action{``0})
-  name.vb: Convert(Of T)(Action(Of T))
-  fullName: FlexValidator.Helpers.Helper.Convert<T>(System.Action<T>)
-  fullName.vb: FlexValidator.Helpers.Helper.Convert(Of T)(System.Action(Of T))
-  nameWithType: Helper.Convert<T>(Action<T>)
-  nameWithType.vb: Helper.Convert(Of T)(Action(Of T))
-- uid: FlexValidator.Helpers.Helper.Convert``1(System.Func{``0,System.Threading.Tasks.Task})
-  name: Convert<T>(Func<T, Task>)
-  href: api/FlexValidator.Helpers.Helper.html#FlexValidator_Helpers_Helper_Convert__1_System_Func___0_System_Threading_Tasks_Task__
-  commentId: M:FlexValidator.Helpers.Helper.Convert``1(System.Func{``0,System.Threading.Tasks.Task})
-  name.vb: Convert(Of T)(Func(Of T, Task))
-  fullName: FlexValidator.Helpers.Helper.Convert<T>(System.Func<T, System.Threading.Tasks.Task>)
-  fullName.vb: FlexValidator.Helpers.Helper.Convert(Of T)(System.Func(Of T, System.Threading.Tasks.Task))
-  nameWithType: Helper.Convert<T>(Func<T, Task>)
-  nameWithType.vb: Helper.Convert(Of T)(Func(Of T, Task))
-- uid: FlexValidator.Helpers.Helper.Convert``2(System.Action{``0,``1})
-  name: Convert<T1, T2>(Action<T1, T2>)
-  href: api/FlexValidator.Helpers.Helper.html#FlexValidator_Helpers_Helper_Convert__2_System_Action___0___1__
-  commentId: M:FlexValidator.Helpers.Helper.Convert``2(System.Action{``0,``1})
-  name.vb: Convert(Of T1, T2)(Action(Of T1, T2))
-  fullName: FlexValidator.Helpers.Helper.Convert<T1, T2>(System.Action<T1, T2>)
-  fullName.vb: FlexValidator.Helpers.Helper.Convert(Of T1, T2)(System.Action(Of T1, T2))
-  nameWithType: Helper.Convert<T1, T2>(Action<T1, T2>)
-  nameWithType.vb: Helper.Convert(Of T1, T2)(Action(Of T1, T2))
-- uid: FlexValidator.Helpers.Helper.Convert``2(System.Func{``0,``1,System.Threading.Tasks.Task})
-  name: Convert<T1, T2>(Func<T1, T2, Task>)
-  href: api/FlexValidator.Helpers.Helper.html#FlexValidator_Helpers_Helper_Convert__2_System_Func___0___1_System_Threading_Tasks_Task__
-  commentId: M:FlexValidator.Helpers.Helper.Convert``2(System.Func{``0,``1,System.Threading.Tasks.Task})
-  name.vb: Convert(Of T1, T2)(Func(Of T1, T2, Task))
-  fullName: FlexValidator.Helpers.Helper.Convert<T1, T2>(System.Func<T1, T2, System.Threading.Tasks.Task>)
-  fullName.vb: FlexValidator.Helpers.Helper.Convert(Of T1, T2)(System.Func(Of T1, T2, System.Threading.Tasks.Task))
-  nameWithType: Helper.Convert<T1, T2>(Func<T1, T2, Task>)
-  nameWithType.vb: Helper.Convert(Of T1, T2)(Func(Of T1, T2, Task))
-- uid: FlexValidator.Helpers.Helper.Convert``3(System.Action{``0,``1,``2})
-  name: Convert<T1, T2, T3>(Action<T1, T2, T3>)
-  href: api/FlexValidator.Helpers.Helper.html#FlexValidator_Helpers_Helper_Convert__3_System_Action___0___1___2__
-  commentId: M:FlexValidator.Helpers.Helper.Convert``3(System.Action{``0,``1,``2})
-  name.vb: Convert(Of T1, T2, T3)(Action(Of T1, T2, T3))
-  fullName: FlexValidator.Helpers.Helper.Convert<T1, T2, T3>(System.Action<T1, T2, T3>)
-  fullName.vb: FlexValidator.Helpers.Helper.Convert(Of T1, T2, T3)(System.Action(Of T1, T2, T3))
-  nameWithType: Helper.Convert<T1, T2, T3>(Action<T1, T2, T3>)
-  nameWithType.vb: Helper.Convert(Of T1, T2, T3)(Action(Of T1, T2, T3))
-- uid: FlexValidator.Helpers.Helper.Convert``3(System.Func{``0,``1,``2,System.Threading.Tasks.Task})
-  name: Convert<T1, T2, T3>(Func<T1, T2, T3, Task>)
-  href: api/FlexValidator.Helpers.Helper.html#FlexValidator_Helpers_Helper_Convert__3_System_Func___0___1___2_System_Threading_Tasks_Task__
-  commentId: M:FlexValidator.Helpers.Helper.Convert``3(System.Func{``0,``1,``2,System.Threading.Tasks.Task})
-  name.vb: Convert(Of T1, T2, T3)(Func(Of T1, T2, T3, Task))
-  fullName: FlexValidator.Helpers.Helper.Convert<T1, T2, T3>(System.Func<T1, T2, T3, System.Threading.Tasks.Task>)
-  fullName.vb: FlexValidator.Helpers.Helper.Convert(Of T1, T2, T3)(System.Func(Of T1, T2, T3, System.Threading.Tasks.Task))
-  nameWithType: Helper.Convert<T1, T2, T3>(Func<T1, T2, T3, Task>)
-  nameWithType.vb: Helper.Convert(Of T1, T2, T3)(Func(Of T1, T2, T3, Task))
-- uid: FlexValidator.Helpers.Helper.Convert``4(System.Action{``0,``1,``2,``3})
-  name: Convert<T1, T2, T3, T4>(Action<T1, T2, T3, T4>)
-  href: api/FlexValidator.Helpers.Helper.html#FlexValidator_Helpers_Helper_Convert__4_System_Action___0___1___2___3__
-  commentId: M:FlexValidator.Helpers.Helper.Convert``4(System.Action{``0,``1,``2,``3})
-  name.vb: Convert(Of T1, T2, T3, T4)(Action(Of T1, T2, T3, T4))
-  fullName: FlexValidator.Helpers.Helper.Convert<T1, T2, T3, T4>(System.Action<T1, T2, T3, T4>)
-  fullName.vb: FlexValidator.Helpers.Helper.Convert(Of T1, T2, T3, T4)(System.Action(Of T1, T2, T3, T4))
-  nameWithType: Helper.Convert<T1, T2, T3, T4>(Action<T1, T2, T3, T4>)
-  nameWithType.vb: Helper.Convert(Of T1, T2, T3, T4)(Action(Of T1, T2, T3, T4))
-- uid: FlexValidator.Helpers.Helper.Convert``4(System.Func{``0,``1,``2,``3,System.Threading.Tasks.Task})
-  name: Convert<T1, T2, T3, T4>(Func<T1, T2, T3, T4, Task>)
-  href: api/FlexValidator.Helpers.Helper.html#FlexValidator_Helpers_Helper_Convert__4_System_Func___0___1___2___3_System_Threading_Tasks_Task__
-  commentId: M:FlexValidator.Helpers.Helper.Convert``4(System.Func{``0,``1,``2,``3,System.Threading.Tasks.Task})
-  name.vb: Convert(Of T1, T2, T3, T4)(Func(Of T1, T2, T3, T4, Task))
-  fullName: FlexValidator.Helpers.Helper.Convert<T1, T2, T3, T4>(System.Func<T1, T2, T3, T4, System.Threading.Tasks.Task>)
-  fullName.vb: FlexValidator.Helpers.Helper.Convert(Of T1, T2, T3, T4)(System.Func(Of T1, T2, T3, T4, System.Threading.Tasks.Task))
-  nameWithType: Helper.Convert<T1, T2, T3, T4>(Func<T1, T2, T3, T4, Task>)
-  nameWithType.vb: Helper.Convert(Of T1, T2, T3, T4)(Func(Of T1, T2, T3, T4, Task))
-- uid: FlexValidator.Helpers.Helper.Pack(System.Object[])
-  name: Pack(params object[])
-  href: api/FlexValidator.Helpers.Helper.html#FlexValidator_Helpers_Helper_Pack_System_Object___
-  commentId: M:FlexValidator.Helpers.Helper.Pack(System.Object[])
-  name.vb: Pack(ParamArray Object())
-  fullName: FlexValidator.Helpers.Helper.Pack(params object[])
-  fullName.vb: FlexValidator.Helpers.Helper.Pack(ParamArray Object())
-  nameWithType: Helper.Pack(params object[])
-  nameWithType.vb: Helper.Pack(ParamArray Object())
-- uid: FlexValidator.Helpers.Helper.Pack*
-  name: Pack
-  href: api/FlexValidator.Helpers.Helper.html#FlexValidator_Helpers_Helper_Pack_
-  commentId: Overload:FlexValidator.Helpers.Helper.Pack
-  isSpec: "True"
-  fullName: FlexValidator.Helpers.Helper.Pack
-  nameWithType: Helper.Pack
-- uid: FlexValidator.Helpers.Helper.UnPack*
-  name: UnPack
-  href: api/FlexValidator.Helpers.Helper.html#FlexValidator_Helpers_Helper_UnPack_
-  commentId: Overload:FlexValidator.Helpers.Helper.UnPack
-  isSpec: "True"
-  fullName: FlexValidator.Helpers.Helper.UnPack
-  nameWithType: Helper.UnPack
-- uid: FlexValidator.Helpers.Helper.UnPack``1(System.Action{``0},System.Object[])
-  name: UnPack<T>(Action<T>, object[])
-  href: api/FlexValidator.Helpers.Helper.html#FlexValidator_Helpers_Helper_UnPack__1_System_Action___0__System_Object___
-  commentId: M:FlexValidator.Helpers.Helper.UnPack``1(System.Action{``0},System.Object[])
-  name.vb: UnPack(Of T)(Action(Of T), Object())
-  fullName: FlexValidator.Helpers.Helper.UnPack<T>(System.Action<T>, object[])
-  fullName.vb: FlexValidator.Helpers.Helper.UnPack(Of T)(System.Action(Of T), Object())
-  nameWithType: Helper.UnPack<T>(Action<T>, object[])
-  nameWithType.vb: Helper.UnPack(Of T)(Action(Of T), Object())
-- uid: FlexValidator.Helpers.Helper.UnPack``2(System.Action{``0,``1},System.Object[])
-  name: UnPack<T1, T2>(Action<T1, T2>, object[])
-  href: api/FlexValidator.Helpers.Helper.html#FlexValidator_Helpers_Helper_UnPack__2_System_Action___0___1__System_Object___
-  commentId: M:FlexValidator.Helpers.Helper.UnPack``2(System.Action{``0,``1},System.Object[])
-  name.vb: UnPack(Of T1, T2)(Action(Of T1, T2), Object())
-  fullName: FlexValidator.Helpers.Helper.UnPack<T1, T2>(System.Action<T1, T2>, object[])
-  fullName.vb: FlexValidator.Helpers.Helper.UnPack(Of T1, T2)(System.Action(Of T1, T2), Object())
-  nameWithType: Helper.UnPack<T1, T2>(Action<T1, T2>, object[])
-  nameWithType.vb: Helper.UnPack(Of T1, T2)(Action(Of T1, T2), Object())
-- uid: FlexValidator.Helpers.Helper.UnPack``3(System.Action{``0,``1,``2},System.Object[])
-  name: UnPack<T1, T2, T3>(Action<T1, T2, T3>, object[])
-  href: api/FlexValidator.Helpers.Helper.html#FlexValidator_Helpers_Helper_UnPack__3_System_Action___0___1___2__System_Object___
-  commentId: M:FlexValidator.Helpers.Helper.UnPack``3(System.Action{``0,``1,``2},System.Object[])
-  name.vb: UnPack(Of T1, T2, T3)(Action(Of T1, T2, T3), Object())
-  fullName: FlexValidator.Helpers.Helper.UnPack<T1, T2, T3>(System.Action<T1, T2, T3>, object[])
-  fullName.vb: FlexValidator.Helpers.Helper.UnPack(Of T1, T2, T3)(System.Action(Of T1, T2, T3), Object())
-  nameWithType: Helper.UnPack<T1, T2, T3>(Action<T1, T2, T3>, object[])
-  nameWithType.vb: Helper.UnPack(Of T1, T2, T3)(Action(Of T1, T2, T3), Object())
-- uid: FlexValidator.Helpers.Helper.UnPack``4(System.Action{``0,``1,``2,``3},System.Object[])
-  name: UnPack<T1, T2, T3, T4>(Action<T1, T2, T3, T4>, object[])
-  href: api/FlexValidator.Helpers.Helper.html#FlexValidator_Helpers_Helper_UnPack__4_System_Action___0___1___2___3__System_Object___
-  commentId: M:FlexValidator.Helpers.Helper.UnPack``4(System.Action{``0,``1,``2,``3},System.Object[])
-  name.vb: UnPack(Of T1, T2, T3, T4)(Action(Of T1, T2, T3, T4), Object())
-  fullName: FlexValidator.Helpers.Helper.UnPack<T1, T2, T3, T4>(System.Action<T1, T2, T3, T4>, object[])
-  fullName.vb: FlexValidator.Helpers.Helper.UnPack(Of T1, T2, T3, T4)(System.Action(Of T1, T2, T3, T4), Object())
-  nameWithType: Helper.UnPack<T1, T2, T3, T4>(Action<T1, T2, T3, T4>, object[])
-  nameWithType.vb: Helper.UnPack(Of T1, T2, T3, T4)(Action(Of T1, T2, T3, T4), Object())
-- uid: FlexValidator.Helpers.Helper.UnPackAsync*
-  name: UnPackAsync
-  href: api/FlexValidator.Helpers.Helper.html#FlexValidator_Helpers_Helper_UnPackAsync_
-  commentId: Overload:FlexValidator.Helpers.Helper.UnPackAsync
-  isSpec: "True"
-  fullName: FlexValidator.Helpers.Helper.UnPackAsync
-  nameWithType: Helper.UnPackAsync
-- uid: FlexValidator.Helpers.Helper.UnPackAsync``1(System.Func{``0,System.Threading.Tasks.Task},System.Object[])
-  name: UnPackAsync<T>(Func<T, Task>, object[])
-  href: api/FlexValidator.Helpers.Helper.html#FlexValidator_Helpers_Helper_UnPackAsync__1_System_Func___0_System_Threading_Tasks_Task__System_Object___
-  commentId: M:FlexValidator.Helpers.Helper.UnPackAsync``1(System.Func{``0,System.Threading.Tasks.Task},System.Object[])
-  name.vb: UnPackAsync(Of T)(Func(Of T, Task), Object())
-  fullName: FlexValidator.Helpers.Helper.UnPackAsync<T>(System.Func<T, System.Threading.Tasks.Task>, object[])
-  fullName.vb: FlexValidator.Helpers.Helper.UnPackAsync(Of T)(System.Func(Of T, System.Threading.Tasks.Task), Object())
-  nameWithType: Helper.UnPackAsync<T>(Func<T, Task>, object[])
-  nameWithType.vb: Helper.UnPackAsync(Of T)(Func(Of T, Task), Object())
-- uid: FlexValidator.Helpers.Helper.UnPackAsync``2(System.Func{``0,``1,System.Threading.Tasks.Task},System.Object[])
-  name: UnPackAsync<T1, T2>(Func<T1, T2, Task>, object[])
-  href: api/FlexValidator.Helpers.Helper.html#FlexValidator_Helpers_Helper_UnPackAsync__2_System_Func___0___1_System_Threading_Tasks_Task__System_Object___
-  commentId: M:FlexValidator.Helpers.Helper.UnPackAsync``2(System.Func{``0,``1,System.Threading.Tasks.Task},System.Object[])
-  name.vb: UnPackAsync(Of T1, T2)(Func(Of T1, T2, Task), Object())
-  fullName: FlexValidator.Helpers.Helper.UnPackAsync<T1, T2>(System.Func<T1, T2, System.Threading.Tasks.Task>, object[])
-  fullName.vb: FlexValidator.Helpers.Helper.UnPackAsync(Of T1, T2)(System.Func(Of T1, T2, System.Threading.Tasks.Task), Object())
-  nameWithType: Helper.UnPackAsync<T1, T2>(Func<T1, T2, Task>, object[])
-  nameWithType.vb: Helper.UnPackAsync(Of T1, T2)(Func(Of T1, T2, Task), Object())
-- uid: FlexValidator.Helpers.Helper.UnPackAsync``3(System.Func{``0,``1,``2,System.Threading.Tasks.Task},System.Object[])
-  name: UnPackAsync<T1, T2, T3>(Func<T1, T2, T3, Task>, object[])
-  href: api/FlexValidator.Helpers.Helper.html#FlexValidator_Helpers_Helper_UnPackAsync__3_System_Func___0___1___2_System_Threading_Tasks_Task__System_Object___
-  commentId: M:FlexValidator.Helpers.Helper.UnPackAsync``3(System.Func{``0,``1,``2,System.Threading.Tasks.Task},System.Object[])
-  name.vb: UnPackAsync(Of T1, T2, T3)(Func(Of T1, T2, T3, Task), Object())
-  fullName: FlexValidator.Helpers.Helper.UnPackAsync<T1, T2, T3>(System.Func<T1, T2, T3, System.Threading.Tasks.Task>, object[])
-  fullName.vb: FlexValidator.Helpers.Helper.UnPackAsync(Of T1, T2, T3)(System.Func(Of T1, T2, T3, System.Threading.Tasks.Task), Object())
-  nameWithType: Helper.UnPackAsync<T1, T2, T3>(Func<T1, T2, T3, Task>, object[])
-  nameWithType.vb: Helper.UnPackAsync(Of T1, T2, T3)(Func(Of T1, T2, T3, Task), Object())
-- uid: FlexValidator.Helpers.Helper.UnPackAsync``4(System.Func{``0,``1,``2,``3,System.Threading.Tasks.Task},System.Object[])
-  name: UnPackAsync<T1, T2, T3, T4>(Func<T1, T2, T3, T4, Task>, object[])
-  href: api/FlexValidator.Helpers.Helper.html#FlexValidator_Helpers_Helper_UnPackAsync__4_System_Func___0___1___2___3_System_Threading_Tasks_Task__System_Object___
-  commentId: M:FlexValidator.Helpers.Helper.UnPackAsync``4(System.Func{``0,``1,``2,``3,System.Threading.Tasks.Task},System.Object[])
-  name.vb: UnPackAsync(Of T1, T2, T3, T4)(Func(Of T1, T2, T3, T4, Task), Object())
-  fullName: FlexValidator.Helpers.Helper.UnPackAsync<T1, T2, T3, T4>(System.Func<T1, T2, T3, T4, System.Threading.Tasks.Task>, object[])
-  fullName.vb: FlexValidator.Helpers.Helper.UnPackAsync(Of T1, T2, T3, T4)(System.Func(Of T1, T2, T3, T4, System.Threading.Tasks.Task), Object())
-  nameWithType: Helper.UnPackAsync<T1, T2, T3, T4>(Func<T1, T2, T3, T4, Task>, object[])
-  nameWithType.vb: Helper.UnPackAsync(Of T1, T2, T3, T4)(Func(Of T1, T2, T3, T4, Task), Object())
 - uid: FlexValidator.ISectionedValidator`1
   name: ISectionedValidator<T>
   href: api/FlexValidator.ISectionedValidator-1.html
@@ -380,141 +187,6 @@ references:
   fullName.vb: FlexValidator.ISectionedValidator(Of T).ValidateSectionAsync
   nameWithType: ISectionedValidator<T>.ValidateSectionAsync
   nameWithType.vb: ISectionedValidator(Of T).ValidateSectionAsync
-- uid: FlexValidator.ISectionedValidator`2
-  name: ISectionedValidator<T1, T2>
-  href: api/FlexValidator.ISectionedValidator-2.html
-  commentId: T:FlexValidator.ISectionedValidator`2
-  name.vb: ISectionedValidator(Of T1, T2)
-  fullName: FlexValidator.ISectionedValidator<T1, T2>
-  fullName.vb: FlexValidator.ISectionedValidator(Of T1, T2)
-  nameWithType: ISectionedValidator<T1, T2>
-  nameWithType.vb: ISectionedValidator(Of T1, T2)
-- uid: FlexValidator.ISectionedValidator`2.ValidateSection(System.String,`0,`1)
-  name: ValidateSection(string, T1, T2)
-  href: api/FlexValidator.ISectionedValidator-2.html#FlexValidator_ISectionedValidator_2_ValidateSection_System_String__0__1_
-  commentId: M:FlexValidator.ISectionedValidator`2.ValidateSection(System.String,`0,`1)
-  name.vb: ValidateSection(String, T1, T2)
-  fullName: FlexValidator.ISectionedValidator<T1, T2>.ValidateSection(string, T1, T2)
-  fullName.vb: FlexValidator.ISectionedValidator(Of T1, T2).ValidateSection(String, T1, T2)
-  nameWithType: ISectionedValidator<T1, T2>.ValidateSection(string, T1, T2)
-  nameWithType.vb: ISectionedValidator(Of T1, T2).ValidateSection(String, T1, T2)
-- uid: FlexValidator.ISectionedValidator`2.ValidateSection*
-  name: ValidateSection
-  href: api/FlexValidator.ISectionedValidator-2.html#FlexValidator_ISectionedValidator_2_ValidateSection_
-  commentId: Overload:FlexValidator.ISectionedValidator`2.ValidateSection
-  isSpec: "True"
-  fullName: FlexValidator.ISectionedValidator<T1, T2>.ValidateSection
-  fullName.vb: FlexValidator.ISectionedValidator(Of T1, T2).ValidateSection
-  nameWithType: ISectionedValidator<T1, T2>.ValidateSection
-  nameWithType.vb: ISectionedValidator(Of T1, T2).ValidateSection
-- uid: FlexValidator.ISectionedValidator`2.ValidateSectionAsync(System.String,`0,`1)
-  name: ValidateSectionAsync(string, T1, T2)
-  href: api/FlexValidator.ISectionedValidator-2.html#FlexValidator_ISectionedValidator_2_ValidateSectionAsync_System_String__0__1_
-  commentId: M:FlexValidator.ISectionedValidator`2.ValidateSectionAsync(System.String,`0,`1)
-  name.vb: ValidateSectionAsync(String, T1, T2)
-  fullName: FlexValidator.ISectionedValidator<T1, T2>.ValidateSectionAsync(string, T1, T2)
-  fullName.vb: FlexValidator.ISectionedValidator(Of T1, T2).ValidateSectionAsync(String, T1, T2)
-  nameWithType: ISectionedValidator<T1, T2>.ValidateSectionAsync(string, T1, T2)
-  nameWithType.vb: ISectionedValidator(Of T1, T2).ValidateSectionAsync(String, T1, T2)
-- uid: FlexValidator.ISectionedValidator`2.ValidateSectionAsync*
-  name: ValidateSectionAsync
-  href: api/FlexValidator.ISectionedValidator-2.html#FlexValidator_ISectionedValidator_2_ValidateSectionAsync_
-  commentId: Overload:FlexValidator.ISectionedValidator`2.ValidateSectionAsync
-  isSpec: "True"
-  fullName: FlexValidator.ISectionedValidator<T1, T2>.ValidateSectionAsync
-  fullName.vb: FlexValidator.ISectionedValidator(Of T1, T2).ValidateSectionAsync
-  nameWithType: ISectionedValidator<T1, T2>.ValidateSectionAsync
-  nameWithType.vb: ISectionedValidator(Of T1, T2).ValidateSectionAsync
-- uid: FlexValidator.ISectionedValidator`3
-  name: ISectionedValidator<T1, T2, T3>
-  href: api/FlexValidator.ISectionedValidator-3.html
-  commentId: T:FlexValidator.ISectionedValidator`3
-  name.vb: ISectionedValidator(Of T1, T2, T3)
-  fullName: FlexValidator.ISectionedValidator<T1, T2, T3>
-  fullName.vb: FlexValidator.ISectionedValidator(Of T1, T2, T3)
-  nameWithType: ISectionedValidator<T1, T2, T3>
-  nameWithType.vb: ISectionedValidator(Of T1, T2, T3)
-- uid: FlexValidator.ISectionedValidator`3.ValidateSection(System.String,`0,`1,`2)
-  name: ValidateSection(string, T1, T2, T3)
-  href: api/FlexValidator.ISectionedValidator-3.html#FlexValidator_ISectionedValidator_3_ValidateSection_System_String__0__1__2_
-  commentId: M:FlexValidator.ISectionedValidator`3.ValidateSection(System.String,`0,`1,`2)
-  name.vb: ValidateSection(String, T1, T2, T3)
-  fullName: FlexValidator.ISectionedValidator<T1, T2, T3>.ValidateSection(string, T1, T2, T3)
-  fullName.vb: FlexValidator.ISectionedValidator(Of T1, T2, T3).ValidateSection(String, T1, T2, T3)
-  nameWithType: ISectionedValidator<T1, T2, T3>.ValidateSection(string, T1, T2, T3)
-  nameWithType.vb: ISectionedValidator(Of T1, T2, T3).ValidateSection(String, T1, T2, T3)
-- uid: FlexValidator.ISectionedValidator`3.ValidateSection*
-  name: ValidateSection
-  href: api/FlexValidator.ISectionedValidator-3.html#FlexValidator_ISectionedValidator_3_ValidateSection_
-  commentId: Overload:FlexValidator.ISectionedValidator`3.ValidateSection
-  isSpec: "True"
-  fullName: FlexValidator.ISectionedValidator<T1, T2, T3>.ValidateSection
-  fullName.vb: FlexValidator.ISectionedValidator(Of T1, T2, T3).ValidateSection
-  nameWithType: ISectionedValidator<T1, T2, T3>.ValidateSection
-  nameWithType.vb: ISectionedValidator(Of T1, T2, T3).ValidateSection
-- uid: FlexValidator.ISectionedValidator`3.ValidateSectionAsync(System.String,`0,`1,`2)
-  name: ValidateSectionAsync(string, T1, T2, T3)
-  href: api/FlexValidator.ISectionedValidator-3.html#FlexValidator_ISectionedValidator_3_ValidateSectionAsync_System_String__0__1__2_
-  commentId: M:FlexValidator.ISectionedValidator`3.ValidateSectionAsync(System.String,`0,`1,`2)
-  name.vb: ValidateSectionAsync(String, T1, T2, T3)
-  fullName: FlexValidator.ISectionedValidator<T1, T2, T3>.ValidateSectionAsync(string, T1, T2, T3)
-  fullName.vb: FlexValidator.ISectionedValidator(Of T1, T2, T3).ValidateSectionAsync(String, T1, T2, T3)
-  nameWithType: ISectionedValidator<T1, T2, T3>.ValidateSectionAsync(string, T1, T2, T3)
-  nameWithType.vb: ISectionedValidator(Of T1, T2, T3).ValidateSectionAsync(String, T1, T2, T3)
-- uid: FlexValidator.ISectionedValidator`3.ValidateSectionAsync*
-  name: ValidateSectionAsync
-  href: api/FlexValidator.ISectionedValidator-3.html#FlexValidator_ISectionedValidator_3_ValidateSectionAsync_
-  commentId: Overload:FlexValidator.ISectionedValidator`3.ValidateSectionAsync
-  isSpec: "True"
-  fullName: FlexValidator.ISectionedValidator<T1, T2, T3>.ValidateSectionAsync
-  fullName.vb: FlexValidator.ISectionedValidator(Of T1, T2, T3).ValidateSectionAsync
-  nameWithType: ISectionedValidator<T1, T2, T3>.ValidateSectionAsync
-  nameWithType.vb: ISectionedValidator(Of T1, T2, T3).ValidateSectionAsync
-- uid: FlexValidator.ISectionedValidator`4
-  name: ISectionedValidator<T1, T2, T3, T4>
-  href: api/FlexValidator.ISectionedValidator-4.html
-  commentId: T:FlexValidator.ISectionedValidator`4
-  name.vb: ISectionedValidator(Of T1, T2, T3, T4)
-  fullName: FlexValidator.ISectionedValidator<T1, T2, T3, T4>
-  fullName.vb: FlexValidator.ISectionedValidator(Of T1, T2, T3, T4)
-  nameWithType: ISectionedValidator<T1, T2, T3, T4>
-  nameWithType.vb: ISectionedValidator(Of T1, T2, T3, T4)
-- uid: FlexValidator.ISectionedValidator`4.ValidateSection(System.String,`0,`1,`2,`3)
-  name: ValidateSection(string, T1, T2, T3, T4)
-  href: api/FlexValidator.ISectionedValidator-4.html#FlexValidator_ISectionedValidator_4_ValidateSection_System_String__0__1__2__3_
-  commentId: M:FlexValidator.ISectionedValidator`4.ValidateSection(System.String,`0,`1,`2,`3)
-  name.vb: ValidateSection(String, T1, T2, T3, T4)
-  fullName: FlexValidator.ISectionedValidator<T1, T2, T3, T4>.ValidateSection(string, T1, T2, T3, T4)
-  fullName.vb: FlexValidator.ISectionedValidator(Of T1, T2, T3, T4).ValidateSection(String, T1, T2, T3, T4)
-  nameWithType: ISectionedValidator<T1, T2, T3, T4>.ValidateSection(string, T1, T2, T3, T4)
-  nameWithType.vb: ISectionedValidator(Of T1, T2, T3, T4).ValidateSection(String, T1, T2, T3, T4)
-- uid: FlexValidator.ISectionedValidator`4.ValidateSection*
-  name: ValidateSection
-  href: api/FlexValidator.ISectionedValidator-4.html#FlexValidator_ISectionedValidator_4_ValidateSection_
-  commentId: Overload:FlexValidator.ISectionedValidator`4.ValidateSection
-  isSpec: "True"
-  fullName: FlexValidator.ISectionedValidator<T1, T2, T3, T4>.ValidateSection
-  fullName.vb: FlexValidator.ISectionedValidator(Of T1, T2, T3, T4).ValidateSection
-  nameWithType: ISectionedValidator<T1, T2, T3, T4>.ValidateSection
-  nameWithType.vb: ISectionedValidator(Of T1, T2, T3, T4).ValidateSection
-- uid: FlexValidator.ISectionedValidator`4.ValidateSectionAsync(System.String,`0,`1,`2,`3)
-  name: ValidateSectionAsync(string, T1, T2, T3, T4)
-  href: api/FlexValidator.ISectionedValidator-4.html#FlexValidator_ISectionedValidator_4_ValidateSectionAsync_System_String__0__1__2__3_
-  commentId: M:FlexValidator.ISectionedValidator`4.ValidateSectionAsync(System.String,`0,`1,`2,`3)
-  name.vb: ValidateSectionAsync(String, T1, T2, T3, T4)
-  fullName: FlexValidator.ISectionedValidator<T1, T2, T3, T4>.ValidateSectionAsync(string, T1, T2, T3, T4)
-  fullName.vb: FlexValidator.ISectionedValidator(Of T1, T2, T3, T4).ValidateSectionAsync(String, T1, T2, T3, T4)
-  nameWithType: ISectionedValidator<T1, T2, T3, T4>.ValidateSectionAsync(string, T1, T2, T3, T4)
-  nameWithType.vb: ISectionedValidator(Of T1, T2, T3, T4).ValidateSectionAsync(String, T1, T2, T3, T4)
-- uid: FlexValidator.ISectionedValidator`4.ValidateSectionAsync*
-  name: ValidateSectionAsync
-  href: api/FlexValidator.ISectionedValidator-4.html#FlexValidator_ISectionedValidator_4_ValidateSectionAsync_
-  commentId: Overload:FlexValidator.ISectionedValidator`4.ValidateSectionAsync
-  isSpec: "True"
-  fullName: FlexValidator.ISectionedValidator<T1, T2, T3, T4>.ValidateSectionAsync
-  fullName.vb: FlexValidator.ISectionedValidator(Of T1, T2, T3, T4).ValidateSectionAsync
-  nameWithType: ISectionedValidator<T1, T2, T3, T4>.ValidateSectionAsync
-  nameWithType.vb: ISectionedValidator(Of T1, T2, T3, T4).ValidateSectionAsync
 - uid: FlexValidator.IValidationResult
   name: IValidationResult
   href: api/FlexValidator.IValidationResult.html
@@ -547,12 +219,15 @@ references:
   isSpec: "True"
   fullName: FlexValidator.IValidationResult.AddPass
   nameWithType: IValidationResult.AddPass
-- uid: FlexValidator.IValidationResult.Check(System.Guid)
-  name: Check(Guid)
-  href: api/FlexValidator.IValidationResult.html#FlexValidator_IValidationResult_Check_System_Guid_
-  commentId: M:FlexValidator.IValidationResult.Check(System.Guid)
-  fullName: FlexValidator.IValidationResult.Check(System.Guid)
-  nameWithType: IValidationResult.Check(Guid)
+- uid: FlexValidator.IValidationResult.Check(System.String)
+  name: Check(string)
+  href: api/FlexValidator.IValidationResult.html#FlexValidator_IValidationResult_Check_System_String_
+  commentId: M:FlexValidator.IValidationResult.Check(System.String)
+  name.vb: Check(String)
+  fullName: FlexValidator.IValidationResult.Check(string)
+  fullName.vb: FlexValidator.IValidationResult.Check(String)
+  nameWithType: IValidationResult.Check(string)
+  nameWithType.vb: IValidationResult.Check(String)
 - uid: FlexValidator.IValidationResult.Check*
   name: Check
   href: api/FlexValidator.IValidationResult.html#FlexValidator_IValidationResult_Check_
@@ -655,135 +330,6 @@ references:
   fullName.vb: FlexValidator.IValidator(Of T).ValidateAsync
   nameWithType: IValidator<T>.ValidateAsync
   nameWithType.vb: IValidator(Of T).ValidateAsync
-- uid: FlexValidator.IValidator`2
-  name: IValidator<T1, T2>
-  href: api/FlexValidator.IValidator-2.html
-  commentId: T:FlexValidator.IValidator`2
-  name.vb: IValidator(Of T1, T2)
-  fullName: FlexValidator.IValidator<T1, T2>
-  fullName.vb: FlexValidator.IValidator(Of T1, T2)
-  nameWithType: IValidator<T1, T2>
-  nameWithType.vb: IValidator(Of T1, T2)
-- uid: FlexValidator.IValidator`2.Validate(`0,`1)
-  name: Validate(T1, T2)
-  href: api/FlexValidator.IValidator-2.html#FlexValidator_IValidator_2_Validate__0__1_
-  commentId: M:FlexValidator.IValidator`2.Validate(`0,`1)
-  fullName: FlexValidator.IValidator<T1, T2>.Validate(T1, T2)
-  fullName.vb: FlexValidator.IValidator(Of T1, T2).Validate(T1, T2)
-  nameWithType: IValidator<T1, T2>.Validate(T1, T2)
-  nameWithType.vb: IValidator(Of T1, T2).Validate(T1, T2)
-- uid: FlexValidator.IValidator`2.Validate*
-  name: Validate
-  href: api/FlexValidator.IValidator-2.html#FlexValidator_IValidator_2_Validate_
-  commentId: Overload:FlexValidator.IValidator`2.Validate
-  isSpec: "True"
-  fullName: FlexValidator.IValidator<T1, T2>.Validate
-  fullName.vb: FlexValidator.IValidator(Of T1, T2).Validate
-  nameWithType: IValidator<T1, T2>.Validate
-  nameWithType.vb: IValidator(Of T1, T2).Validate
-- uid: FlexValidator.IValidator`2.ValidateAsync(`0,`1)
-  name: ValidateAsync(T1, T2)
-  href: api/FlexValidator.IValidator-2.html#FlexValidator_IValidator_2_ValidateAsync__0__1_
-  commentId: M:FlexValidator.IValidator`2.ValidateAsync(`0,`1)
-  fullName: FlexValidator.IValidator<T1, T2>.ValidateAsync(T1, T2)
-  fullName.vb: FlexValidator.IValidator(Of T1, T2).ValidateAsync(T1, T2)
-  nameWithType: IValidator<T1, T2>.ValidateAsync(T1, T2)
-  nameWithType.vb: IValidator(Of T1, T2).ValidateAsync(T1, T2)
-- uid: FlexValidator.IValidator`2.ValidateAsync*
-  name: ValidateAsync
-  href: api/FlexValidator.IValidator-2.html#FlexValidator_IValidator_2_ValidateAsync_
-  commentId: Overload:FlexValidator.IValidator`2.ValidateAsync
-  isSpec: "True"
-  fullName: FlexValidator.IValidator<T1, T2>.ValidateAsync
-  fullName.vb: FlexValidator.IValidator(Of T1, T2).ValidateAsync
-  nameWithType: IValidator<T1, T2>.ValidateAsync
-  nameWithType.vb: IValidator(Of T1, T2).ValidateAsync
-- uid: FlexValidator.IValidator`3
-  name: IValidator<T1, T2, T3>
-  href: api/FlexValidator.IValidator-3.html
-  commentId: T:FlexValidator.IValidator`3
-  name.vb: IValidator(Of T1, T2, T3)
-  fullName: FlexValidator.IValidator<T1, T2, T3>
-  fullName.vb: FlexValidator.IValidator(Of T1, T2, T3)
-  nameWithType: IValidator<T1, T2, T3>
-  nameWithType.vb: IValidator(Of T1, T2, T3)
-- uid: FlexValidator.IValidator`3.Validate(`0,`1,`2)
-  name: Validate(T1, T2, T3)
-  href: api/FlexValidator.IValidator-3.html#FlexValidator_IValidator_3_Validate__0__1__2_
-  commentId: M:FlexValidator.IValidator`3.Validate(`0,`1,`2)
-  fullName: FlexValidator.IValidator<T1, T2, T3>.Validate(T1, T2, T3)
-  fullName.vb: FlexValidator.IValidator(Of T1, T2, T3).Validate(T1, T2, T3)
-  nameWithType: IValidator<T1, T2, T3>.Validate(T1, T2, T3)
-  nameWithType.vb: IValidator(Of T1, T2, T3).Validate(T1, T2, T3)
-- uid: FlexValidator.IValidator`3.Validate*
-  name: Validate
-  href: api/FlexValidator.IValidator-3.html#FlexValidator_IValidator_3_Validate_
-  commentId: Overload:FlexValidator.IValidator`3.Validate
-  isSpec: "True"
-  fullName: FlexValidator.IValidator<T1, T2, T3>.Validate
-  fullName.vb: FlexValidator.IValidator(Of T1, T2, T3).Validate
-  nameWithType: IValidator<T1, T2, T3>.Validate
-  nameWithType.vb: IValidator(Of T1, T2, T3).Validate
-- uid: FlexValidator.IValidator`3.ValidateAsync(`0,`1,`2)
-  name: ValidateAsync(T1, T2, T3)
-  href: api/FlexValidator.IValidator-3.html#FlexValidator_IValidator_3_ValidateAsync__0__1__2_
-  commentId: M:FlexValidator.IValidator`3.ValidateAsync(`0,`1,`2)
-  fullName: FlexValidator.IValidator<T1, T2, T3>.ValidateAsync(T1, T2, T3)
-  fullName.vb: FlexValidator.IValidator(Of T1, T2, T3).ValidateAsync(T1, T2, T3)
-  nameWithType: IValidator<T1, T2, T3>.ValidateAsync(T1, T2, T3)
-  nameWithType.vb: IValidator(Of T1, T2, T3).ValidateAsync(T1, T2, T3)
-- uid: FlexValidator.IValidator`3.ValidateAsync*
-  name: ValidateAsync
-  href: api/FlexValidator.IValidator-3.html#FlexValidator_IValidator_3_ValidateAsync_
-  commentId: Overload:FlexValidator.IValidator`3.ValidateAsync
-  isSpec: "True"
-  fullName: FlexValidator.IValidator<T1, T2, T3>.ValidateAsync
-  fullName.vb: FlexValidator.IValidator(Of T1, T2, T3).ValidateAsync
-  nameWithType: IValidator<T1, T2, T3>.ValidateAsync
-  nameWithType.vb: IValidator(Of T1, T2, T3).ValidateAsync
-- uid: FlexValidator.IValidator`4
-  name: IValidator<T1, T2, T3, T4>
-  href: api/FlexValidator.IValidator-4.html
-  commentId: T:FlexValidator.IValidator`4
-  name.vb: IValidator(Of T1, T2, T3, T4)
-  fullName: FlexValidator.IValidator<T1, T2, T3, T4>
-  fullName.vb: FlexValidator.IValidator(Of T1, T2, T3, T4)
-  nameWithType: IValidator<T1, T2, T3, T4>
-  nameWithType.vb: IValidator(Of T1, T2, T3, T4)
-- uid: FlexValidator.IValidator`4.Validate(`0,`1,`2,`3)
-  name: Validate(T1, T2, T3, T4)
-  href: api/FlexValidator.IValidator-4.html#FlexValidator_IValidator_4_Validate__0__1__2__3_
-  commentId: M:FlexValidator.IValidator`4.Validate(`0,`1,`2,`3)
-  fullName: FlexValidator.IValidator<T1, T2, T3, T4>.Validate(T1, T2, T3, T4)
-  fullName.vb: FlexValidator.IValidator(Of T1, T2, T3, T4).Validate(T1, T2, T3, T4)
-  nameWithType: IValidator<T1, T2, T3, T4>.Validate(T1, T2, T3, T4)
-  nameWithType.vb: IValidator(Of T1, T2, T3, T4).Validate(T1, T2, T3, T4)
-- uid: FlexValidator.IValidator`4.Validate*
-  name: Validate
-  href: api/FlexValidator.IValidator-4.html#FlexValidator_IValidator_4_Validate_
-  commentId: Overload:FlexValidator.IValidator`4.Validate
-  isSpec: "True"
-  fullName: FlexValidator.IValidator<T1, T2, T3, T4>.Validate
-  fullName.vb: FlexValidator.IValidator(Of T1, T2, T3, T4).Validate
-  nameWithType: IValidator<T1, T2, T3, T4>.Validate
-  nameWithType.vb: IValidator(Of T1, T2, T3, T4).Validate
-- uid: FlexValidator.IValidator`4.ValidateAsync(`0,`1,`2,`3)
-  name: ValidateAsync(T1, T2, T3, T4)
-  href: api/FlexValidator.IValidator-4.html#FlexValidator_IValidator_4_ValidateAsync__0__1__2__3_
-  commentId: M:FlexValidator.IValidator`4.ValidateAsync(`0,`1,`2,`3)
-  fullName: FlexValidator.IValidator<T1, T2, T3, T4>.ValidateAsync(T1, T2, T3, T4)
-  fullName.vb: FlexValidator.IValidator(Of T1, T2, T3, T4).ValidateAsync(T1, T2, T3, T4)
-  nameWithType: IValidator<T1, T2, T3, T4>.ValidateAsync(T1, T2, T3, T4)
-  nameWithType.vb: IValidator(Of T1, T2, T3, T4).ValidateAsync(T1, T2, T3, T4)
-- uid: FlexValidator.IValidator`4.ValidateAsync*
-  name: ValidateAsync
-  href: api/FlexValidator.IValidator-4.html#FlexValidator_IValidator_4_ValidateAsync_
-  commentId: Overload:FlexValidator.IValidator`4.ValidateAsync
-  isSpec: "True"
-  fullName: FlexValidator.IValidator<T1, T2, T3, T4>.ValidateAsync
-  fullName.vb: FlexValidator.IValidator(Of T1, T2, T3, T4).ValidateAsync
-  nameWithType: IValidator<T1, T2, T3, T4>.ValidateAsync
-  nameWithType.vb: IValidator(Of T1, T2, T3, T4).ValidateAsync
 - uid: FlexValidator.SectionedValidator`1
   name: SectionedValidator<T>
   href: api/FlexValidator.SectionedValidator-1.html
@@ -982,24 +528,6 @@ references:
   commentId: T:FlexValidator.ValidationInfoBase
   fullName: FlexValidator.ValidationInfoBase
   nameWithType: ValidationInfoBase
-- uid: FlexValidator.ValidationInfoBase.#ctor(System.Guid,System.String)
-  name: ValidationInfoBase(Guid, string)
-  href: api/FlexValidator.ValidationInfoBase.html#FlexValidator_ValidationInfoBase__ctor_System_Guid_System_String_
-  commentId: M:FlexValidator.ValidationInfoBase.#ctor(System.Guid,System.String)
-  name.vb: New(Guid, String)
-  fullName: FlexValidator.ValidationInfoBase.ValidationInfoBase(System.Guid, string)
-  fullName.vb: FlexValidator.ValidationInfoBase.New(System.Guid, String)
-  nameWithType: ValidationInfoBase.ValidationInfoBase(Guid, string)
-  nameWithType.vb: ValidationInfoBase.New(Guid, String)
-- uid: FlexValidator.ValidationInfoBase.#ctor(System.Guid)
-  name: ValidationInfoBase(Guid)
-  href: api/FlexValidator.ValidationInfoBase.html#FlexValidator_ValidationInfoBase__ctor_System_Guid_
-  commentId: M:FlexValidator.ValidationInfoBase.#ctor(System.Guid)
-  name.vb: New(Guid)
-  fullName: FlexValidator.ValidationInfoBase.ValidationInfoBase(System.Guid)
-  fullName.vb: FlexValidator.ValidationInfoBase.New(System.Guid)
-  nameWithType: ValidationInfoBase.ValidationInfoBase(Guid)
-  nameWithType.vb: ValidationInfoBase.New(Guid)
 - uid: FlexValidator.ValidationInfoBase.#ctor(System.String,System.String)
   name: ValidationInfoBase(string, string)
   href: api/FlexValidator.ValidationInfoBase.html#FlexValidator_ValidationInfoBase__ctor_System_String_System_String_
@@ -1028,19 +556,19 @@ references:
   fullName.vb: FlexValidator.ValidationInfoBase.New
   nameWithType: ValidationInfoBase.ValidationInfoBase
   nameWithType.vb: ValidationInfoBase.New
-- uid: FlexValidator.ValidationInfoBase.Guid
-  name: Guid
-  href: api/FlexValidator.ValidationInfoBase.html#FlexValidator_ValidationInfoBase_Guid
-  commentId: P:FlexValidator.ValidationInfoBase.Guid
-  fullName: FlexValidator.ValidationInfoBase.Guid
-  nameWithType: ValidationInfoBase.Guid
-- uid: FlexValidator.ValidationInfoBase.Guid*
-  name: Guid
-  href: api/FlexValidator.ValidationInfoBase.html#FlexValidator_ValidationInfoBase_Guid_
-  commentId: Overload:FlexValidator.ValidationInfoBase.Guid
+- uid: FlexValidator.ValidationInfoBase.Id
+  name: Id
+  href: api/FlexValidator.ValidationInfoBase.html#FlexValidator_ValidationInfoBase_Id
+  commentId: P:FlexValidator.ValidationInfoBase.Id
+  fullName: FlexValidator.ValidationInfoBase.Id
+  nameWithType: ValidationInfoBase.Id
+- uid: FlexValidator.ValidationInfoBase.Id*
+  name: Id
+  href: api/FlexValidator.ValidationInfoBase.html#FlexValidator_ValidationInfoBase_Id_
+  commentId: Overload:FlexValidator.ValidationInfoBase.Id
   isSpec: "True"
-  fullName: FlexValidator.ValidationInfoBase.Guid
-  nameWithType: ValidationInfoBase.Guid
+  fullName: FlexValidator.ValidationInfoBase.Id
+  nameWithType: ValidationInfoBase.Id
 - uid: FlexValidator.ValidationInfoBase.Message
   name: Message
   href: api/FlexValidator.ValidationInfoBase.html#FlexValidator_ValidationInfoBase_Message
@@ -1105,12 +633,15 @@ references:
   isSpec: "True"
   fullName: FlexValidator.ValidationResult.AddPass
   nameWithType: ValidationResult.AddPass
-- uid: FlexValidator.ValidationResult.Check(System.Guid)
-  name: Check(Guid)
-  href: api/FlexValidator.ValidationResult.html#FlexValidator_ValidationResult_Check_System_Guid_
-  commentId: M:FlexValidator.ValidationResult.Check(System.Guid)
-  fullName: FlexValidator.ValidationResult.Check(System.Guid)
-  nameWithType: ValidationResult.Check(Guid)
+- uid: FlexValidator.ValidationResult.Check(System.String)
+  name: Check(string)
+  href: api/FlexValidator.ValidationResult.html#FlexValidator_ValidationResult_Check_System_String_
+  commentId: M:FlexValidator.ValidationResult.Check(System.String)
+  name.vb: Check(String)
+  fullName: FlexValidator.ValidationResult.Check(string)
+  fullName.vb: FlexValidator.ValidationResult.Check(String)
+  nameWithType: ValidationResult.Check(string)
+  nameWithType.vb: ValidationResult.Check(String)
 - uid: FlexValidator.ValidationResult.Check*
   name: Check
   href: api/FlexValidator.ValidationResult.html#FlexValidator_ValidationResult_Check_
@@ -1202,12 +733,6 @@ references:
   isSpec: "True"
   fullName: FlexValidator.Validator.Fail
   nameWithType: Validator.Fail
-- uid: FlexValidator.Validator.Failed(System.Guid)
-  name: Failed(Guid)
-  href: api/FlexValidator.Validator.html#FlexValidator_Validator_Failed_System_Guid_
-  commentId: M:FlexValidator.Validator.Failed(System.Guid)
-  fullName: FlexValidator.Validator.Failed(System.Guid)
-  nameWithType: Validator.Failed(Guid)
 - uid: FlexValidator.Validator.Failed(System.String)
   name: Failed(string)
   href: api/FlexValidator.Validator.html#FlexValidator_Validator_Failed_System_String_
@@ -1237,12 +762,6 @@ references:
   isSpec: "True"
   fullName: FlexValidator.Validator.Pass
   nameWithType: Validator.Pass
-- uid: FlexValidator.Validator.Passed(System.Guid)
-  name: Passed(Guid)
-  href: api/FlexValidator.Validator.html#FlexValidator_Validator_Passed_System_Guid_
-  commentId: M:FlexValidator.Validator.Passed(System.Guid)
-  fullName: FlexValidator.Validator.Passed(System.Guid)
-  nameWithType: Validator.Passed(Guid)
 - uid: FlexValidator.Validator.Passed(System.String)
   name: Passed(string)
   href: api/FlexValidator.Validator.html#FlexValidator_Validator_Passed_System_String_

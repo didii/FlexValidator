@@ -72,7 +72,7 @@
 
   <h1 id="FlexValidator_Validator" data-uid="FlexValidator.Validator" class="text-break">Class Validator
 </h1>
-  <div class="markdown level0 summary"><p>The base of a validator holding common functions of the typed versions</p>
+  <div class="markdown level0 summary"><p>The base of a validator holding common functions</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -282,94 +282,19 @@ validation logic and make sure this leads to a single call to <a class="xref" hr
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/didii/FlexValidator/new/master/apiSpec/new?filename=FlexValidator_Validator_Failed_System_Guid_.md&amp;value=---%0Auid%3A%20FlexValidator.Validator.Failed(System.Guid)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/didii/FlexValidator/blob/master/FlexValidator/Validator.cs/#L132">View Source</a>
-  </span>
-  <a id="FlexValidator_Validator_Failed_" data-uid="FlexValidator.Validator.Failed*"></a>
-  <h4 id="FlexValidator_Validator_Failed_System_Guid_" data-uid="FlexValidator.Validator.Failed(System.Guid)">Failed(Guid)</h4>
-  <div class="markdown level1 summary"><p>Check if the given validatino failed</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected bool Failed(Guid guid)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Guid</span></td>
-        <td><span class="parametername">guid</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">bool</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="FlexValidator_Validator_Failed_System_Guid__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>In it's simplest form, this is how the validation should be used.</p>
-<pre><code>Start(new ValidationInfoBase(&quot;guid&quot;, &quot;Id must be positive&quot;));
-if (obj.Id > 0) {
-    Pass();
-else
-    Fail();
-Complete();</code></pre>
-<p>In words: Start every test with a single <a class="xref" href="FlexValidator.Validator.html#FlexValidator_Validator_Start_FlexValidator_ValidationInfoBase_">Start(ValidationInfoBase)</a> with information about the validation you want to do. Then write the
-validation logic and make sure this leads to a single call to <a class="xref" href="FlexValidator.Validator.html#FlexValidator_Validator_Pass">Pass()</a> or <a class="xref" href="FlexValidator.Validator.html#FlexValidator_Validator_Fail">Fail()</a>. Then complete the validation using
-<a class="xref" href="FlexValidator.Validator.html#FlexValidator_Validator_Complete_System_Nullable_FlexValidator_Assume__">Complete(Assume?)</a>.</p>
-</div>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="FlexValidator.Exceptions.InvalidValidatorStateException.html">InvalidValidatorStateException</a></td>
-        <td><p>Thrown when the given validation does not exist</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
     <a href="https://github.com/didii/FlexValidator/new/master/apiSpec/new?filename=FlexValidator_Validator_Failed_System_String_.md&amp;value=---%0Auid%3A%20FlexValidator.Validator.Failed(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/didii/FlexValidator/blob/master/FlexValidator/Validator.cs/#L122">View Source</a>
+    <a href="https://github.com/didii/FlexValidator/blob/master/FlexValidator/Validator.cs/#L124">View Source</a>
   </span>
   <a id="FlexValidator_Validator_Failed_" data-uid="FlexValidator.Validator.Failed*"></a>
   <h4 id="FlexValidator_Validator_Failed_System_String_" data-uid="FlexValidator.Validator.Failed(System.String)">Failed(string)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Check if the given validation failed</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected bool Failed(string guid)</code></pre>
+    <pre><code class="lang-csharp hljs">protected bool Failed(string id)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -383,7 +308,7 @@ validation logic and make sure this leads to a single call to <a class="xref" hr
     <tbody>
       <tr>
         <td><span class="xref">string</span></td>
-        <td><span class="parametername">guid</span></td>
+        <td><span class="parametername">id</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -415,6 +340,22 @@ Complete();</code></pre>
 validation logic and make sure this leads to a single call to <a class="xref" href="FlexValidator.Validator.html#FlexValidator_Validator_Pass">Pass()</a> or <a class="xref" href="FlexValidator.Validator.html#FlexValidator_Validator_Fail">Fail()</a>. Then complete the validation using
 <a class="xref" href="FlexValidator.Validator.html#FlexValidator_Validator_Complete_System_Nullable_FlexValidator_Assume__">Complete(Assume?)</a>.</p>
 </div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FlexValidator.Exceptions.InvalidValidatorStateException.html">InvalidValidatorStateException</a></td>
+        <td><p>Thrown when the given validation does not exist</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/didii/FlexValidator/new/master/apiSpec/new?filename=FlexValidator_Validator_Pass.md&amp;value=---%0Auid%3A%20FlexValidator.Validator.Pass%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -462,94 +403,19 @@ validation logic and make sure this leads to a single call to <a class="xref" hr
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/didii/FlexValidator/new/master/apiSpec/new?filename=FlexValidator_Validator_Passed_System_Guid_.md&amp;value=---%0Auid%3A%20FlexValidator.Validator.Passed(System.Guid)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/didii/FlexValidator/new/master/apiSpec/new?filename=FlexValidator_Validator_Passed_System_String_.md&amp;value=---%0Auid%3A%20FlexValidator.Validator.Passed(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/didii/FlexValidator/blob/master/FlexValidator/Validator.cs/#L115">View Source</a>
+    <a href="https://github.com/didii/FlexValidator/blob/master/FlexValidator/Validator.cs/#L111">View Source</a>
   </span>
   <a id="FlexValidator_Validator_Passed_" data-uid="FlexValidator.Validator.Passed*"></a>
-  <h4 id="FlexValidator_Validator_Passed_System_Guid_" data-uid="FlexValidator.Validator.Passed(System.Guid)">Passed(Guid)</h4>
+  <h4 id="FlexValidator_Validator_Passed_System_String_" data-uid="FlexValidator.Validator.Passed(System.String)">Passed(string)</h4>
   <div class="markdown level1 summary"><p>Check if the given validation was a success</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected bool Passed(Guid guid)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Guid</span></td>
-        <td><span class="parametername">guid</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">bool</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="FlexValidator_Validator_Passed_System_Guid__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>In it's simplest form, this is how the validation should be used.</p>
-<pre><code>Start(new ValidationInfoBase(&quot;guid&quot;, &quot;Id must be positive&quot;));
-if (obj.Id > 0) {
-    Pass();
-else
-    Fail();
-Complete();</code></pre>
-<p>In words: Start every test with a single <a class="xref" href="FlexValidator.Validator.html#FlexValidator_Validator_Start_FlexValidator_ValidationInfoBase_">Start(ValidationInfoBase)</a> with information about the validation you want to do. Then write the
-validation logic and make sure this leads to a single call to <a class="xref" href="FlexValidator.Validator.html#FlexValidator_Validator_Pass">Pass()</a> or <a class="xref" href="FlexValidator.Validator.html#FlexValidator_Validator_Fail">Fail()</a>. Then complete the validation using
-<a class="xref" href="FlexValidator.Validator.html#FlexValidator_Validator_Complete_System_Nullable_FlexValidator_Assume__">Complete(Assume?)</a>.</p>
-</div>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="FlexValidator.Exceptions.InvalidValidatorStateException.html">InvalidValidatorStateException</a></td>
-        <td><p>Thrown when the given validation does not exist</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/didii/FlexValidator/new/master/apiSpec/new?filename=FlexValidator_Validator_Passed_System_String_.md&amp;value=---%0Auid%3A%20FlexValidator.Validator.Passed(System.String)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/didii/FlexValidator/blob/master/FlexValidator/Validator.cs/#L105">View Source</a>
-  </span>
-  <a id="FlexValidator_Validator_Passed_" data-uid="FlexValidator.Validator.Passed*"></a>
-  <h4 id="FlexValidator_Validator_Passed_System_String_" data-uid="FlexValidator.Validator.Passed(System.String)">Passed(string)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="declaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected bool Passed(string guid)</code></pre>
+    <pre><code class="lang-csharp hljs">protected bool Passed(string id)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -563,7 +429,7 @@ validation logic and make sure this leads to a single call to <a class="xref" hr
     <tbody>
       <tr>
         <td><span class="xref">string</span></td>
-        <td><span class="parametername">guid</span></td>
+        <td><span class="parametername">id</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -595,12 +461,28 @@ Complete();</code></pre>
 validation logic and make sure this leads to a single call to <a class="xref" href="FlexValidator.Validator.html#FlexValidator_Validator_Pass">Pass()</a> or <a class="xref" href="FlexValidator.Validator.html#FlexValidator_Validator_Fail">Fail()</a>. Then complete the validation using
 <a class="xref" href="FlexValidator.Validator.html#FlexValidator_Validator_Complete_System_Nullable_FlexValidator_Assume__">Complete(Assume?)</a>.</p>
 </div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="FlexValidator.Exceptions.InvalidValidatorStateException.html">InvalidValidatorStateException</a></td>
+        <td><p>Thrown when the given validation does not exist</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/didii/FlexValidator/new/master/apiSpec/new?filename=FlexValidator_Validator_Reset.md&amp;value=---%0Auid%3A%20FlexValidator.Validator.Reset%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/didii/FlexValidator/blob/master/FlexValidator/Validator.cs/#L153">View Source</a>
+    <a href="https://github.com/didii/FlexValidator/blob/master/FlexValidator/Validator.cs/#L145">View Source</a>
   </span>
   <a id="FlexValidator_Validator_Reset_" data-uid="FlexValidator.Validator.Reset*"></a>
   <h4 id="FlexValidator_Validator_Reset" data-uid="FlexValidator.Validator.Reset">Reset()</h4>
@@ -628,7 +510,7 @@ validation logic and make sure this leads to a single call to <a class="xref" hr
     <a href="https://github.com/didii/FlexValidator/new/master/apiSpec/new?filename=FlexValidator_Validator_RunValidator__1_FlexValidator_IValidator___0____0_.md&amp;value=---%0Auid%3A%20FlexValidator.Validator.RunValidator%60%601(FlexValidator.IValidator%7B%60%600%7D%2C%60%600)%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/didii/FlexValidator/blob/master/FlexValidator/Validator.cs/#L145">View Source</a>
+    <a href="https://github.com/didii/FlexValidator/blob/master/FlexValidator/Validator.cs/#L137">View Source</a>
   </span>
   <a id="FlexValidator_Validator_RunValidator_" data-uid="FlexValidator.Validator.RunValidator*"></a>
   <h4 id="FlexValidator_Validator_RunValidator__1_FlexValidator_IValidator___0____0_" data-uid="FlexValidator.Validator.RunValidator``1(FlexValidator.IValidator{``0},``0)">RunValidator&lt;T&gt;(IValidator&lt;T&gt;, T)</h4>
