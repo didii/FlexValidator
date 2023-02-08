@@ -52,7 +52,7 @@ namespace FlexValidator.Tests {
             //Arrange
             var isRun = false;
             _sut = new TestSectionedValidator<SomeModel>();
-            _sut.Init(() => _sut.AsyncSection(Section, async m => isRun = true));
+            _sut.Init(() => _sut.AsyncSection(Section, m => Task.FromResult(isRun = true)));
 
             //Act
             _sut.Validate(_model);
@@ -66,7 +66,7 @@ namespace FlexValidator.Tests {
             //Arrange
             var isRun = false;
             _sut = new TestSectionedValidator<SomeModel>();
-            _sut.Init(() => _sut.AsyncSection(Section, async m => isRun = true));
+            _sut.Init(() => _sut.AsyncSection(Section, m => Task.FromResult(isRun = true)));
 
             //Act
             await _sut.ValidateAsync(_model);
@@ -106,7 +106,7 @@ namespace FlexValidator.Tests {
         public void ValidateSection_WithAsyncSection_ShouldReturnSomething() {
             //Arrange
             _sut = new TestSectionedValidator<SomeModel>();
-            _sut.Init(() => _sut.AsyncSection(Section, async m => {}));
+            _sut.Init(() => _sut.AsyncSection(Section, m => Task.CompletedTask));
 
             //Act
             var result = _sut.ValidateSection(Section, _model);
@@ -132,7 +132,7 @@ namespace FlexValidator.Tests {
         public async Task ValidateSectionAsync_WithAsyncSection_ShouldReturnSomething() {
             //Arrange
             _sut = new TestSectionedValidator<SomeModel>();
-            _sut.Init(() => _sut.AsyncSection(Section, async m => {}));
+            _sut.Init(() => _sut.AsyncSection(Section, m => Task.CompletedTask));
 
             //Act
             var result = await _sut.ValidateSectionAsync(Section, _model);

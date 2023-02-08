@@ -37,7 +37,7 @@ namespace FlexValidator.Tests {
             //Arrange
             var isRun = false;
             _sut = new TestSimpleValidator<SomeModel>() {
-                ValidateAsyncFunc = async m => isRun = true
+                ValidateAsyncFunc = m => Task.FromResult(isRun = true)
             };
 
             //Act
@@ -82,7 +82,7 @@ namespace FlexValidator.Tests {
             //Arrange
             var isRun = false;
             _sut = new TestSimpleValidator<SomeModel>() {
-                ValidateAsyncFunc = async m => isRun = true
+                ValidateAsyncFunc = m => Task.FromResult(isRun = true)
             };
 
             //Act
