@@ -14,8 +14,4 @@
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Base" />
-  </ItemGroup>
-
 </Project>
